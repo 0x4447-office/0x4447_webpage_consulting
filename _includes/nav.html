@@ -2,8 +2,8 @@
   <div class="container">
 
     <!-- Brand -->
-    <a class="navbar-brand" href="./index.html">
-      <img src="./assets/img/brand.svg" class="navbar-brand-img" alt="...">
+    <a class="navbar-brand" href="/">
+      <img src="/assets/img/brand.svg" class="navbar-brand-img" alt="...">
     </a>
 
     <!-- Toggler -->
@@ -28,6 +28,11 @@
           </a>
         </li>
       {% endfor %}
+      <!-- HTML elements for search -->
+      <input type="text" id="search-input" class="form-control form-control-flush h-75" placeholder="Search Blog Posts">
+      <ul id="results-container"></ul>
+      <span class="fe fe-search mt-4"></span>
+      </ul>
     </div>
   </div>
 </nav>
