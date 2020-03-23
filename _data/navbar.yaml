@@ -1,8 +1,6 @@
 - name: Home
   url: /
-- name: About
-  url: /about
 - name: Contact
   url: /contact
-- name: Blog
-  url: /blog
+- name: Articles
+  url: /articles
