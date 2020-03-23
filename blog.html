@@ -45,7 +45,7 @@ permalink: /blog
                   {% endfor %}
                   <footer class="blockquote-footer bottom-0">
                     <hr>
-                    Author: <span class="h6 text-uppercase">{{ post.author }}</span>
+                    Created at: <span class="h6 text-uppercase">{{post.date | date_to_string }}</span>
                   </footer>
 
                 </blockquote>
