@@ -9,11 +9,9 @@ permalink: /articles
 ================================================== -->
 <section class="pt-6 pt-md-8 pb-8 mb-md-8">
   <div class="container">
-  <!-- Example single danger button -->
   <center><h2>Please choose a category to view</h2></center>
   <hr>  
   {% assign color = "#DA5988,#FF5A5F,#0082C9,#6772E5" %}
-
   <div class="row">
     {% for category in site.categories %}
     {% assign idx = forloop.index | minus:1 | modulo:4 %}
@@ -32,8 +30,7 @@ permalink: /articles
                 </div>
         </div>
       {% endfor %}
-  </div>
-
+    </div>
   </div> <!-- / .container -->
 </section>
 
