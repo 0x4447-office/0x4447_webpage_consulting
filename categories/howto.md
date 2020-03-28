@@ -1,6 +1,6 @@
 ---
 layout: category
-title: How To Posts
+title: How To
 permalink: /how_to/
 pagination: 
   enabled: true
