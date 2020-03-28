@@ -8,42 +8,28 @@ permalink: /:categories/:title:output_ext
       <div class="container">
         <div class="row align-items-center">
           <div class="col-12 col-md">
-            
             <!-- Link -->
             <i class="fe fe-arrow-left mr-3"></i>
             {% for cat in page.categories %}  
             <a href="/{{ cat }}" class="font-weight-bold font-size-sm text-decoration-none mb-3">{{cat}} | </a>
             {% endfor %}
-            
             <!-- Heading -->
             <h1 class="display-4 mb-2">
               UX Design Lead
             </h1>
-
-            <!-- Text -->
-            <p class="font-size-lg text-gray-700 mb-5 mb-md-0">
-                Posted at {{page.date | date_to_string }}
-            </p>
-
           </div>
-          
         </div> <!-- / .row -->
         <div class="row">
           <div class="col-12">
-            
             <!-- Divider -->
             <hr class="my-6 my-md-8 border-gray-300">
-
           </div>
         </div> <!-- / .row -->
         <div class="row">
           <div class="col-12 col-md-12">
-            
               {{ page.content }}
-          
           </div>
           </div>
-          
         </div> <!-- / .row -->
       </div> <!-- / .container -->
     </section>
