@@ -1,0 +1,17 @@
+pagination:
+  enabled: true
+  per_page: 2
+  permalink: '/page/:num/'
+  title_suffix: ' - :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+permalink: /:categories/:title:output_ext
+gems:
+  - jekyll-paginate-v2
+
+plugins:
+  - jekyll-paginate-v2
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag

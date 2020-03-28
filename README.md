@@ -1,2 +1,4 @@
-# Consulting
-The home page of the project
+## Installing
+
+- bundle install
+- npm install ( I included a search pluging which uses js )
