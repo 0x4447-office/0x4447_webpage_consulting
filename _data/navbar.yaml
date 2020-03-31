@@ -1,6 +1,6 @@
 - name: Home
   url: /
 - name: Contact
-  url: /contact
+  url: /contact.html
 - name: Articles
   url: /articles

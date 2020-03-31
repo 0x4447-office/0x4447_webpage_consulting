@@ -1,4 +1,9 @@
-## Installing
+# 0x4447 Consulting
+
+This this website contains all the details related to the Consulting experities of 0x4447, LLC.
+
+# How to run locally
 
 - bundle install
-- npm install ( I included a search pluging which uses js )
+- gem install jekyll bundler
+- bundle exec jekyll serve
