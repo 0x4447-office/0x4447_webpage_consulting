@@ -4,35 +4,37 @@ pagination:
   enabled: true
   permalink: /:num/
 permalink: /articles
-title: Articles
 ---
 <!-- CONTENT
 ================================================== -->
 <section class="pt-6 pt-md-8 pb-8 mb-md-8">
-  <div class="container">
+  <div class="container" style="min-height:700px">
   <!-- Example single danger button -->
+
   <center><h2>Please choose a category to view</h2></center>
   <hr>  
   {% assign color = "#DA5988,#FF5A5F,#0082C9,#6772E5" %}
+
   <div class="row">
     {% for category in site.categories %}
     {% assign idx = forloop.index | minus:1 | modulo:4 %}
     {% assign curr_color = color | split:',' | slice:idx %}
-        <div class="col-sm-12 col-md-4 mt-5">
+        <div class="col-4 mt-5">
                 <!-- Card -->
                 <div class="card card-border shadow-light-lg lift lift-lg" style="border-top-color: {{ curr_color }};">
                   <div class="card-body text-center">
-                  
                     <!-- Text -->
                     <h3 class="text-gray-700 mb-5" style="color:{{ curr_color }}">
-                        {{ category | first | split:"_" | join:" " | upcase }}
+                        {{ category | first | split:"-" | join:" " | upcase }}
                     </h3>
                     <!-- Link -->
                     <a href="/{{ category | first }}" style="color: {{ curr_color }};">Show More</a>
                   </div>
                 </div>
+          
         </div>
       {% endfor %}
   </div>
+
   </div> <!-- / .container -->
 </section>
