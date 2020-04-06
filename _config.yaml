@@ -13,5 +13,6 @@ gems:
 plugins:
   - jekyll-paginate-v2
   - jekyll-feed
+  - jekyll-environment-variables  
   - jekyll-sitemap
   - jekyll-seo-tag

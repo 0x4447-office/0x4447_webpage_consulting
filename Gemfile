@@ -9,6 +9,7 @@ gem "jekyll"
 group :jekyll_plugins do
   gem 'jekyll-paginate-v2'
   gem 'jekyll-sitemap'
+  gem 'jekyll-environment-variables'
   gem 'jekyll-feed'
   gem 'jekyll-seo-tag'
 end
