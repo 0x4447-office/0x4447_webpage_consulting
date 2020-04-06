@@ -6,7 +6,7 @@ pagination:
   limit: 0
   sort_field: 'date'
   sort_reverse: true
-permalink: /:categories/:title:output_ext
+permalink: /articles/:categories/:title:output_ext
 gems:
   - jekyll-paginate-v2
 
