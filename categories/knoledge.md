@@ -1,7 +1,7 @@
 ---
 layout: category
 title: Knoledge
-permalink: /knoledge/
+permalink: /articles/knoledge/
 pagination: 
   enabled: true
   category: knoledge
