@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-sticky-footer
 pagination: 
   enabled: true
   permalink: /:num/
@@ -8,7 +8,7 @@ permalink: /articles
 <!-- CONTENT
 ================================================== -->
 <section class="pt-6 pt-md-8 pb-8 mb-md-8">
-  <div class="container" style="min-height:700px">
+  <div class="container">
   <!-- Example single danger button -->
 
   <center><h2>Please choose a category to view</h2></center>
@@ -28,7 +28,7 @@ permalink: /articles
                         {{ category | first | split:"-" | join:" " | upcase }}
                     </h3>
                     <!-- Link -->
-                    <a href="/{{ category | first }}" style="color: {{ curr_color }};">Show More</a>
+                    <a href="/articles/{{ category | first }}" style="color: {{ curr_color }};">Show More</a>
                   </div>
                 </div>
           

@@ -6,7 +6,7 @@ subtitle: I've worked with countless clients with recurring issues that leave th
 categories: [knoledge]
 ---
 
-![How to lower EC2 Costs](../assets/img/articles/the-benefits-of-aws-organization/header.png)
+![How to lower EC2 Costs](/assets/img/articles/the-benefits-of-aws-organization/header.png)
 
 This article is meant for CEOs, CTOs, and managers who want to get a good frame of reference to help make more educated decisions about building products in the cloud. 
 
