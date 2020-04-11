@@ -3,7 +3,8 @@ layout: default
 permalink: /contact
 title: Contact
 ---
-  <script src="/assets/js/aws-sdk-2.404.0.min.js"></script>
+  <script src="/assets/js/aws-sdk-2.656.0.min.js"></script>
+
     <!-- WELCOME
     ================================================== -->
     <section class="py-10 py-md-14 overlay overlay-black overlay-60 bg-cover" style="background-image: url(assets/img/covers/cover-5.jpg);">
@@ -125,19 +126,9 @@ title: Contact
   //
   //  Initializing s3 object
   //
-  var s3 = new AWS.S3({apiVersion: '2006-03-01'});
-
-  //
-  //  A helper function to convert string to binary
-  //
-  function string_to_binary(string)
-  {
-    let output = ''
-    for (i=0; i < string.length; i++) {
-     	output +=string[i].charCodeAt(0).toString(2) + " ";
-    }
-    return output
-  }
+  let s3 = new AWS.S3({
+    apiVersion: '2006-03-01'
+  });
 
   // 
   //  1.  Function to get field values
@@ -145,23 +136,23 @@ title: Contact
 
   function send_message(event)
   {
-    event.preventDefault()
+    event.preventDefault();
 
     //
     //  1.  Get information from corresponding fields.
     //
-    let message = $('#contact_message')[0].value
-    let email = $('#contact_email')[0].value
-    let fullname = $('#contact_name')[0].value
+    let message = $('#contact_message')[0].value;
+    let email = $('#contact_email')[0].value;
+    let fullname = $('#contact_name')[0].value;
 
     //
     //  2.  Disable the fields
     //
-    $('#contact_message')[0].disabled=true
-    $('#contact_email')[0].disabled=true
-    $('#contact_name')[0].disabled=true
-    $('#submit_button')[0].disabled=true
-    $('#submit_button')[0].textContent = 'Sending..'
+    $('#contact_message')[0].disabled = true;
+    $('#contact_email')[0].disabled = true;
+    $('#contact_name')[0].disabled = true;
+    $('#submit_button')[0].disabled = true;
+    $('#submit_button')[0].textContent = 'Sending...'
 
     //
     //  3.  create a JSON object
@@ -187,39 +178,54 @@ title: Contact
     //
     let params = {
       Body: binary,
-      Bucket: "{{site.env.S3_BUCKET}}",
-      Key: "message_from_"+email+".json",
-      ContentType: 'application/json; charset=utf-8',
+      Bucket: "{{ site.env.S3_BUCKET }}",
+      Key: "message_from_" + email + ".json"
     }
 
     //
     //  6.  Call putObject to send json to S3 Bucket
     //
-    s3.putObject(params, function(err,data){
-      if(data){
-        
-        //
-        //  1. Show Alert saying data sent successfully
-        //
-        $('#alert')[0].hidden=false
-        $('#alert')[0].fadeOut(4000)
-        
-        //
-        //  2.  Enable and clean input fields
-        //
-        $('#contact_message')[0].disabled=false
-        $('#contact_email')[0].disabled=true
-        $('#contact_name')[0].disabled=true
-        $('#submit_button')[0].disabled=false
+    s3.putObject(params, function(error, data) {
 
-        $('#contact_message')[0].value=''
-        $('#contact_email')[0].value=''
-        $('#contact_name')[0].value=''
+      if(error)
+      {
+        return console.log(error);
+      }
+      
+      //
+      //  1. Show Alert saying data sent successfully
+      //
+      $('#alert')[0].hidden = false;
+      $('#alert')[0].fadeOut(4000);
+      
+      //
+      //  2.  Enable and clean input fields
+      //
+      $('#contact_message')[0].disabled = false;
+      $('#contact_email')[0].disabled = true;
+      $('#contact_name')[0].disabled = true;
+      $('#submit_button')[0].disabled = false;
 
-      }
-      if(err){
-        console.log(err)
-      }
+      $('#contact_message')[0].value= '';
+      $('#contact_email')[0].value= '';
+      $('#contact_name')[0].value= '';
+    
     })
   }
+
+  //
+  //  A helper function to convert string to binary
+  //
+  function string_to_binary(string)
+  {
+    let output = '';
+
+    for (i=0; i < string.length; i++) 
+    {
+      output +=string[i].charCodeAt(0).toString(2) + " ";
+    }
+    
+    return output
+  }
+
 </script>
