@@ -2,15 +2,17 @@
 title: Should I go all in with Serverless?
 cover: /assets/img/articles/should-i-go-all-in-with-serverless/cover.png
 layout: post
-subtitle: This article is meant for CEOs, CTOs, and managers who want a good frame of reference to help them make more educated decisions about building products in the cloud.
+subtitle: The goal is to give a better understanding of what is the Serverless technology.
 categories: [knoledge]
 ---
 
 ![How to lower EC2 Costs](/assets/img/articles/should-i-go-all-in-with-serverless/header.png)
 
-This article is meant for CEOs, CTOs, and managers who want a good frame of reference to help them make more educated decisions about building products in the cloud. If you think you may not be the right target, but you know someone who is, consider sharing the link to this article with that person.
+This article is meant for CEOs, CTOs, and Managers. The goal is to give a better understanding of what is the Serverless technology.
 
-And in the end, if you'd like to chat about this topic, we provide a free one-hour consultation for new clients. Send us a message at hello+linkedin+should_i_go_all_in_with_serverless@0x4447.email.
+This article also tries to answer a common question our clients ask: *Should I go serverless or still build a project with regualr servers*?
+
+In the end, If you'd like to chat about this topic, we provide a free one-hour consultation for new clients.
 
 # First
 
@@ -48,12 +50,14 @@ Now you can look to see what's outside AWS. There are cloud providers out there 
 
 And now, the last major step: a lot of online articles like to imply that AWS is too expensive and having your our own data center is the cheapest way to go about serving a product to clients. But this statement will be true only for some very specific companies that either have outgrown the AWS volume discount, operate at a scale close to that of AWS, or deal only with a local market.
 
-A good example would be Bank of America, which transitioned to their own data center to lower costs. For a company of this size that deals only with the local market, this makes perfect sense and is the right move. 
+A good example would be [Bank of America](https://www.businessinsider.com/bank-of-americas-350-million-internal-cloud-bet-striking-payoff-2019-10), which transitioned to their own data center to lower costs. For a company of this size that deals only with the local market, this makes perfect sense and is the right move.
 
-[https://www.businessinsider.com/bank-of-americas-350-million-internal-cloud-bet-striking-payoff-2019-10](https://www.businessinsider.com/bank-of-americas-350-million-internal-cloud-bet-striking-payoff-2019-10)
-
-# In the end
+# To sum it up
 
 I hope this explanation will help you organize your thoughts around the serverless approach and you'll know exactly what to ask your team or contractors when talking about this topic.
 
 If you found this article useful, consider sharing it with someone you think could benefit from it.
+
+# Contact
+
+Check our [contanct](/contact.html) page to find out how to get in touch with us.

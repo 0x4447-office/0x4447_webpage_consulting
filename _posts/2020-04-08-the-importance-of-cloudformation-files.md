@@ -2,7 +2,7 @@
 title: The Importance of CloudFormation Files
 cover: /assets/img/articles/should-i-go-all-in-with-serverless/cover.png
 layout: post
-subtitle: "This article also tries to answer a common question our clients ask: Why spend time making a CloudFormation file?"
+subtitle: The goal is to give a better understanding of what CloudFormation is and why every AWS project should be done only through a file like this.
 categories: [knoledge]
 ---
 
@@ -10,7 +10,9 @@ categories: [knoledge]
 
 This article is meant for CEOs, CTOs, and Managers. The goal is to give a better understanding of what CloudFormation is and why every AWS project should be done only through a file like this. 
 
-This article also tries to answer a common question our clients ask: Why spend time making a CloudFormation file?
+This article also tries to answer a common question our clients ask: *Why spend time making a CloudFormation file*?
+
+In the end, If you'd like to chat about this topic, we provide a free one-hour consultation for new clients.
 
 # What is CloudFormation
 
@@ -36,6 +38,10 @@ Once you do one file (which will take some time the first time you do it), makin
 
 Just copy and past what you need from what you have. And the best thing is that once a file like this is created and tested, you know it works - now and in the future. And, even if AWS makes some changes, modifications to the file will be minor and easy to do.
 
-# In the End
+# To sum it up
 
 I hope that I was able to make it easy to understand the benefits of this approach and that this AWS Service will help you streamline your DevOps work flow.
+
+# Contact
+
+Check our [contanct](/contact.html) page to find out how to get in touch with us.

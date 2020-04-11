@@ -2,15 +2,17 @@
 title: How to lower EC2 Costs
 cover: /assets/img/articles/how-to-lower-ec2-costs/cover.png
 layout: post
-subtitle: If you're spending more than $1000 a month on your AWS bill, you're probably spinning servers in On-Demand mode and paying by the hour.
+subtitle: The goal is to show you how to lower your AWS costs by 40 or even 75 percent (depending on the instance type and plan) within few minutes.
 categories: [how_to]
 ---
 
 ![How to lower EC2 Costs](/assets/img/articles/how-to-lower-ec2-costs/header.png)
 
-If you're spending more than $1000 a month on your AWS bill, you're probably spinning servers in On-Demand mode and paying by the hour. This is all good if you need to spin an instance for a few hours or days, but it's far from perfect if you plan to use those servers for an entire month over the next year or more.
+This article is meant for CEOs, CTOs, and Managers. The goal is to show you how to lower your AWS costs by 40 or even 75 percent (depending on the instance type and plan) within few minutes
 
-If you constantly run your servers, you can lower your bill by 40 or even 75 percent (depending on the instance type and plan) within few minutes. Just buy Reserved Instances.
+This article also tries to answer a common question our clients ask: *What options do I have at my disposal to lower the AWS bill*?
+
+In the end, If you'd like to chat about this topic, we provide a free one-hour consultation for new clients.
 
 ## What are Reserved Instances?
 
@@ -71,4 +73,4 @@ Stop using On-Demand servers for long-term work. Use them only for quick tests, 
 
 # Contact
 
-If you'd like to chat about this topic, we provide a free one-hour consultation for new clients. Check our [contanct](/contact.html) page to find out how to get in touch with us.
+Check our [contanct](/contact.html) page to find out how to get in touch with us.
