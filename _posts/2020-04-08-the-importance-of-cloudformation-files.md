@@ -1,5 +1,5 @@
 ---
-title: The Importance of CloudFormation Files
+title: Articles - Knoledge - The Importance of CloudFormation Files
 cover: /assets/img/articles/should-i-go-all-in-with-serverless/cover.png
 layout: post
 subtitle: "This article also tries to answer a common question our clients ask: Why spend time making a CloudFormation file?"

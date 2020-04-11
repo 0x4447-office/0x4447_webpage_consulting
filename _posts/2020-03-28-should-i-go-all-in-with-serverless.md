@@ -1,5 +1,5 @@
 ---
-title: Should I go all in with Serverless?
+title: Articles - Knoledge - Should I go all in with Serverless?
 cover: /assets/img/articles/should-i-go-all-in-with-serverless/cover.png
 layout: post
 subtitle: This article is meant for CEOs, CTOs, and managers who want a good frame of reference to help them make more educated decisions about building products in the cloud.

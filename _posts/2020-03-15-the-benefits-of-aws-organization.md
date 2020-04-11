@@ -1,5 +1,5 @@
 ---
-title: The benefits of AWS organization
+title: Articles - Knoledge - The benefits of AWS organization
 cover: /assets/img/articles/the-benefits-of-aws-organization/cover.png
 layout: post
 subtitle: I've worked with countless clients with recurring issues that leave them in a corner and having a hard time with...
