@@ -6,13 +6,14 @@ pagination:
   limit: 0
   sort_field: 'date'
   sort_reverse: true
-permalink: /:categories/:title:output_ext
+permalink: articles/:categories/:title:output_ext
 gems:
   - jekyll-paginate-v2
-
+url: "https://consulting.0x4447.com"
 plugins:
   - jekyll-paginate-v2
   - jekyll-feed
   - jekyll-environment-variables  
   - jekyll-sitemap
   - jekyll-seo-tag
+  

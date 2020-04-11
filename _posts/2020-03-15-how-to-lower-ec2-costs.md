@@ -1,12 +1,12 @@
 ---
 title: How to lower EC2 Costs
-img: url
+cover: /assets/img/articles/how-to-lower-ec2-costs/cover.png
 layout: post
 subtitle: If you're spending more than $1000 a month on your AWS bill, you're probably spinning servers in On-Demand mode and paying by the hour.
 categories: [how_to]
 ---
 
-![How to lower EC2 Costs](../assets/img/articles/how-to-lower-ec2-costs.png)
+![How to lower EC2 Costs](/assets/img/articles/how-to-lower-ec2-costs/header.png)
 
 If you're spending more than $1000 a month on your AWS bill, you're probably spinning servers in On-Demand mode and paying by the hour. This is all good if you need to spin an instance for a few hours or days, but it's far from perfect if you plan to use those servers for an entire month over the next year or more.
 

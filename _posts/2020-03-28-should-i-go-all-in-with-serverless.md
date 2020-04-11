@@ -1,12 +1,12 @@
 ---
 title: Should I go all in with Serverless?
-img: url
+cover: /assets/img/articles/should-i-go-all-in-with-serverless/cover.png
 layout: post
 subtitle: This article is meant for CEOs, CTOs, and managers who want a good frame of reference to help them make more educated decisions about building products in the cloud.
 categories: [knoledge]
 ---
 
-![How to lower EC2 Costs](../assets/img/articles/should-i-go-all-in-with-serverless.png)
+![How to lower EC2 Costs](/assets/img/articles/should-i-go-all-in-with-serverless/header.png)
 
 This article is meant for CEOs, CTOs, and managers who want a good frame of reference to help them make more educated decisions about building products in the cloud. If you think you may not be the right target, but you know someone who is, consider sharing the link to this article with that person.
 
