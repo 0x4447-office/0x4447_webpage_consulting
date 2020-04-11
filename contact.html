@@ -179,7 +179,7 @@ title: Contact
     //
     let params = {
       Body: binary,
-      Bucket: "{{ site.env.S3_BUCKET }}",
+      Bucket: "{{ site.env.S3_BUCKET_EMAIL }}",
       Key: "message_from_" + email + ".json"
     }
 
