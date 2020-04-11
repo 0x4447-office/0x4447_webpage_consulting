@@ -13,6 +13,7 @@ url: "https://consulting.0x4447.com"
 plugins:
   - jekyll-paginate-v2
   - jekyll-feed
+  - jekyll-environment-variables  
   - jekyll-sitemap
   - jekyll-seo-tag
   
