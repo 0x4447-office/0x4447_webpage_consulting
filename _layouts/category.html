@@ -28,7 +28,9 @@ layout: default
                   </p>
                   <!-- Footer -->
                   {% for category in post.categories %}
-                  <span class="badge badge-info-soft bottom-0">{{ category }}</span>
+                  <span class="badge badge-info-soft bottom-0">
+                    <a href="{{ post.url }}">Show More</a>
+                  </span>
                   {% endfor %}
                   <footer class="blockquote-footer bottom-0">
                   </footer>
