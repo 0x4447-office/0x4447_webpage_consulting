@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post-view
 permalink: /articles/:categories/:title:output_ext
 --- 
         <!-- CONTENT
@@ -15,7 +15,7 @@ permalink: /articles/:categories/:title:output_ext
             {% endfor %}
             <!-- Heading -->
             <h1 class="display-4 mb-2">
-              {{ page.title }}
+              Articles - {{ page.categories | first | capitalize }} - {{ page.title }}
             </h1>
           </div>
         </div> <!-- / .row -->

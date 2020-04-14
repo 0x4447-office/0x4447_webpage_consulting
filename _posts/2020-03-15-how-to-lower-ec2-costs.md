@@ -1,5 +1,5 @@
 ---
-title: Articles - How To - How to lower EC2 Costs
+title: How to lower EC2 Costs
 cover: /assets/img/articles/how-to-lower-ec2-costs/cover.png
 layout: post
 subtitle: If you're spending more than $1000 a month on your AWS bill, you're probably spinning servers in On-Demand mode and paying by the hour.
