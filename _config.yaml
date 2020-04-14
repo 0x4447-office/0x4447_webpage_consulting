@@ -16,9 +16,4 @@ plugins:
   - jekyll-environment-variables  
   - jekyll-sitemap
   - jekyll-seo-tag
-defaults:
-  -
-    scope:
-      path:            "assets/**/*.html"
-    values:
-      sitemap:         false
+  
