@@ -6,7 +6,7 @@ layout: default
     {% for post in paginator.posts %}
       <div class="row pt-6">
         <div class="col-lg-12 col-md-12 col-sm-12">
-          <a href={{ post.url }} class="card text-reset text-decoration-none lift" href="#">
+          <div class="card text-reset text-decoration-none lift">
             <div class="row no-gutters shadow-light-lg">
               <div class="col-12 col-md-6">
                 <!-- Image (mobile) -->
@@ -27,17 +27,15 @@ layout: default
                     {{ post.subtitle }}
                   </p>
                   <!-- Footer -->
-                  {% for category in post.categories %}
-                  <span class="badge badge-info-soft bottom-0">
-                    <a href="{{ post.url }}">Show More</a>
-                  </span>
-                  {% endfor %}
                   <footer class="blockquote-footer bottom-0">
                   </footer>
                 </blockquote>
+                <center class="mt-4">
+                <a class="btn btn-outline-info" href="{{ post.url }}">Show More</a>
+                </center>
               </div>
             </div> <!-- / .row -->
-          </a>
+          </div>
         </div>
         </div>
     {% endfor %}
