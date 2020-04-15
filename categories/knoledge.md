@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Knoledge
+title: Articles - knoledge
 permalink: /articles/knoledge/
 pagination: 
   enabled: true

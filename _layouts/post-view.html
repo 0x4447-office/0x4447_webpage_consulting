@@ -1,3 +1,8 @@
+---
+--- 
+<!doctype html>
+<html lang="en">
+
  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -23,10 +28,16 @@
     <!-- Theme CSS -->
     <link rel="stylesheet" href="/assets/css/theme.min.css">
 
-    <title>0x4447, LLC - Consulting - {{ page.title }}</title>
+    <title>0x4447, LLC - Consulting - Articles - {{ page.categories | first }} - {{ page.title }}</title>
 
     {% feed_meta %}
 
     {% seo %}
     
 </head>
+<body>
+{% include nav.html %}
+{{ content }}
+{% include footer.html %}
+</body>
+</html>
