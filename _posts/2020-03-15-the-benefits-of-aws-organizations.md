@@ -1,16 +1,16 @@
 ---
-title: The benefits of AWS organization
-cover: /assets/img/articles/the-benefits-of-aws-organization/cover.png
+title: The benefits of AWS organizations
+cover: /assets/img/articles/the-benefits-of-aws-organizations/cover.png
 layout: post
-subtitle: The goal is to show you the benefits of managing your AWS infrastructure using the Organization.
+subtitle: The goal is to show you the benefits of managing your AWS infrastructure using Organizations.
 categories: [knoledge]
 ---
 
-![How to lower EC2 Costs](/assets/img/articles/the-benefits-of-aws-organization/header.png)
+![How to lower EC2 Costs](/assets/img/articles/the-benefits-of-aws-organizations/header.png)
 
-This article is meant for CEOs, CTOs, and Managers. The goal is to show you the benefits of managing your AWS infrastructure using the Organization.
+This article is meant for CEOs, CTOs, and Managers. The goal is to show you the benefits of managing your AWS infrastructure using Organizations.
 
-This article also tries to answer a common question our clients ask: *Why spend the time setting up AWS Organization*?
+This article also tries to answer a common question our clients ask: *Why spend the time setting up AWS Organizations*?
 
 In the end, If you'd like to chat about this topic, we provide a free one-hour consultation for new clients.
 
@@ -25,7 +25,7 @@ I've worked with countless clients with recurring issues that leave them in a co
 
 My hope is that this article will help you understand the importance of being organized from the start with AWS and avoiding the extra costs and time involved in reorganizing everything.
 
-# Key features of AWS organization
+# Key features of AWS organizations
 
 - You have one bill to pay for all other AWS accounts within the organization.
 - You get a detailed breakdown of your bill per AWS account, which helps showcase where your money goes.
@@ -94,10 +94,12 @@ This is just an example for once you get your project off the ground. You could 
 
 # To sum it up
 
-I hope this explanation will help you organize your thoughts around the AWS organization and you'll know exactly what to ask for when talking to contractors or your team.
-
-If you found this article useful, consider sharing it with someone you think could benefit from it.
+I hope this explanation will help you organize your thoughts around AWS Organizations and you'll know exactly what to ask for when talking to contractors or your team.
 
 # Contact
 
 Check our [contanct](/contact.html) page to find out how to get in touch with us.
+
+# Sharing is Caring
+
+If you found this article useful, consider sharing it with someone you think could benefit from it.
