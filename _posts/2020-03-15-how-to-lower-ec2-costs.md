@@ -74,3 +74,7 @@ Stop using On-Demand servers for long-term work. Use them only for quick tests, 
 # Contact
 
 Check our [contanct](/contact.html) page to find out how to get in touch with us.
+
+# Sharing is Caring
+
+If you found this article useful, consider sharing it with someone you think could benefit from it.

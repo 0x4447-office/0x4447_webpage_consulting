@@ -45,3 +45,7 @@ I hope that I was able to make it easy to understand the benefits of this approa
 # Contact
 
 Check our [contanct](/contact.html) page to find out how to get in touch with us.
+
+# Sharing is Caring
+
+If you found this article useful, consider sharing it with someone you think could benefit from it.

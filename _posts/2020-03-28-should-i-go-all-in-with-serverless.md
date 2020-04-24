@@ -56,8 +56,10 @@ A good example would be [Bank of America](https://www.businessinsider.com/bank-o
 
 I hope this explanation will help you organize your thoughts around the serverless approach and you'll know exactly what to ask your team or contractors when talking about this topic.
 
-If you found this article useful, consider sharing it with someone you think could benefit from it.
-
 # Contact
 
 Check our [contanct](/contact.html) page to find out how to get in touch with us.
+
+# Sharing is Caring
+
+If you found this article useful, consider sharing it with someone you think could benefit from it.
