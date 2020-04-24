@@ -1,5 +1,7 @@
 - name: Home
   url: /
+- name: Schedule
+  url: /schedule
 - name: Contact
   url: /contact.html
 - name: Articles
