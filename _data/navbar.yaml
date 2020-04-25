@@ -3,6 +3,6 @@
 - name: Schedule
   url: /schedule
 - name: Contact
-  url: /contact.html
+  url: /contact
 - name: Articles
   url: /articles
