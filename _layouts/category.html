@@ -48,7 +48,7 @@ layout: default
           <li class="page-item {% if paginator.previous_page==nil %}disabled{% endif %}"><a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Previous</a></li>
         {% for pg in (1..paginator.total_pages) %}
           {% assign link = page.permalink | split:"/" | slice:0,3 | join: "/" %}
-          <li class="page-item"><a class="page-link" href="{% if pg==1 %}{{ link }}{% endif %}{% if pg!=1 %}{{ link | append: "/2/" }}{% endif %}">{{ pg }}</a></li>
+          <li class="page-item"><a class="page-link" href="{% if pg==1 %}{{ link }}{% endif %}{% if pg!=1 %}{{ link }}/{{ pg }}/{% endif %}">{{ pg }}</a></li>
         {% endfor %}
             <li class="page-item {% if paginator.next_page==nil %}disabled{% endif %}"><a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next</a></li>
     </ul>
