@@ -171,16 +171,16 @@ title: Contact
     let data = JSON.stringify(json)
 
     //
-    //  5.  Convert string to binary data
+    //  5.  Convert string to an ArrayBuffer
     //
-    var enc = new TextEncoder();
-    let buffer = enc.encode(data)
+    let encoder = new TextEncoder();
+    let array_buffer = encoder.encode(data)
 
     //
     //  6.  Prepare parameters for putObject function
     //
     let params = {
-      Body: buffer,
+      Body: array_buffer,
       Bucket: "{{ site.env.S3_BUCKET_EMAIL }}",
       Key: new Date() + ".json"
     }
