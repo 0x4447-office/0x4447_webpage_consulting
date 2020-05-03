@@ -171,13 +171,14 @@ title: Contact
     //
     //  5.  Convert string to binary data
     //
-    let binary = string_to_binary(data)
+    var enc = new TextEncoder();
+    let buffer = enc.encode(data)
 
     //
     //  6.  Prepare parameters for putObject function
     //
     let params = {
-      Body: binary,
+      Body: buffer,
       Bucket: "{{ site.env.S3_BUCKET_EMAIL }}",
       Key: "message_from_" + email + ".json"
     }
@@ -211,21 +212,6 @@ title: Contact
       $('#contact_name')[0].value= '';
     
     })
-  }
-
-  //
-  //  A helper function to convert string to binary
-  //
-  function string_to_binary(string)
-  {
-    let output = '';
-
-    for (i=0; i < string.length; i++) 
-    {
-      output +=string[i].charCodeAt(0).toString(2) + " ";
-    }
-    
-    return output
   }
 
 </script>
