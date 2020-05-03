@@ -44,7 +44,7 @@ I hope that I was able to make it easy to understand the benefits of this approa
 
 # Contact
 
-Check our [contanct](/contact.html) page to find out how to get in touch with us.
+Check our [contanct](/contact/) page to find out how to get in touch with us.
 
 # Sharing is Caring
 
