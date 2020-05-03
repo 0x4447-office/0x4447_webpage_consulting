@@ -199,7 +199,7 @@ title: Contact
       //  1. Show Alert saying data sent successfully
       //
       $('#alert').attr("hidden", false);
-      $('#alert').fadeOut(2000);
+      $('#alert').fadeOut(4000);
       
       //
       //  2.  Enable and clean input fields
@@ -208,6 +208,10 @@ title: Contact
       $('#contact_email').attr("disabled", false);
       $('#contact_name').attr("disabled", false);
       $('#submit_button').attr("disabled", false);
+      
+      $('#contact_message').val("");
+      $('#contact_email').val("");
+      $('#contact_name').val("");
       
       $('#submit_button').text('Send message');
     
