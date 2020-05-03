@@ -149,11 +149,11 @@ title: Contact
     //
     //  2.  Disable the fields
     //
-    $('#contact_message')[0].disabled = true;
-    $('#contact_email')[0].disabled = true;
-    $('#contact_name')[0].disabled = true;
-    $('#submit_button')[0].disabled = true;
-    $('#submit_button')[0].textContent = 'Sending...'
+    $('#contact_message').attr("disabled", true);
+    $('#contact_email').attr("disabled", true);
+    $('#contact_name').attr("disabled", true);
+    $('#submit_button').attr("disabled", true);
+    $('#submit_button').text('Sending...');
 
     //
     //  3.  create a JSON object
@@ -182,11 +182,11 @@ title: Contact
     let params = {
       Body: array_buffer,
       Bucket: "{{ site.env.S3_BUCKET_EMAIL }}",
-      Key: new Date() + ".json"
+      Key: Math.round((new Date()).getTime() / 1000) + ".json"
     }
 
     //
-    //  6.  Call putObject to send json to S3 Bucket
+    //  7.  Call putObject to send json to S3 Bucket
     //
     s3.putObject(params, function(error, data) {
 
@@ -198,20 +198,17 @@ title: Contact
       //
       //  1. Show Alert saying data sent successfully
       //
-      $('#alert')[0].hidden = false;
-      $('#alert')[0].fadeOut(4000);
+      $('#alert').fadeOut(1000);
       
       //
       //  2.  Enable and clean input fields
       //
-      $('#contact_message')[0].disabled = false;
-      $('#contact_email')[0].disabled = true;
-      $('#contact_name')[0].disabled = true;
-      $('#submit_button')[0].disabled = false;
-
-      $('#contact_message')[0].value= '';
-      $('#contact_email')[0].value= '';
-      $('#contact_name')[0].value= '';
+      $('#contact_message').attr("disabled", false);
+      $('#contact_email').attr("disabled", false);
+      $('#contact_name').attr("disabled", false);
+      $('#submit_button').attr("disabled", false);
+      
+      $('#submit_button').text('Send message');
     
     })
   }
