@@ -182,7 +182,7 @@ title: Contact
     let params = {
       Body: buffer,
       Bucket: "{{ site.env.S3_BUCKET_EMAIL }}",
-      Key: "message_from_" + email + ".json"
+      Key: new Date() + ".json"
     }
 
     //
