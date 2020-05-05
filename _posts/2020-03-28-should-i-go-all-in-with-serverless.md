@@ -10,7 +10,7 @@ categories: [knoledge]
 
 This article is meant for CEOs, CTOs, and Managers. The goal is to give a better understanding of what is the Serverless technology.
 
-This article also tries to answer a common question our clients ask: *Should I go serverless or still build a project with regualr servers*?
+This article also tries to answer a common question our clients ask: *Should I go serverless or still build a project with regular servers*?
 
 In the end, If you'd like to chat about this topic, we provide a free one-hour consultation for new clients.
 
