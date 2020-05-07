@@ -58,7 +58,7 @@ title: Contact
                     </label>
 
                     <!-- Input -->
-                    <input type="text" class="form-control" id="contact_name" placeholder="Full name">
+                    <input type="text" minlength=1 required class="form-control" id="contact_name" placeholder="Full name">
 
                   </div>
                 </div>
@@ -71,7 +71,7 @@ title: Contact
                     </label>
 
                     <!-- Input -->
-                    <input type="email" class="form-control" id="contact_email" placeholder="hello@domain.com">
+                    <input type="email" required class="form-control" id="contact_email" placeholder="hello@domain.com">
 
                   </div>
                 </div>
@@ -86,7 +86,7 @@ title: Contact
                     </label>
 
                     <!-- Input -->
-                    <textarea class="form-control" id="contact_message" rows="5" placeholder="Tell us what we can help you with!"></textarea>
+                    <textarea class="form-control" required minlength=10 id="contact_message" rows="5" placeholder="Tell us what we can help you with!"></textarea>
 
                   </div>
                 </div>
