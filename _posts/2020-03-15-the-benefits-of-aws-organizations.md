@@ -95,11 +95,3 @@ This is just an example for once you get your project off the ground. You could 
 # To sum it up
 
 I hope this explanation will help you organize your thoughts around AWS Organizations and you'll know exactly what to ask for when talking to contractors or your team.
-
-# Contact
-
-Check our [contanct](/contact/) page to find out how to get in touch with us.
-
-# Sharing is Caring
-
-If you found this article useful, consider sharing it with someone you think could benefit from it.

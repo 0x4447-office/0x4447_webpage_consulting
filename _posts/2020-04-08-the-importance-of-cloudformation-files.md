@@ -41,11 +41,3 @@ Just copy and past what you need from what you have. And the best thing is that 
 # To sum it up
 
 I hope that I was able to make it easy to understand the benefits of this approach and that this AWS Service will help you streamline your DevOps work flow.
-
-# Contact
-
-Check our [contanct](/contact/) page to find out how to get in touch with us.
-
-# Sharing is Caring
-
-If you found this article useful, consider sharing it with someone you think could benefit from it.
