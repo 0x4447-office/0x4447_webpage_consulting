@@ -70,11 +70,3 @@ When the lease for the old types expires, you can switch the front end to two bi
 # To sum it up
 
 Stop using On-Demand servers for long-term work. Use them only for quick tests, maintenance, or temporary auto scaling to handle spikes in traffic during the day. For continuous work, use Reserved Instances - and spend your money elsewhere.
-
-# Contact
-
-Check our [contanct](/contact/) page to find out how to get in touch with us.
-
-# Sharing is Caring
-
-If you found this article useful, consider sharing it with someone you think could benefit from it.
