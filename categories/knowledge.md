@@ -1,9 +1,9 @@
 ---
 layout: category
 title: Articles - knoledge
-permalink: /articles/knoledge/
+permalink: /articles/knowledge/
 pagination: 
   enabled: true
-  category: knoledge
+  category: knowledge
   permalink: /:num/
 ---
