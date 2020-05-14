@@ -110,7 +110,7 @@ title: Contact
                     <label for="statePicker">
                       State
                     </label>
-                    <select class="selectpicker form-control" style="width:100%" name="statePicker" id="contact_state" data-live-search="true">
+                    <select class="selectpicker form-control" style="width:100%" name="statePicker" id="states" data-live-search="true">
                       <option value="Alabama">Alabama</option>
                       <option value="Alaska">Alaska</option>
                       <option value="Arizona">Arizona</option>
@@ -237,7 +237,7 @@ title: Contact
     let fullname = $('#contact_name')[0].value;
     let company_name = $('#contact_company_name')[0].value;
     let job_title = $('#contact_job_title')[0].value;
-    let contact_state = $('#contact_state')[0].value;
+    let state = $('#states')[0].value;
 
     //
     //  2.  Disable the fields
@@ -247,36 +247,52 @@ title: Contact
     $('#contact_name').attr("disabled", true);
     $('#contact_company_name').attr("disabled", true);
     $('#contact_job_title').attr("disabled", true);
-    $('#contact_state').attr("disabled", true);
+    $('#states').attr("disabled", true);
     $('#submit_button').attr("disabled", true);
     $('#submit_button').text('Sending...');
 
     //
-    //  3.  create a JSON object
+    //  3.  This array is used to format the body of the message.
+    //
+    let body_raw = [
+      message,
+      '\n',
+      '- Company Name: ' + company_name,
+      '- Job Title: ' + job_title,
+      '- State: ' + state,
+    ];
+
+    //
+    //  4.  Once we have the body formated how we want we join the array
+    //      in to a single string.
+    //  
+    let body = body_raw.join('\n');
+
+    console.log(body)
+    
+    //
+    //  5.  create a JSON object
     //
     let json = {
       "name": fullname,
       "email": email,
       "subject": "Email from Consulting page.",
-      "body": message,
-      "job_title": job_title,
-      "contact_state": contact_state,
-      "company_name": company_name
+      "body": body
     }
 
     //
-    //  4.  Stringify JSON
+    //  6.  Stringify JSON
     //
     let data = JSON.stringify(json)
 
     //
-    //  5.  Convert string to an ArrayBuffer
+    //  7.  Convert string to an ArrayBuffer
     //
     let encoder = new TextEncoder();
     let array_buffer = encoder.encode(data)
 
     //
-    //  6.  Prepare parameters for putObject function
+    //  8.  Prepare parameters for putObject function
     //
     let params = {
       Body: array_buffer,
@@ -285,7 +301,7 @@ title: Contact
     }
 
     //
-    //  7.  Call putObject to send json to S3 Bucket
+    //  9.  Call putObject to send json to S3 Bucket
     //
     s3.putObject(params, function(error, data) {
 
@@ -308,7 +324,7 @@ title: Contact
       $('#contact_name').attr("disabled", false);
       $('#contact_company_name').attr("disabled", false);
       $('#contact_job_title').attr("disabled", false);
-      $('#contact_state').attr("disabled", false);
+      $('#states').attr("disabled", false);
       $('#submit_button').attr("disabled", false);
       
       $('#contact_message').val("");
