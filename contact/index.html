@@ -58,7 +58,7 @@ title: Contact
                     </label>
 
                     <!-- Input -->
-                    <input type="text" minlength=1 required class="form-control" id="contact_name" placeholder="Full name">
+                    <input type="text" name="contactName" minlength=1 required class="form-control" id="contact_name" placeholder="Full name">
 
                   </div>
                 </div>
@@ -71,8 +71,98 @@ title: Contact
                     </label>
 
                     <!-- Input -->
-                    <input type="email" required class="form-control" id="contact_email" placeholder="hello@domain.com">
+                    <input type="email" name="contactEmail" required class="form-control" id="contact_email" placeholder="hello@domain.com">
 
+                  </div>
+                </div>
+              </div> <!-- / .row -->
+              <div class="row">
+                <div class="col-12 col-md-4">
+                  <div class="form-group mb-5">
+                    
+                    <!-- Label -->
+                    <label for="companyName">
+                      Company Name
+                    </label>
+
+                    <!-- Input -->
+                    <input type="text" name="companyName" required class="form-control" id="contact_company_name" placeholder="Company Name ">
+
+                  </div>
+                </div>
+                <div class="col-12 col-md-4">
+                  <div class="form-group mb-5">
+                    
+                    <!-- Label -->
+                    <label for="jobTitle">
+                      Job Title
+                    </label>
+
+                    <!-- Input -->
+                    <input type="text" name="jobTitle" required class="form-control" id="contact_job_title" placeholder="Job Title">
+
+                  </div>
+                </div>
+                <div class="col-12 col-md-4">
+                  <div class="form-group mb-5">
+                    
+                    <!-- Label -->
+                    <label for="statePicker">
+                      State
+                    </label>
+                    <select class="selectpicker form-control" style="width:100%" name="statePicker" id="states" data-live-search="true">
+                      <option value="Alabama">Alabama</option>
+                      <option value="Alaska">Alaska</option>
+                      <option value="Arizona">Arizona</option>
+                      <option value="Arkansas">Arkansas</option>
+                      <option value="California">California</option>
+                      <option value="Colorado">Colorado</option>
+                      <option value="Connecticut">Connecticut</option>
+                      <option value="Delaware">Delaware</option>
+                      <option value="District Of Columbia">District Of Columbia</option>
+                      <option value="Florida">Florida</option>
+                      <option value="Georgia">Georgia</option>
+                      <option value="Hawaii">Hawaii</option>
+                      <option value="Idaho">Idaho</option>
+                      <option value="Illinois">Illinois</option>
+                      <option value="Indiana">Indiana</option>
+                      <option value="Iowa">Iowa</option>
+                      <option value="Kansas">Kansas</option>
+                      <option value="Kentucky">Kentucky</option>
+                      <option value="Louisiana">Louisiana</option>
+                      <option value="Maine">Maine</option>
+                      <option value="Maryland">Maryland</option>
+                      <option value="Massachusetts">Massachusetts</option>
+                      <option value="Michigan">Michigan</option>
+                      <option value="Minnesota">Minnesota</option>
+                      <option value="Mississippi">Mississippi</option>
+                      <option value="Missouri">Missouri</option>
+                      <option value="Montana">Montana</option>
+                      <option value="Nebraska">Nebraska</option>
+                      <option value="Nevada">Nevada</option>
+                      <option value="New Hampshire">New Hampshire</option>
+                      <option value="New Jersey">New Jersey</option>
+                      <option value="New Mexico">New Mexico</option>
+                      <option value="New York">New York</option>
+                      <option value="North Carolina">North Carolina</option>
+                      <option value="North Dakota">North Dakota</option>
+                      <option value="Ohio">Ohio</option>
+                      <option value="Oklahoma">Oklahoma</option>
+                      <option value="Oregon">Oregon</option>
+                      <option value="Pennsylvania">Pennsylvania</option>
+                      <option value="Rhode Island">Rhode Island</option>
+                      <option value="South Carolina">South Carolina</option>
+                      <option value="South Dakota">South Dakota</option>
+                      <option value="Tennessee">Tennessee</option>
+                      <option value="Texas">Texas</option>
+                      <option value="Utah">Utah</option>
+                      <option value="Vermont">Vermont</option>
+                      <option value="Virginia">Virginia</option>
+                      <option value="Washington">Washington</option>
+                      <option value="West Virginia">West Virginia</option>
+                      <option value="Wisconsin">Wisconsin</option>
+                      <option value="Wyoming">Wyoming</option>
+                    </select>
                   </div>
                 </div>
               </div> <!-- / .row -->
@@ -145,6 +235,9 @@ title: Contact
     let message = $('#contact_message')[0].value;
     let email = $('#contact_email')[0].value;
     let fullname = $('#contact_name')[0].value;
+    let company_name = $('#contact_company_name')[0].value;
+    let job_title = $('#contact_job_title')[0].value;
+    let state = $('#states')[0].value;
 
     //
     //  2.  Disable the fields
@@ -152,32 +245,54 @@ title: Contact
     $('#contact_message').attr("disabled", true);
     $('#contact_email').attr("disabled", true);
     $('#contact_name').attr("disabled", true);
+    $('#contact_company_name').attr("disabled", true);
+    $('#contact_job_title').attr("disabled", true);
+    $('#states').attr("disabled", true);
     $('#submit_button').attr("disabled", true);
     $('#submit_button').text('Sending...');
 
     //
-    //  3.  create a JSON object
+    //  3.  This array is used to format the body of the message.
+    //
+    let body_raw = [
+      message,
+      '\n',
+      '- Company Name: ' + company_name,
+      '- Job Title: ' + job_title,
+      '- State: ' + state,
+    ];
+
+    //
+    //  4.  Once we have the body formated how we want we join the array
+    //      in to a single string.
+    //  
+    let body = body_raw.join('\n');
+
+    console.log(body)
+    
+    //
+    //  5.  create a JSON object
     //
     let json = {
       "name": fullname,
       "email": email,
       "subject": "Email from Consulting page.",
-      "body": message
+      "body": body
     }
 
     //
-    //  4.  Stringify JSON
+    //  6.  Stringify JSON
     //
     let data = JSON.stringify(json)
 
     //
-    //  5.  Convert string to an ArrayBuffer
+    //  7.  Convert string to an ArrayBuffer
     //
     let encoder = new TextEncoder();
     let array_buffer = encoder.encode(data)
 
     //
-    //  6.  Prepare parameters for putObject function
+    //  8.  Prepare parameters for putObject function
     //
     let params = {
       Body: array_buffer,
@@ -186,7 +301,7 @@ title: Contact
     }
 
     //
-    //  7.  Call putObject to send json to S3 Bucket
+    //  9.  Call putObject to send json to S3 Bucket
     //
     s3.putObject(params, function(error, data) {
 
@@ -207,9 +322,14 @@ title: Contact
       $('#contact_message').attr("disabled", false);
       $('#contact_email').attr("disabled", false);
       $('#contact_name').attr("disabled", false);
+      $('#contact_company_name').attr("disabled", false);
+      $('#contact_job_title').attr("disabled", false);
+      $('#states').attr("disabled", false);
       $('#submit_button').attr("disabled", false);
       
       $('#contact_message').val("");
+      $('#contact_company_name').val("");
+      $('#contact_job_title').val("");
       $('#contact_email').val("");
       $('#contact_name').val("");
       
