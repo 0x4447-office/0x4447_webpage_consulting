@@ -208,9 +208,9 @@ title: Contact
   //	Get temporary credentials from AWS.
   //
   AWS.config.update({
-    region: "{{ site.env.AWS_REGION }}",
+    region: "us-east-1",
     credentials: new AWS.CognitoIdentityCredentials({
-      IdentityPoolId: "{{ site.env.IDENTITY_POOL_ID }}"
+      IdentityPoolId: "us-east-1:871c0d0b-3977-460d-bb91-acf703669f76"
     })
   });
   
@@ -293,7 +293,7 @@ title: Contact
     //
     let params = {
       Body: array_buffer,
-      Bucket: "{{ site.env.S3_BUCKET_EMAIL }}",
+      Bucket: "0x4447-web-us-east-1-smtp",
       Key: Math.round((new Date()).getTime() / 1000) + ".json"
     }
 
