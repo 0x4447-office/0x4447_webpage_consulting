@@ -8,6 +8,7 @@ phases:
       - echo AWS_REGION=$AWS_REGION >> .env
       - echo IDENTITY_POOL_ID=$IDENTITY_POOL_ID >> .env
       - echo S3_BUCKET_EMAIL=$S3_BUCKET_EMAIL >> .env
+      - echo .env
       - gem install bundler
   pre_build:
     commands:
