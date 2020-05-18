@@ -277,7 +277,6 @@ title: Contact
       "subject": "Email from Consulting page.",
       "body": body
     }
-
     //
     //  6.  Stringify JSON
     //
@@ -309,29 +308,9 @@ title: Contact
       }
       
       //
-      //  1. Show Alert saying data sent successfully
+      //  1.  Send user to thank you page after successful submit.
       //
-      $('#alert').attr("hidden", false);
-      $('#alert').fadeOut(4000);
-      
-      //
-      //  2.  Enable and clean input fields
-      //
-      $('#contact_message').attr("disabled", false);
-      $('#contact_email').attr("disabled", false);
-      $('#contact_name').attr("disabled", false);
-      $('#contact_company_name').attr("disabled", false);
-      $('#contact_job_title').attr("disabled", false);
-      $('#states').attr("disabled", false);
-      $('#submit_button').attr("disabled", false);
-      
-      $('#contact_message').val("");
-      $('#contact_company_name').val("");
-      $('#contact_job_title').val("");
-      $('#contact_email').val("");
-      $('#contact_name').val("");
-      
-      $('#submit_button').text('Send message');
+      window.location.replace('/contact/thankyou/')
     
     })
   }
