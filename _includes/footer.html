@@ -30,21 +30,13 @@
 
             <!-- List -->
             <ul class="list-unstyled text-muted mb-0">
+            {% for nav_item in site.data.navbar %}
               <li class="mb-3">
-                <a href="/" class="text-reset">
-                  Home
+                <a class="text-reset" href="{{ nav_item.url }}">
+                  {{ nav_item.name }}     
                 </a>
               </li>
-              <li class="mb-3">
-                <a href="/contact.html" class="text-reset">
-                  Contact
-                </a>
-              </li>
-              <li class="mb-3">
-                <a href="/articles/" class="text-reset">
-                  Articles
-                </a>
-              </li>
+            {% endfor %}
             </ul>
 
           </div>
