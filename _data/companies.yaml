@@ -1,4 +1,24 @@
-- company_name: First Company
-  description: First Company Description
-  logo_name: /assets/img/clients/incomyz.png
+- company_name: INCOMYZ
+  description: Highly customized and precise retirement plans.
+  logo_name: incomyz.png
   color: "#3c2270"
+- company_name: VOCATALES
+  description: Discover the wondrous new world of storytelling.
+  logo_name: vocatales.png
+  color: "#FF5A5F"
+- company_name: SECURITY 7
+  description: Managed Cybersecurity Services.
+  logo_name: security7.svg
+  color: "#79bc5d"
+- company_name: MARINE CENTRAL
+  description: Marine Services Database.
+  logo_name: marinecentral.svg
+  color: "#8ac4e9"
+- company_name: SECUR
+  description: Cloud based physical-access control.
+  logo_name: secur.jpg
+  color: "#478eca"
+- company_name: TONIC HQ
+  description: Building your staffing business through technology.
+  logo_name: tonichq.png
+  color: "#18afa3"
