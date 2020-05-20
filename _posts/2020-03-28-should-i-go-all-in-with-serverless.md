@@ -1,12 +1,11 @@
 ---
 title: Should I go all in with Serverless?
 cover: /assets/img/articles/should-i-go-all-in-with-serverless/cover.png
+header: /assets/img/articles/should-i-go-all-in-with-serverless/header.png
 layout: post
 subtitle: The goal is to give a better understanding of what is the Serverless technology.
 categories: [knowledge]
 ---
-
-![How to lower EC2 Costs](/assets/img/articles/should-i-go-all-in-with-serverless/header.png)
 
 This article is meant for CEOs, CTOs, and Managers. The goal is to give a better understanding of what is the Serverless technology.
 
