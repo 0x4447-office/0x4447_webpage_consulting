@@ -253,7 +253,12 @@ meta-description: Contact Page
     $('#submit_button').text('Sending...');
 
     //
-    //  3.  This array is used to format the body of the message.
+    //  3.  Get the time zone the browser is in.
+    //
+    let tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+    //
+    //  4.  This array is used to format the body of the message.
     //
     let body_raw = [
       message,
@@ -261,16 +266,17 @@ meta-description: Contact Page
       '- Company Name: ' + company_name,
       '- Job Title: ' + job_title,
       '- State: ' + state,
+      '- Time zone: ' + tz
     ];
 
     //
-    //  4.  Once we have the body formated how we want we join the array
+    //  5.  Once we have the body formated how we want we join the array
     //      in to a single string.
     //  
     let body = body_raw.join('\n');
     
     //
-    //  5.  create a JSON object
+    //  6.  create a JSON object
     //
     let json = {
       "name": fullname,
@@ -279,18 +285,18 @@ meta-description: Contact Page
       "body": body
     }
     //
-    //  6.  Stringify JSON
+    //  7.  Stringify JSON
     //
     let data = JSON.stringify(json)
 
     //
-    //  7.  Convert string to an ArrayBuffer
+    //  8.  Convert string to an ArrayBuffer
     //
     let encoder = new TextEncoder();
     let array_buffer = encoder.encode(data)
 
     //
-    //  8.  Prepare parameters for putObject function
+    //  9.  Prepare parameters for putObject function
     //
     let params = {
       Body: array_buffer,
@@ -299,7 +305,7 @@ meta-description: Contact Page
     }
 
     //
-    //  9.  Call putObject to send json to S3 Bucket
+    //  10.  Call putObject to send json to S3 Bucket
     //
     s3.putObject(params, function(error, data) {
 
