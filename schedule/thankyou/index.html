@@ -5,56 +5,47 @@ meta-img: ''
 meta-description: Thank You
 ---
 <div class="container" style='padding-top:10%' >
-<div class="col-12">
-<center>
-  <h1>Thank You!</h1>
-  <h2 class='text-gray-700'>We've got your appointment.</h2>
-  <p class='text-gray-900' id="event-start-details"></p>
-</center>
-</div>
+  <div class="col-12">
+    <center>
+      
+      <h1>Thank You!</h1>
+      <h2 class='text-gray-700'>We've got your appointment.</h2>
+      <p class='text-gray-900'>Your meeting starts at: <strong><u><span id="event-start-details">N/A</span></u></strong> your local time.</p>
+
+    </center>
+  </div>
 </div>
 
 <script>
+
   //
   //  1.  Call get_url_parameters function to get a dictionary
-  //  of current parameters in the url.
+  //      of current parameters in the url.
   //
-  let parameters = get_url_parameters()
+  let parameters = get_url_parameters();
   
   //
   //  2.  If event_start_time is given in URLs, then do below.
   //
-  if('event_start_time' in parameters)
+  if(parameters.event_start_time)
   {
     //
     //  1.  Capture event_start_time parameter to a variable
-    //  for readability.
+    //      for readability.
     //
-    let event_start_time = parameters['event_start_time']
+    let event_start_time = parameters['event_start_time'];
 
     //
     //  2.  Decode the parameter value since it was encoded in URL.
     //
-    event_start_time = decodeURIComponent(event_start_time)
+    event_start_time = decodeURIComponent(event_start_time);
 
-    //
-    //  3.  Lastly, convert it to a Date Object.
-    //
-    event_start_time = Date(event_start_time)
+    let no_time_zone = event_start_time.split('+')[0].replace(/T/g, ' ');
     
     //
     //  4.  Display the result.
     //
-    $('#event-start-details').text('Your meeting starts at '+start_time);
-
-  }
-  
-  //
-  //  3.  If not in parameters, log to console and don't show anything.
-  //
-  if( !('event_start_time' in parameters) )
-  {
-    console.info(" Event Start Time wasn't found in parameters. ")
+    $('#event-start-details').text(no_time_zone);
   }
 
 </script>
