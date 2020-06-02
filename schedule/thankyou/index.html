@@ -40,6 +40,9 @@ meta-description: Thank You
     //
     event_start_time = decodeURIComponent(event_start_time);
 
+    //
+    //  3.  Remove the letter T from the string.
+    //
     let no_time_zone = event_start_time.split('+')[0].replace(/T/g, ' ');
     
     //
