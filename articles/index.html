@@ -1,8 +1,7 @@
 ---
 layout: sticky-footer-default
 title: Articles
-meta-img: ''
-meta-description: 'Articles Page'
+meta_description: 'Articles Page'
 ---
 <section class="pt-6 pt-md-8 pb-8 mb-md-8">
   <div class="container">
@@ -14,19 +13,19 @@ meta-description: 'Articles Page'
     {% assign idx = forloop.index | minus:1 | modulo:4 %}
     {% assign curr_color = color | split:',' | slice:idx %}
         <div class="col-md-4 col-12 mt-5">
-                <!-- Card -->
-                <div class="card card-border shadow-light-lg lift lift-lg" style="border-top-color: {{curr_color}};">
-                  <div class="card-body text-center">
-                    <!-- Text -->
-                    <h2 class="text-gray-900 mb-5" style="color:{{ curr_color }}">
-                      <div class="container">
-                        {{ category | first | split:"-" | join:" " }}
-                      </div>
-                    </h2>
-                    <!-- Link -->
-                    <a href="/articles/{{category | first}}" style="color:{{curr_color}};">Show More</a>
-                  </div>
+          <!-- Card -->
+          <div class="card card-border shadow-light-lg lift lift-lg" style="border-top-color: {{curr_color}};">
+            <div class="card-body text-center">
+              <!-- Text -->
+              <h2 class="text-gray-900 mb-5" style="color:{{ curr_color }}">
+                <div class="container">
+                  {{ category | first | split:"-" | join:" " }}
                 </div>
+              </h2>
+              <!-- Link -->
+              <a href="/articles/{{category | first}}" style="color:{{curr_color}};">Show More</a>
+            </div>
+          </div>
         </div>
       {% endfor %}
   </div>
