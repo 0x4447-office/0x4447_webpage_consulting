@@ -10,9 +10,9 @@ layout: default
             <div class="row no-gutters shadow-light-lg">
               <div class="col-12 col-md-6">
                 <!-- Image (mobile) -->
-                <img src={{ post.cover }} class="img-fluid rounded" alt="{{ post.title }}">
+                <img src={{ post.image }} class="img-fluid rounded" alt="{{ post.title }}">
                 <!-- Image -->
-                <div src={{ post.cover }} class="position-absolute w-100 h-30 bg-cover rounded-left d-none d-md-block" alt="{{ post.title }}">
+                <div src={{ post.image }} class="position-absolute w-100 h-30 bg-cover rounded-left d-none d-md-block" alt="{{ post.title }}">
                 </div>
               </div>
               <div class="col-12 col-md-6">
@@ -24,7 +24,7 @@ layout: default
                 </h2>
                   <!-- Text -->
                   <p class="mb-5 mb-md-6 pt-5 text-gray-700">
-                    {{ post.subtitle }}
+                    {{ post.description }}
                   </p>
                   <!-- Footer -->
                   <footer class="blockquote-footer bottom-0">

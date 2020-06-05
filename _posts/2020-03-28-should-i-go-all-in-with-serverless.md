@@ -1,9 +1,9 @@
 ---
 title: Should I go all in with Serverless?
-cover: /assets/img/articles/should-i-go-all-in-with-serverless/cover.png
+image: /assets/img/articles/should-i-go-all-in-with-serverless/cover.png
 header: /assets/img/articles/should-i-go-all-in-with-serverless/header.png
 layout: post
-subtitle: The goal is to give a better understanding of what is the Serverless technology.
+description: The goal is to give a better understanding of what is the Serverless technology.
 categories: [knowledge]
 ---
 
