@@ -1,7 +1,8 @@
 ---
 layout: category
-title: Articles - knoledge
+title: Articles - Knowledge
 permalink: /articles/knowledge/
+meta_description: Articles - Knowledge Category
 pagination: 
   enabled: true
   category: knowledge
