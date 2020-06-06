@@ -1,5 +1,6 @@
  <head>
-    <!-- Required meta tags -->
+
+        <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -11,11 +12,10 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
     
-    <!-- Bootstrap Select -->
-    <!-- Latest compiled and minified CSS -->
+        <!-- Bootstrap Select -->
     <link rel="stylesheet" href="/assets/css/bootstrap-select.min.css">
 
-    <!-- Libs CSS -->
+        <!-- Libs CSS -->
     <link rel="stylesheet" href="/assets/fonts/Feather/feather.css">
     <link rel="stylesheet" href="/assets/libs/flickity/dist/flickity.min.css">
     <link rel="stylesheet" href="/assets/libs/flickity-fade/flickity-fade.css">
@@ -23,14 +23,29 @@
     <link rel="stylesheet" href="/assets/libs/jarallax/dist/jarallax.css">
     <link rel="stylesheet" href="/assets/libs/highlightjs/styles/vs2015.css">
     <link rel="stylesheet" href="/assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
-    <!-- Helper functions -->
-    <script src="/assets/js/helpers.js"></script>
-    <!-- J Query -->
-    <script src="/assets/libs/jquery/dist/jquery.min.js"></script>
-    <!-- Theme CSS -->
-    <link rel="stylesheet" href="/assets/css/theme.min.css">
-
-    <title>0x4447, LLC - Consulting - {{ page.title }}</title>
     
+        <!-- Theme CSS -->
+    <link rel="stylesheet" href="/assets/css/theme.min.css">
+        
+        <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/custom.css">
+
+        <!-- Helper functions -->
+    <script src="/assets/js/helpers.js"></script>
+
+        <!-- J Query -->
+    <script src="/assets/libs/jquery/dist/jquery.min.js"></script>
+    
+    {% if page.categories  %}
+
+        <title>0x4447, LLC - Consulting - Articles - {{ page.categories | first }} - {{ page.title }}</title>
+        
+    {% else %}
+
+        <title>0x4447, LLC - Consulting - {{ page.title }}</title>
+
+    {% endif %}
+
     {% seo %}
+
 </head>
