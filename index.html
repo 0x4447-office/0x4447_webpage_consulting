@@ -308,7 +308,7 @@ image: /assets/img/index/illustration-4.png
                     
                     <!-- Link -->
                     {% if company.url %}
-                      <a href={{ company.url.href }} name={{ company.url.name }} style="color: {{ company.color }}">Read more</a>
+                      <a target="blank_" href={{ company.url.href }} name={{ company.url.name }} style="color: {{ company.color }}">Read more</a>
                     {% else %}
                       <span style="color:red">Work in progress</span> 
                     {% endif %}
