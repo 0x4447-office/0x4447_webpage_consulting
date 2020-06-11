@@ -2,41 +2,38 @@
   description: Highly customized and precise retirement plans.
   logo_name: incomyz.png
   color: "#3c2270"
-  url:
-    name: "INCOMYZ"
-    href: "#"
 - company_name: VOCATALES
   description: Discover the wondrous new world of storytelling.
   logo_name: vocatales.png
   color: "#FF5A5F"
   url:
-    name: "VOCATALES"
-    href: "#"
+    name: "vocatales.com"
+    href: "https://www.vocatales.com/"
 - company_name: SECURITY 7
   description: Managed Cybersecurity Services.
   logo_name: security7.svg
   color: "#79bc5d"
   url:
-    name: "SECURITY 7"
-    href: "#"
+    name: "security7.net"
+    href: "https://www.security7.net/"
 - company_name: MARINE CENTRAL
   description: Marine Services Database for all sailors.
   logo_name: marinecentral.svg
   color: "#8ac4e9"
   url:
-    name: "MARINE CENTRAL"
-    href: "#"
-- company_name: SECUR
+    name: "marinecentral.com"
+    href: "https://marinecentral.com/"
+- company_name: SEQUR
   description: Cloud based physical-access control.
   logo_name: secur.jpg
   color: "#478eca"
   url:
-    name: "SECUR"
-    href: "#"
+    name: "sequr.io"
+    href: "https://www.sequr.io/"
 - company_name: TONIC HQ
   description: Building your staffing business through technology.
   logo_name: tonichq.png
   color: "#18afa3"
   url:
-    name: "TONIC HQ"
-    href: "#"
+    name: "tonichq.com"
+    href: "https://tonichq.com/"
