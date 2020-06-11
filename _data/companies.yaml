@@ -14,9 +14,9 @@
   description: Marine Services Database for all sailors.
   logo_name: marinecentral.svg
   color: "#8ac4e9"
-- company_name: SECUR
+- company_name: SEQUR
   description: Cloud based physical-access control.
-  logo_name: secur.jpg
+  logo_name: sequr.png
   color: "#478eca"
 - company_name: TONIC HQ
   description: Building your staffing business through technology.
