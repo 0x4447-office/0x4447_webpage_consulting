@@ -3,11 +3,11 @@ title: Should I go all in with Serverless?
 image: /assets/img/articles/should-i-go-all-in-with-serverless/cover.png
 header: /assets/img/articles/should-i-go-all-in-with-serverless/header.png
 layout: post
-description: The goal is to give a better understanding of what is the Serverless technology.
+description: The goal is to better understand Serverless technology and how it affects your costs as your project grows.
 categories: [knowledge]
 ---
 
-This article is meant for CEOs, CTOs, and Managers. The goal is to give a better understanding of what is the Serverless technology.
+This article is meant for CEOs, CTOs, and Managers. The goal is to better understand Serverless technology and how it affects your costs as your project grows.
 
 This article also tries to answer a common question our clients ask: *Should I go serverless or still build a project with regular servers*?
 

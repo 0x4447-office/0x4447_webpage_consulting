@@ -3,11 +3,11 @@ title: How to lower EC2 Costs
 image: /assets/img/articles/how-to-lower-ec2-costs/cover.png
 header: /assets/img/articles/how-to-lower-ec2-costs/header.png
 layout: post
-description: The goal is to show you how to lower your AWS costs by 40 or even 75 percent (depending on the instance type and plan) within few minutes.
+description: The goal is to show you how to lower your AWS costs by 40 or even 75 percent within a few minutes (depending on the instance type and plan).
 categories: [how_to]
 ---
 
-This article is meant for CEOs, CTOs, and Managers. The goal is to show you how to lower your AWS costs by 40 or even 75 percent (depending on the instance type and plan) within few minutes
+This article is meant for CEOs, CTOs, and Managers. The goal is to show you how to lower your AWS costs by 40 or even 75 percent within a few minutes (depending on the instance type and plan).
 
 This article also tries to answer a common question our clients ask: *What options do I have at my disposal to lower the AWS bill*?
 

@@ -3,11 +3,11 @@ title: The Importance of CloudFormation Files
 image: /assets/img/articles/the-importance-of-cloudformation-files/cover.png
 header: /assets/img/articles/the-importance-of-cloudformation-files/header.png
 layout: post
-description: The goal is to give a better understanding of what CloudFormation is and why every AWS project should be done only through a file like this.
+description: The goal is to give a better understanding of what CloudFormation is and why it should be used for every AWS project.
 categories: [knowledge]
 ---
 
-This article is meant for CEOs, CTOs, and Managers. The goal is to give a better understanding of what CloudFormation is and why every AWS project should be done only through a file like this. 
+This article is meant for CEOs, CTOs, and Managers. The goal is to give a better understanding of what CloudFormation is and why it should be used for every AWS project. 
 
 This article also tries to answer a common question our clients ask: *Why spend time making a CloudFormation file*?
 
