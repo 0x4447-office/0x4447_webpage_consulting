@@ -171,6 +171,23 @@ description: Please describe your situation and how 0x4447 can meet your expecta
                   <div class="form-group mb-7 mb-md-9">
                     
                     <!-- Label -->
+                    <label for="contactTags">
+                      Tags
+                    </label>
+
+                    <!-- Input -->
+                    <select class="selectpicker form-control" style="width:50%" name="contactTags" id="tags" required data-live-search="true" multiple>
+  
+                    </select>
+
+                  </div>
+                </div>
+              </div> <!-- / .row -->
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group mb-7 mb-md-9">
+                    
+                    <!-- Label -->
                     <label for="contactMessage">
                       What can we help you with?
                     </label>
@@ -204,8 +221,34 @@ description: Please describe your situation and how 0x4447 can meet your expecta
 
 <script>
 
+  {%for category in site.data.aws_services%}
+
+    {% for service in category%}
+
+      {% for s in service %}
+
+        //
+        //  1.  If service name actually a string and not None
+        //
+        if('{{s.name}}'.length>1)
+        {
+          //
+          //  1.  Create option elements from service names
+          //
+          let option = $('<option></option>').text('{{s.name}}').attr('value','{{s.name}}')[0]
+          //
+          //  2.  Populate select element with each option created.
+          //
+          $('#tags').append(option)
+        }
+      {% endfor %}
+
+    {% endfor %}
+
+  {%endfor%}
+
   //
-  //	Get temporary credentials from AWS.
+  //  1.  Get temporary credentials from AWS.
   //
   AWS.config.update({
     region: "us-east-1",
@@ -215,14 +258,14 @@ description: Please describe your situation and how 0x4447 can meet your expecta
   });
   
   //
-  //  Initializing s3 object
+  //  2.  Initializing s3 object
   //
   let s3 = new AWS.S3({
     apiVersion: '2006-03-01'
   });
 
   // 
-  //  1.  Function to get field values
+  //  3.  Function to get field values
   //
 
   function send_message(event)
@@ -238,7 +281,7 @@ description: Please describe your situation and how 0x4447 can meet your expecta
     let company_name = $('#contact_company_name')[0].value;
     let job_title = $('#contact_job_title')[0].value;
     let state = $('#states')[0].value;
-
+    let tags = $('#tags')[0].nextElementSibling.title;
     //
     //  2.  Disable the fields
     //
@@ -250,7 +293,8 @@ description: Please describe your situation and how 0x4447 can meet your expecta
     $('#states').attr("disabled", true);
     $('#submit_button').attr("disabled", true);
     $('#submit_button').text('Sending...');
-
+    $('#tags').attr("disabled",true);
+  
     //
     //  3.  Get the time zone the browser is in.
     //
@@ -265,7 +309,8 @@ description: Please describe your situation and how 0x4447 can meet your expecta
       '- Company Name: ' + company_name,
       '- Job Title: ' + job_title,
       '- State: ' + state,
-      '- Time zone: ' + tz
+      '- Time zone: ' + tz,
+      '- Tags: ' + tags
     ];
 
     //
@@ -320,5 +365,4 @@ description: Please describe your situation and how 0x4447 can meet your expecta
     
     })
   }
-
 </script>
