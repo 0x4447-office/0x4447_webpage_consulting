@@ -1,3 +1,10 @@
+- company_name: Atkins
+  description: Exprt Sinus Care. Your Solution for Sinus Problems
+  logo_name: atkinssinus.png
+  color: "#fcb555"
+  url:
+    name: "atkinssinus.com"
+    href: "https://www.atkinssinus.com"
 - company_name: Incomyz
   description: Highly customized and precise retirement plans.
   logo_name: incomyz.png
