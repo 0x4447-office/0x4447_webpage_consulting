@@ -16,6 +16,13 @@
   url:
     name: "vocatales.com"
     href: "https://www.vocatales.com/"
+- company_name: Webcorp
+  description: The Job Application... Reinvented
+  logo_name: webcorp.png
+  color: "#38a2ff"
+  url:
+    name: "webcorp.com"
+    href: "https://webcorp.com/"
 - company_name: Security 7
   description: Managed Cybersecurity Services.
   logo_name: security7.svg
@@ -23,13 +30,6 @@
   url:
     name: "security7.net"
     href: "https://www.security7.net/"
-- company_name: Marine Central
-  description: Marine Services Database for all sailors.
-  logo_name: marinecentral.jpg
-  color: "#8ac4e9"
-  url:
-    name: "marinecentral.com"
-    href: "https://marinecentral.com/"
 - company_name: Sequr
   description: Cloud based physical-access control.
   logo_name: sequr.png
@@ -37,6 +37,13 @@
   url:
     name: "sequr.io"
     href: "https://www.sequr.io/"
+- company_name: Marine Central
+  description: Marine Services Database for all sailors.
+  logo_name: marinecentral.jpg
+  color: "#8ac4e9"
+  url:
+    name: "marinecentral.com"
+    href: "https://marinecentral.com/"
 - company_name: Tonic HQ
   description: Building your staffing business through technology.
   logo_name: tonichq.png
