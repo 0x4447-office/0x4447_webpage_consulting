@@ -25,7 +25,7 @@ This way...
 
 - it's much easier to update your configuration or service, because you just have to edit one value. You will also know the exact location, instead of losing yourself to an ever changing web UI and you end up wasting time looking for an option that's buried somewhere.
 - if the file is committed to GitHub, you can track and monitor the changes to the stack over time.
-- you can deploy the exact stack described in the JSON file to any AWS account. This is ideal when you have multiple environments, such as one AWS account for development and another for production (learn about AWS Organizations here). What you test in one account, you can  then deploy in production within a few minutes and keep track of all your changes.
+- you can deploy the exact stack described in the JSON file to any AWS account. This is ideal when you have multiple environments, such as one AWS account for development and another for production (learn about [AWS Organizations](https://consulting.0x4447.com/articles/knowledge/the-benefits-of-aws-organizations.html) here). What you test in one account, you can  then deploy in production within a few minutes and keep track of all your changes.
 
 # More Flexibility
 
