@@ -7,29 +7,26 @@ description: The goal is to show you the benefits of managing your AWS infrastru
 categories: [knowledge]
 ---
 
-This article is meant for CEOs, CTOs, and Managers. The goal is to show you the benefits of managing your AWS infrastructure using Organizations.
-
-This article also tries to answer a common question our clients ask: *Why spend the time setting up AWS Organizations*?
-
-In the end, If you'd like to chat about this topic, we provide a free one-hour consultation for new clients.
+This article is meant for CEOs, CTOs, and managers who want to understand the benefits of managing AWS infrastructure using Organizations, by answering a common question clients have: *Why spend the time setting up AWS Organizations?* 
 
 # Why I wrote this article
 
-I've worked with countless clients with recurring issues that leave them in a corner and having a hard time with:
+I have worked with countless clients on recurring issues that leave them feeling trapped and struggling how to:
 
 - building new features
 - understanding where they are
 - figuring out whether their infrastructure is secure
 - running a stable product
+- Understand their costs
 
-My hope is that this article will help you understand the importance of being organized from the start with AWS and avoiding the extra costs and time involved in reorganizing everything.
+I am confident that this article will help you understand how important is to use AWS at the outset so that you start off organized and thus avoid the extra time and costs involved in having to later reorganize.
 
-# Key features of AWS organizations
+# Key features of AWS Organizations
 
-- You have one bill to pay for all other AWS accounts within the organization.
+- You have one bill to pay for all of your AWS accounts within Organizations.
 - You get a detailed breakdown of your bill per AWS account, which helps showcase where your money goes.
-- You can control access to AWS resources for each individual AWS account from the main organization account.
-- You can apply policies from the org account down to all the sub-accounts.
+- You can control access to AWS resources for each individual AWS account from the main Organizations account.
+- You can apply policies from the Organizations account down to all the sub-accounts.
 - You can organize the sub-accounts in Organization Unit (OU) to help you further organize the company in AWS and improve security.
 
 # The benefits
@@ -37,41 +34,41 @@ My hope is that this article will help you understand the importance of being or
 It's much easier to:
 
 - Do audits
-- Set the right policies and access to resources
+- Set the right policies and access resources
 - Create test environments
 - Understand what each AWS account has for newcomers
-- Easier to lower costs
+- Lower costs by exposing hidden costs
 
 # The bare-minimum setup
 
 I always recommend this setup to my clients:
 
-- In **Development** you test and work on the project. Here, you have the most freedom to use different resources.
-- The D**emo** account is where you can showcase the latest features that are ready to go into production. This is your last chance to see if you like what's been done. It can also be used to perform demos for clients.
+- In **Development** you test and work on the project. Here you have the most freedom to use different resources.
+- The **Demo** account is where you can showcase the latest features that are ready to go into production. This is your last chance to see if you like what's been done. It can also be used to perform demos for clients.
 - On the other hand, **Production** is for your customers with live data.
 
-The **Demo** and **Production** environments are locked down to the point that nobody but the main admin has access to them. 
+The **Demo** and **Production** environments are locked down to the point that no one but the main admin has access to them. 
 
-All accounts have 100 percent automatic deployment and no access to the servers over SSH or other means- no exceptions. 
+All accounts have 100 percent automatic deployment and do not have access to the servers over SSH or other means – no exceptions. 
 
 # A word of caution
 
-Having said all this, here's an example of what will happen if you start the wrong way, based on clients I've worked with over the years.
+Having said all this, here's an example of what will happen if you start the wrong way, based on interacting with clients over the years.
 
-Depending on project size, creating a CloudFormation from scratch takes an average of one month, then two more weeks of creating all the AWS accounts and deploying the stack using the created CloudFormation files. That's where all the final testing and final tuning happens.
+Depending on project size, creating a CloudFormation from scratch takes an average of one month, and then it takes two more weeks to create all the AWS accounts to deploy the stack using the created CloudFormation files. This is the stage where all the final testing and final tuning happens.
 
-Lastly, you'll start running your code in the new environment and with a new work flow. A lot of the project's bugs will surface in this moment because at this point nobody can log in to the servers to perform ad hoc changes (also known as massaging the code) . Now all the work a developer told himself he'd copy later in the repository will show up at this stage, and how long will it take to fix everything? It depends on the project. From my experience, it takes a team of developers three months to normalize everything and adapt to the more organized environment.
+Lastly, you'll start running your code in the new environment with a new work flow. A lot of the project's bugs will surface at this stage, because up to this point no one could log into the servers to perform ad hoc changes (also known as massaging the code). Now all the work a developer told himself he'd copy later in the repository shows up at this stage. How long will it take to fix everything? It depends on the project. From my experience, it takes a team of developers three months to normalize everything and adapt to the more organized environment.
 
 # What else should I know?
 
 - You're limited to five nested OU, so design your infrastructure accordingly.
-- You can  use CloudFormation to describe your organization.
+- You can use CloudFormation to describe your organization.
 - You can programmatically request a limit increase.
-- Converting the main account to an organization won't make any changes to what you already have in the account.
+- Converting the main account to an Organization won't make any changes to what you already have in the account.
 
-# An example of a more complex organization
+# An example of a more complex Organization
 
-This is just an example for once you get your project off the ground. You could extend your organization this way later on:
+This is an example for once you get your project off the ground. You could extend your Organization this way later on:
 
 - Application (OU):
     - Development - (AWS Account)
@@ -93,4 +90,4 @@ This is just an example for once you get your project off the ground. You could 
 
 # To sum it up
 
-I hope this explanation will help you organize your thoughts around AWS Organizations and you'll know exactly what to ask for when talking to contractors or your team.
+I hope this explanation helps you organize your thoughts around AWS Organizations so that you can know exactly what to ask for when talking to contractors or your team.
