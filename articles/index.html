@@ -12,7 +12,7 @@ meta_description: 'Articles Page'
     {% for category in site.categories %}
     {% assign idx = forloop.index | minus:1 | modulo:4 %}
     {% assign curr_color = color | split:',' | slice:idx %}
-        <div class="col-12 mt-5">
+        <div class="col-md-6 col-12 mt-5">
           <!-- Card -->
           <div class="card card-border shadow-light-lg lift lift-lg" style="border-top-color: {{curr_color}};">
             <div class="card-body text-center">
