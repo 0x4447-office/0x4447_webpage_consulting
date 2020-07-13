@@ -1,8 +1,9 @@
 ---
-title: How to lower EC2 Costs
-image: /assets/img/articles/how-to-lower-ec2-costs/cover.png
-header: /assets/img/articles/how-to-lower-ec2-costs/header.png
 layout: post
+title: How to lower EC2 Costs
+image: /assets/img/articles/how-to-lower-ec2-costs/og.png
+cover: /assets/img/articles/how-to-lower-ec2-costs/cover.png
+header: /assets/img/articles/how-to-lower-ec2-costs/header.png
 description: The goal is to show you how to lower your AWS costs by 40 or even 75 percent within a few minutes (depending on the instance type and plan).
 categories: [how_to]
 ---
