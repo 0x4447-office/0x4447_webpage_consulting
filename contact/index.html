@@ -340,10 +340,18 @@ description: Please describe your situation and how 0x4447 can meet your expecta
     //  7.  create a JSON object for S3.
     //
     let json = {
-      "name": fullname,
-      "email": email,
       "subject": "Email from Consulting page.",
-      "body": body
+      "body": body,
+      "emails": {
+        "to": {
+            "name": "David Gatti",
+            "email": "david@0x4447.com"
+        },
+        "reply_to": {
+            "name": fullname,
+            "email": email
+        }
+      }
     }
 
     //
