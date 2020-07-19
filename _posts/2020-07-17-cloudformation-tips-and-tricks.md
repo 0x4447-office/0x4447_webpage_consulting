@@ -13,17 +13,17 @@ This article is meant for CEOs, CTOs, and Managers. The goal is to give a better
 
 Since a CloudFormation is nothing more then a JSON file, one might think that keeping everything in one big file is the right way to go. But it is not. After you have added multiple services, even as little as 3, then you will have to scroll across the file like crazy trying to edit it, and each new service exponentially extends the complexity of managing the file.
 
-A good approach that I found helpful is to keep the JSON familiarity while braking down each service in a separated JSON file. Hence, I create a framework called Grapes.
+A good approach that I found helpful is to keep the JSON familiarity while braking down each service in a separated JSON file. Hence, I create a framework called [Grapes](https://www.npmjs.com/package/@0x4447/grapes).
 
-With the Grapes framework, you are free to structure the Resource folder however you want. You can nest folders and name your files in total freedom – whatever makes sense to your project.
+With the [Grapes framework](https://www.npmjs.com/package/@0x4447/grapes), you are free to structure the Resource folder however you want. You can nest folders and name your files in total freedom – whatever makes sense to your project.
 
-The only imposed structure is the root folders. I have used Grapes for the past year and I have been able to make and easily manage a massive stack, since everything remains neatly organized. Below you can find a handful of links to open source projects that I released using Grapes.
+The only imposed structure is the root folders. I have used Grapes since 2019 and I have been able to make and easily manage a massive stack, since everything remains neatly organized. Below you can find a handful of links to open source projects that I released using Grapes.
 
 # The bare minimum
 
 One of the few negatives about CloudFormation is the parameters part and how it is implemented in the AWS Console.
 
-When you deploy a stack the first time with multiple parameters and there is an error, you'll loose everything you added. This is infuriating when you have a stack with 50 parameters, because redeploying a stack until work for 10 times multiplied by 50 equals 500 inputs you had to repeatedly add.
+When you deploy a stack the first time with multiple parameters and there is an error, you'll loose everything you added. This is infuriating when you have a stack with 50 parameters, because if you have to redeploy a stack until it works, and let's say it takes 10 retries and you have 50 parameters, then that's equal to you having to do 500 copy and paste actions. 
 
 The only work around at this moment is to start small. Make the smallest stack that makes sense to you, deploy it successfully, and then the parameters will be saved. Afterwards you can incrementally add a service to the others.
 
@@ -31,7 +31,7 @@ This approach is also good to more quickly find issues within the CF file.
 
 # Good naming and description
 
-Since we are on the parameters topic, I highly recommend making sure all your parameters have simple, clear names that explain what to expect from them. Add as many details of the description as you can, even if the description is that you can just copy and paste in the input field. If you don't have a good description, then when you come back months after you made the stack and have to deploy it in another account, then you won't remember what parameters are needed for the stack.
+Since we are on the parameters topic, I highly recommend making sure all your parameters have simple, clear names that explain what to expect from them. You can add as many details of the description as you would like, even if the description is just a copy and paste of the input field. The purpose of this is to have a clear description with your default parameters in the description itself, which gives you a reference to the parameters. If you don't have a good description, then when you come back months after you made the stack and have to deploy it in another account, then you won't remember what parameters are needed for the stack.
 
 # Do not rename the resources
 
@@ -41,7 +41,7 @@ CloudFormation deploys changes by first making the new resource, and if all goes
 
 But if you were to rename the object Key, then AWS will see the changes as: "I have to add a completely new service, while deleting the old one." But since AWS first makes resources and then deletes them, in this case you would get an error because AWS would try to make a S3 Bucket that already exists. Thus resulting in a update error.
 
-Instead, the solution is to rename the resource while also renaming the S3 Bucket by adding at the end of the name, for example, `1`. Deployed that, which will be scuffle. since now the buckets have unique names, and then remove the `1` from the name, and update the stack again.
+Instead, the solution is to rename the resource while also renaming the S3 Bucket by adding at the end of the name, for example, `1`. Deploying that will be sufficient, since now the buckets have unique names. Then remove the `1` from the name and update the stack again.
 
 This trick won't work in some AWS resources and you might be stuck.
 
@@ -51,7 +51,7 @@ CloudFormation is for people that like to be organized and keep everything neat.
 
 # Don't refer to Resource Outputs in Another AWS CloudFormation Stack
 
-CloudFormation allows you to create a cross-stack reference that can be used in another stack. For example, one sick grates a S3 Bucket, and then you can reference the name of the Bucket in the 2nd stack.
+CloudFormation allows you to create a cross-stack reference that can be used in another stack. For example, one stack creates a S3 Bucket, and then you can reference the name of the Bucket in the 2nd stack.
 
 At first this sounds like a cool and useful idea, but in practice it is the most dangerous feature out there for CF.
 
