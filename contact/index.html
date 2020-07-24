@@ -110,7 +110,7 @@ description: Please describe your situation and how 0x4447 can meet your expecta
                       <label for="statePicker">
                         State
                       </label>
-                      <select class="selectpicker form-control" style="width:100%" name="statePicker" id="states" data-live-search="true">
+                      <select class="selectpicker form-control" style="width:100%" name="statePicker" id="states" data-size="12" title="Select a state" data-live-search="true">
                         <option value="Alabama">Alabama</option>
                         <option value="Alaska">Alaska</option>
                         <option value="Arizona">Arizona</option>
@@ -172,11 +172,11 @@ description: Please describe your situation and how 0x4447 can meet your expecta
                     
                     <!-- Label -->
                     <label for="contactTags">
-                      Tags
+                      AWS Services
                     </label>
 
                     <!-- Input -->
-                    <select class="selectpicker form-control" style="width:50%" name="contactTags" id="tags" required data-live-search="true" multiple>
+                    <select class="selectpicker form-control" style="width:50%" name="contactTags" id="tags" required data-live-search="true" data-size="12" multiple title="Select an AWS Service">
   
                     </select>
 
@@ -340,10 +340,18 @@ description: Please describe your situation and how 0x4447 can meet your expecta
     //  7.  create a JSON object for S3.
     //
     let json = {
-      "name": fullname,
-      "email": email,
       "subject": "Email from Consulting page.",
-      "body": body
+      "body": body,
+      "emails": {
+        "to": {
+            "name": "David Gatti",
+            "email": "david@0x4447.com"
+        },
+        "reply_to": {
+            "name": fullname,
+            "email": email
+        }
+      }
     }
 
     //

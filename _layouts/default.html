@@ -1,15 +1,20 @@
 ---
 ---
-{% include head.html %}
-{% include nav.html %}
-<body class="d-flex flex-column">
-    <!-- Begin page content -->
-<main role="main" class="flex-shrink-0">
-{{ content }}
-</main>
-<footer class="footer mt-auto">
-    <span class="text-muted">{% include footer.html %}</span>
-</footer>
+<html>
+    
+    {% include head.html %}
+    {% include nav.html %}
 
+    <body class="d-flex flex-column">
 
-</body>
+        <main role="main" class="flex-shrink-0">
+            {{ content }}
+        </main>
+
+        <footer class="footer mt-auto">
+            <span class="text-muted">{% include footer.html %}</span>
+        </footer>
+
+    </body>
+
+</html>

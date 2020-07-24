@@ -5,14 +5,14 @@ meta_description: 'Articles Page'
 ---
 <section class="pt-6 pt-md-8 pb-8 mb-md-8">
   <div class="container">
-  <center><h2>Please choose a category to view</h2></center>
+  <center><h1>Choose a category</h1></center>
   <hr>  
   {% assign color = "#DA5988,#FF5A5F,#0082C9,#6772E5" %}
   <div class="row ml-5 mr-5">
     {% for category in site.categories %}
     {% assign idx = forloop.index | minus:1 | modulo:4 %}
     {% assign curr_color = color | split:',' | slice:idx %}
-        <div class="col-md-4 col-12 mt-5">
+        <div class="col-md-6 col-12 mt-5">
           <!-- Card -->
           <div class="card card-border shadow-light-lg lift lift-lg" style="border-top-color: {{curr_color}};">
             <div class="card-body text-center">

@@ -8,50 +8,44 @@ description: The goal is to better understand Serverless technology and how it a
 categories: [knowledge]
 ---
 
-This article is meant for CEOs, CTOs, and Managers. The goal is to better understand Serverless technology and how it affects your costs as your project grows.
-
-This article also tries to answer a common question our clients ask: *Should I go serverless or still build a project with regular servers*?
-
-In the end, If you'd like to chat about this topic, we provide a free one-hour consultation for new clients.
+This article is meant for CEOs, CTOs, and managers who want to make a more educated decision about building products in the cloud, by answering a common question clients have: *Should I go serverless or build a project with regular servers?*
 
 # First
 
-There isn't a short answer to this question, because it all depends on what stage the project is in. I always recommend serverless to new clients at a starting point in exploring an idea that may or may not work - meaning that they're not certain how much traffic they're going to get. Then, once they begin to get some decent traffic, they can better predict how much load the solution will get, and thus transition some of the most expensive parts of the project to a regular server and lower the costs of running the solution. Once a company is established, the final transition would be 90 percent servers and some serverless for things that aren't triggered often or are only used to manage DevOps daily tasks.
+There isn't a short answer to this question, because it all depends on the stage of your project. I always recommend that new clients start out serverless when in the initial phases of exploring an idea that may or may not work, meaning when you are not certain how much traffic the site is going to get. Then, once you begin to get some decent traffic, you are able to better predict how much load the solution will get, and thus transition some of the most expensive parts of the project to a regular server and lower the costs of running the solution. After your business is established, the final transition stage would likely be 90 percent use of servers with some serverless remaining for anything that isn't triggered often or when only used to manage DevOps daily tasks.
 
-Now the question is this: Why this life cycle?
+So the question becomes: Why this life cycle?
 
 # Start with serverless
 
-One advantage of going serverless is that it's inexpensive at a project's starting point. It costs virtually nothing to run during development, regardless of how many resources are in use. In the beginning phase, when acquiring customers - all you pay for is traffic generated. And if you have to pause the project for whatever reason, you don't have to delete anything; keep the whole setup as is and just pay for storage. Then, when all is back to normal, you can resume the project right where you left it.
+One advantage of starting serverless is that it's inexpensive at the outset of the project. It will cost you virtually nothing to run during development, regardless of how many resources you use. In the beginning phase as you are acquiring customers, all you pay for is traffic generated. If you have to pause the project for any reason, then you don't have to delete anything or worry about starting over, because you can preserve the entire set up and just pay for storage. Then, when all is back to normal, you can resume the project right where you left it.
 
-# Move to managed servers - lower costs
+# Move to managed servers to lower costs
 
-Serverless may be convenient at the beginning when you're testing the waters, but it's definitely not cheap in the long run. Once you see your idea is catching on and you're getting more and more traffic to your product, you should review your AWS bill on a monthly basis to identify the most expensive serverless resources. Use your list of the most expensive resources to begin converting to a custom server setup using EC2 Instances, but be sure that you understand the benefits of reserved instances to be sure that you pay as little as possible for them.
+Serverless may be convenient in the beginning when you're testing the waters, but it's definitely not cheap in the long run. Once you see your idea is catching on and you're getting more and more traffic to your product, you should review your AWS bill on a monthly basis to identify the most expensive serverless resources. Use your list of the most expensive resources to begin converting to a custom server setup using EC2 Instances, but be sure that you understand the [benefits of reserved instances](https://consulting.0x4447.com/articles/how_to/how-to-lower-ec2-costs.html) in order to know that you are paying as little as possible for them.
 
-Regarding the server approach, a common misconception is that it requires dedicated people to monitor the servers and react when something is not working as expected.
+A common misconception about using physical servers is that they requires dedicated people to monitor and react when something is not working as expected. Thankfully that way of thinking is old fashioned and doesn't take into account the current programmatic nature of AWS. Nowadays you can manage the whole infrastructure with code and automate many of the moving parts.
 
-The reality is that this way of thinking is old fashioned and doesn't take into account the programmatic nature of AWS. Meaning that you can manage the whole infrastructure with code and automate many of the moving parts.
+By using [CloudFormation](https://consulting.0x4447.com/articles/knowledge/the-importance-of-cloudformation-files.html) and all the EC2 tools provided, you can create a server environment that acts like a serverless one. Operation is seamless and developers just have to push new code to a repository to make the stack automatically pull the changes and replace the old code, even without anyone having physical access to the servers.
 
-By using CloudFormation and all the EC2 tools provided, you can create a server environment that acts like a serverless one. It all just works; the developers just have to push new code to a repository to make the stack automatically pull the changes and replace the old code with the new one without anyone having physical access to the servers.
+Another important factor: a setup like this implies no need for physical access to the deployed servers, no SSH Keys, or Port 22 open, etc. Once set up correctly, everything should run smoothly. If AWS is able to operate your servers, then you should be able to as well, because serverless ends up being no more involved than a regular server set up in a organized and automated way. Serverless could be considered just a concept.
 
-This is also important: a setup like this implies no physical access to the deployed servers, no SSH Keys, Port 22 open, etc. A correct setup should just work. If AWS is able to do it, you should be too, because in the end serverless is nothing more than regular servers set up in a organized and automated way. Serverless is just a concept.
-
-Once you have your initial migration to EC2 Instances, keep monitoring the AWS bills and keep moving more and more resources until you reach the right price balance.
+If you have migrated to EC2 Instances, then you can monitor the AWS bills and continue to transfer more and more resources until you find the price balance that's right for you.
 
 # Volume discount
 
-Now that you've struck the right price balance and your whole setup is working correctly, you can keep lowering the price by contacting the AWS Pricing Team to see if they can give you a volume discount for some of the services you're using. 
+With the right price balance in hand and your whole setup working correctly, you can take additional steps to lower your costs by contacting the AWS Pricing Team to see if they can give you a volume discount for some of the services you're using. 
 
 # Think about going outside AWS
 
-Now you can look to see what's outside AWS. There are cloud providers out there that specialize in providing the cheapest price for a specific AWS service. For example, Wasabi competes directly against S3. Their prices are truly much cheaper compared with what AWS has to offer, but you also have to consider that AWS has more regions available, more storage options for S3 to lower your prices, and features - including triggers. This means that it all depends on your needs, but if what Wasabi offers is perfect for your solution, why not consider them?
+You can also look to see what's outside AWS. There are cloud providers out there that specialize in providing the cheapest price for specific AWS services. For example, Wasabi competes directly against S3. Their prices are truly much cheaper compared with what AWS has to offer, but you also have to consider that AWS has more regions available, more storage options for S3 to lower your prices, and more features - including triggers. This means that it all depends on your needs. But if what Wasabi offers is perfect for your solution, why not consider them?
 
 # Go custom data center
 
-And now, the last major step: a lot of online articles like to imply that AWS is too expensive and having your our own data center is the cheapest way to go about serving a product to clients. But this statement will be true only for some very specific companies that either have outgrown the AWS volume discount, operate at a scale close to that of AWS, or deal only with a local market.
+And now, the last major step: a lot of online articles like to imply that AWS is too expensive and that having your our own data center is the cheapest way for you to serve a product to your clients. But this statement will only be true for a select few companies that have either outgrown the AWS volume discount, operate at a scale close to that of AWS, or only interact with a local market.
 
-A good example would be [Bank of America](https://www.businessinsider.com/bank-of-americas-350-million-internal-cloud-bet-striking-payoff-2019-10), which transitioned to their own data center to lower costs. For a company of this size that deals only with the local market, this makes perfect sense and is the right move.
+A good example would be [Bank of America](https://www.businessinsider.com/bank-of-americas-350-million-internal-cloud-bet-striking-payoff-2019-10), which transitioned to their own data center to lower costs. For a company of this size that deals only with the local market, this makes perfect sense and is the right move. 
 
 # To sum it up
 
-I hope this explanation will help you organize your thoughts around the serverless approach and you'll know exactly what to ask your team or contractors when talking about this topic.
+I hope this explanation will help you organize your thoughts around the serverless approach and you'll know exactly how to discuss this with your team or contractors.
