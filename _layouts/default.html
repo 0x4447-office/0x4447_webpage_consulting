@@ -5,13 +5,13 @@
     {% include head.html %}
     {% include nav.html %}
 
-    <body class="d-flex flex-column">
+    <body style="min-height:100%">
 
-        <main role="main" class="flex-shrink-0">
+        <main role="main" style="min-height:60%">
             {{ content }}
         </main>
 
-        <footer class="footer mt-auto">
+        <footer style="width:100%">
             <span class="text-muted">{% include footer.html %}</span>
         </footer>
 
