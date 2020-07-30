@@ -5,10 +5,13 @@
   url:
     name: "atkinssinus.com"
     href: "https://www.atkinssinus.com"
-- company_name: Incomyz
+- company_name: Applied Behavioral Finance
   description: Highly customized and precise retirement plans.
-  logo_name: incomyz.png
+  logo_name: applied_behavioral_finance.png
   color: "#3c2270"
+  url:
+    name: "appliedbehavioralfinanceinc.com"
+    href: "https://appliedbehavioralfinanceinc.com"
 - company_name: Vocatales
   description: Discover the wondrous new world of storytelling.
   logo_name: vocatales.png
