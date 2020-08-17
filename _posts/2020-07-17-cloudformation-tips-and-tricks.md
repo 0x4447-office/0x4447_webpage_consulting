@@ -9,7 +9,7 @@ categories: [knowledge]
 
 This article is meant for CEOs, CTOs, and Managers. The goal is to give a better understanding of what CloudFormation is and why it should be used for every AWS project, by answering a common question clients have: *What are the the most important things our team should be aware of when working on a CF file?*
 
-# Pick a framework
+## Pick a framework
 
 Since a CloudFormation is nothing more then a JSON file, one might think that keeping everything in one big file is the right way to go. But it is not. After you have added multiple services, even as little as 3, then you will have to scroll across the file like crazy trying to edit it, and each new service exponentially extends the complexity of managing the file.
 
@@ -19,7 +19,7 @@ With the [Grapes framework](https://www.npmjs.com/package/@0x4447/grapes), you a
 
 The only imposed structure is the root folders. I have used Grapes since 2019 and I have been able to make and easily manage a massive stack, since everything remains neatly organized. Below you can find a handful of links to open source projects that I released using Grapes.
 
-# The bare minimum
+## The bare minimum
 
 One of the few negatives about CloudFormation is the parameters part and how it is implemented in the AWS Console.
 
@@ -29,11 +29,11 @@ The only work around at this moment is to start small. Make the smallest stack t
 
 This approach is also good to more quickly find issues within the CF file.
 
-# Good naming and description
+## Good naming and description
 
 Since we are on the parameters topic, I highly recommend making sure all your parameters have simple, clear names that explain what to expect from them. You can add as many details of the description as you would like, even if the description is just a copy and paste of the input field. The purpose of this is to have a clear description with your default parameters in the description itself, which gives you a reference to the parameters. If you don't have a good description, then when you come back months after you made the stack and have to deploy it in another account, then you won't remember what parameters are needed for the stack.
 
-# Do not rename the resources
+## Do not rename the resources
 
 Each resource described in the CloudFormation file must have a unique name as the JSON object Key. I recommend that you name them carefully, ideally with a simple pattern, because once the stack is deploy it can cause a lot of drama to change the name of the resource. For example:
 
@@ -49,7 +49,7 @@ Make sure your resource names are standardized, and always follow this standard,
 
 CloudFormation is for people that like to be organized and keep everything neat. With this service, you can't just do something quick and later improve upon it; you have to have it right from the start - otherwise it is going to be complete misery later working with it.
 
-# Don't refer to Resource Outputs in Another AWS CloudFormation Stack
+## Don't refer to Resource Outputs in Another AWS CloudFormation Stack
 
 CloudFormation allows you to create a cross-stack reference that can be used in another stack. For example, one stack creates a S3 Bucket, and then you can reference the name of the Bucket in the 2nd stack.
 
@@ -59,7 +59,7 @@ The problem is similar to the previous section. Because once a stack is referenc
 
 This feature is one that you should never use. The ideal approach when you want to reference a resource created in one stack with another, is to just output the resource name or ID in the original stack, copy it, and paste it in the params section of the second one. This way you still can split your stack and keep everything small and compact, while staying flexible and free to make any changes. Of course you have to remember that if you rename a S3 Bucket in the original stack, you then have to update all the CF files that uses the Bucket name.
 
-# Don't trust a working CloudFormation file.
+## Don't trust a working CloudFormation file.
 
 If you have your work organized with 2 AWS accounts, one for production and one for development, then it doesn't necessarily mean that the CloudFormation file you created and tested in development will work in production.
 
@@ -71,6 +71,6 @@ To mitigate this problem, I recommend that you delete the stack in development a
 
 Only then can you be confident that deploying the stack in production will work.
 
-# To sum it up
+## To sum it up
 
 Move slowly, iterate piece by piece, and be organized - these are things to keep in mind when working with CloudFormation.

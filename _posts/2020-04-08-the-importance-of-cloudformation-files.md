@@ -10,7 +10,7 @@ categories: [knowledge]
 
 This article is meant for CEOs, CTOs, and Managers. The goal is to give a better understanding of what CloudFormation is and why it should be used for every AWS project, by answering a common question clients have: *Why spend time making a CloudFormation file?*
 
-# What is CloudFormation
+## What is CloudFormation
 
 A CloudFormation file is nothing more than a text file with the text formatted as JSON.
 
@@ -18,7 +18,7 @@ Within this JSON file, you are able to describe what type of resources you'd lik
 
 Simple, right?
 
-# The Benefits of Using CloudFormation
+## The Benefits of Using CloudFormation
 
 Because everything is laid out as JSON format, when you upload this file, you get exactly what you've described.
 
@@ -28,7 +28,7 @@ This way...
 - if the file is committed to GitHub, you can track and monitor the changes to the stack over time.
 - you can deploy the exact stack described in the JSON file to any AWS account. This is ideal when you have multiple environments, such as one AWS account for development and another for production (learn about [AWS Organizations](https://consulting.0x4447.com/articles/knowledge/the-benefits-of-aws-organizations.html) here). What you test in one account, you can  then deploy in production within a few minutes and keep track of all your changes.
 
-# More Flexibility
+## More Flexibility
 
 Another benefit that's hard to see in the beginning, is that as you become more comfortable with CloudFormation files you will start to like this way of working in the cloud.
 
@@ -38,6 +38,6 @@ You can just copy and past what you need from your completed file. The best thin
 
 It takes time and money to get the hang of it, but once you do you'll have a nice foundation to build upon and extend.
 
-# To sum it up
+## To sum it up
 
 I hope that you now understand the benefits of using CloudFormation files and that this AWS Service will help you streamline your DevOps work flow.

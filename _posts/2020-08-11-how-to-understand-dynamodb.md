@@ -9,21 +9,21 @@ categories: [how_to]
 
 This article is meant for anyone who wants to better understand DynamoDB after experiencing that your AWS bill for DDB is too high, the complexity is too big, or the promised speed is not there. This article presents an easier question: Am I doing DynamoDB the right way?
 
-# Why I'm not getting DynamoDB
+## Why I'm not getting DynamoDB
 
 You may be surprised, but 20+ years of SQL may not help you with this new AWS service, and the biggest reason is that you are probably comparing DynamoDB to MongoDB.
 
 Both are NoSQL but they still way different from each other. Just because you store data as JSON and there are no columns for fixed structure that you have to set upfront, doesn't mean they are the same.
 
-# MongoDB is self hosted, and this is a problem
+## MongoDB is self hosted, and this is a problem
 
 Because you can host MongoDB, it makes it hard for you to realize the incorrectness in the ongoing data structure that you have. Doing it wrong doesn't appear to cost you anything, because you don't have limits and you pay just for the server that MondoDB runs on. If the performance starts to be an issue, then you can always add a bigger server, and all the incorrectness gets hidden away.
 
-# DynamoDB is the real NoSQL Database
+## DynamoDB is the real NoSQL Database
 
 Since AWS hosts DynamoDB for you, you are forced to adhere to the NoSQL principles, which makes you pay for all your mistakes out of your pocket, and the only way around it is to really understand NoSQL.
 
-# DynamoDB Key Limits
+## DynamoDB Key Limits
 
 DynamoDB has 3 major limits:
 
@@ -33,11 +33,11 @@ DynamoDB has 3 major limits:
 
 These three rules makes it so that either you structure the data the right way, or you lose performance and could have to pay thousands of dollars for simple requests.
 
-# Examples
+## Examples
 
 I'll give you 2 examples which should give you a good idea of how to start thinking about DDB data structure and even how to organize your website to make sure that all works well together.
 
-## User Data
+### User Data
 
 A typical case of user data would be the name, email, address, and a JSON object that could look like this:
 
@@ -97,7 +97,7 @@ When the user visits this individual page, you will get only what the page requi
 
 More details about `type` key later on in the article.
 
-# Invoice Data
+## Invoice Data
 
 The next example looks at the 400Kb limit per object. The clients that I work with always end up with this data structure: they use the Array type object, add Invoice data in this array, and then save the whole thing as one object in DynamoDB. For example:
 
@@ -130,7 +130,7 @@ User data from the example above is rather limited. In the invoice example, we w
 
 There is a way simpler solution that will allow you to never have to think about this limit ever again. The simpler solution will add incredible flexibility to your data and will dramatically increase speed.
 
-# Always add a Search Key
+## Always add a Search Key
 
 The Search Key is your friend, and you should always use it. There are edge cases where you don't have to use it, but these are edge cases and over time you'll know when not to use it. We will focus on the 99.99% of cases when the search key should be utilized.
 
@@ -168,17 +168,17 @@ As you can see, this is your limitless array of data that can go in to infinity.
 
 In order to update an entry in the array, you need to know the position of that item (index), which means that if you don't know it, then you have to download the whole object, loop over every entry in the array, find the position, update it, and then send back the whole object again. So if you have an object of 400Kb, you then have to send back an additional 400Kb, which is 800Kb in total. A slow and expensive operation just to change one item in an array.
 
-# Never do this with DynamoDB
+## Never do this with DynamoDB
 
 - Never make one big object
 - Never use Arrays unless the data that you are working with has them, and you need to store it as is.
 
-# Always do this with DynamoDB
+## Always do this with DynamoDB
 
 - Brake down your data in the smallest parts you can
 - Design your search key as folder structure
 - Always make precise queries to just get what you need.
 
-# To sum it up
+## To sum it up
 
 I hope this explanation will give you a much better understanding how to go about working with DynamoDB, and I truly hope this will bring your costs down and speed improvements.

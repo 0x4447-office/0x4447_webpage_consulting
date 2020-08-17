@@ -10,17 +10,17 @@ categories: [how_to]
 
 This article is meant for CEOs, CTOs, and Managers. The goal is to show you how to lower your AWS costs by 40 or even 75 percent within a few minutes (depending on the instance type and plan), by answering a common question clients have: *What options do I have at my disposal to lower the AWS bill?*
 
-# What are Reserved Instances?
+## What are Reserved Instances?
 
 If you pay for an instance upfront for a period of either one or three years, then your price for an instance can be 40 to 75 percent lower. The beauty of this is that if you buy a Reserved Instance, you don't have to make changes to your instances - no restart or reconfiguration is necessary. This is because a Reserved Instance is a billing concept. If you have two instances and you buy one Reserved Instance, AWS will automatically apply the discount for the instance that matches the type you bought. The entire process is transparent to you.
 
-# What else should I know?
+## What else should I know?
 
-## Standard vs. Convertible
+#### Standard vs. Convertible
 
 There are two types of Reserved Instances: Standard and Convertible. Standard is suitable for a situation when you have an organized environment and you know what you need. Convertible (a bit more  expensive) is for situations with a more dynamic environment that requires constant changes to your operating systems and instance families as well as types.
 
-## Normalization Factor
+#### Normalization Factor
 
 AWS gives you quite a bit of flexibility with the Normalization Factor approach. Each instance type has the following factors:
 
@@ -41,15 +41,15 @@ This means that if you buy one large type, you can actually have four small inst
 
 AWS also allows you to scale above what you have. For example, let's say you bought a large type for the year and you scaled up to the 2xlarge type for one week. AWS will charge you the On-Demand price, but only for the scaling factor that goes beyond what you paid for. They do the calculation automatically so you don't have to worry about it.
 
-## Be organized
+#### Be organized
 
 The Scaling Factor is flexible, but best practice is to have a homogeneous instance type. This makes it much easier to manage and keeps costs to a minimum.
 
-## You can resell what you don't use
+#### You can resell what you don't use
 
 If you buy a one-year or three-year lease, and after some time you find that you don't need it anymore, or you've upgraded to a new type because of traffic to your site, then you can buy the new type and put the old lease on the market for bidding. While you won't be able to get 100 percent of the money back from the remainder of your old type, you'll still get a decent amount.
 
-## The roll-over strategy
+#### The roll-over strategy
 
 Even with the flexibility AWS gives you, you may still be left with some unused instance types. Before you resell them, you should consider the following strategy: roll your instance types to the next-lower traffic site. For example, let's assume that you have a site with two parts, the front end and the back end. The back is the API, and the front delivers the site build using Angular, with some server rendering for good SEO. 
 
@@ -63,6 +63,6 @@ The reasoning here is that more traffic will increase the load on both projects,
 
 When the lease for the old types expires, you can switch the front end to two bigger server types or extend the lease for what you already have. AWS's flexibility means you have options to role-over instance types and save money.
 
-# To sum it up
+## To sum it up
 
 Stop using On-Demand servers for long-term work. Use them only for quick tests, maintenance, or temporary auto scaling to handle spikes in traffic during the day. For continuous work, use Reserved Instances, and spend your money elsewhere.
