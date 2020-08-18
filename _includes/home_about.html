@@ -1,0 +1,124 @@
+<!-- ABOUT
+    ================================================== -->
+    
+{%- assign about = site.data.home.about -%}
+<section class="py-8 py-md-11 bg-gray-200">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-7 text-center">
+
+        <!-- Heading -->
+        <h2 class="font-weight-bold">
+          {{about.title}}
+        </h2>
+
+        <!-- Text -->
+        <p class="font-size-lg text-muted mb-7 mb-md-9">
+          {{about.text}}
+        </p>
+
+      </div>
+    </div> <!-- / .row -->
+    <div class="form-row">
+      <div class="col-12 col-lg-6 d-lg-flex pb-1 mb-4">
+
+        <!-- Card 1 -->
+        <div class="card shadow-light-lg overflow-hidden" data-aos="fade-up">
+          <div class="row">
+            <div class="col-md-4 position-relative">
+
+              <!-- Image -->
+              <img src="{{about.card_1.image}}" class="h-75 position-absolute right-0 mt-7 mr-n4" alt="One-on-One">
+
+            </div>
+            <div class="col-md-8">
+
+              <!-- Body -->
+              <div class="card-body py-7 py-md-9 text-center">
+
+                <!-- Heading -->
+                <h4 class="font-weight-bold">
+                  {{about.card_1.title}}
+                </h4>
+
+                <!-- Text -->
+                <p class="text-muted mb-0">{{about.card_1.text}}</p>
+
+              </div>
+
+            </div>
+          </div> <!-- / .row -->
+        </div>
+
+      </div>
+      <div class="col-12 col-lg-6 d-lg-flex pb-1 mb-4">
+
+        <!-- Card 2 -->
+        <div class="card shadow-light-lg overflow-hidden text-center" data-aos="fade-up">
+          <div class="row">
+            <div class="col-md-8">
+
+              <!-- Body -->
+              <div class="card-body py-7 py-md-9">
+
+                <!-- Heading -->
+                <h4 class="font-weight-bold">
+                  {{about.card_2.title}}
+                </h4>
+
+                <!-- Text -->
+                <p class="text-muted mb-0">
+                  {{about.card_2.text}}
+                </p>
+
+              </div>
+
+            </div>
+            <div class="col-md-4">
+
+              <!-- Image -->
+              <img src="{{about.card_2.image}}" class="h-75 position-absolute left-0 mt-7" alt="Management">
+
+            </div>
+          </div> <!-- / .row -->
+        </div>
+
+      </div>
+    </div> <!-- / .row -->
+    <div class="row">
+      <div class="col-12">
+
+        <!-- Card 3 -->
+        <div class="card shadow-light-lg overflow-hidden text-center text-lg-left" data-aos="fade-up">
+          <div class="row">
+            <div class="col-md-4 position-relative">
+
+              <!-- Image -->
+              <img src="{{about.card_3.image}}" class="h-75 position-absolute right-0 mt-6" alt="Your Entire Team">
+
+            </div>
+            <div class="col-md-8">
+
+              <!-- Body -->
+              <div class="card-body py-7 py-md-9">
+
+                <!-- Heading -->
+                <h4 class="font-weight-bold">
+                  {{about.card_3.title}}
+                </h4>
+
+                <!-- Text -->
+                <p class="text-muted mb-0">
+                  {{about.card_3.text}}
+                </p>
+
+              </div>
+
+            </div>
+          </div> <!-- / .row -->
+        </div>
+
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>
