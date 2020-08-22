@@ -9,11 +9,15 @@ pagination:
 permalink: articles/:categories/:title:output_ext
 gems:
   - jekyll-paginate-v2
-url: "https://consulting.0x4447.com"
+url: "https://test-8e6c05.netlify.app"
 plugins:
   - jekyll-paginate-v2
   - jekyll-feed
   - jekyll-environment-variables  
   - jekyll-sitemap
   - jekyll-seo-tag
-name: "0x4447, LLC. Consulting"
+name: AWS Cloud Consulting
+description: "Drive business growth with personalized AWS consulting through 0x4447 to implement cost-effective customer solutions built on scalable cloud infrastructure."
+author: David Gatti
+after-name: "0x4447"
+generator: Jekyll v4.1.1

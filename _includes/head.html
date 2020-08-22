@@ -1,22 +1,54 @@
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169327122-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'UA-169327122-1');
     </script>
-
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     {% feed_meta %}
-    {% seo %}
 
+    {% if page.type == 'articles' %}
+    {% assign title = page.title | append: " - " | append: site.after-name %}
+        {% elsif page.type == 'home' %}
+        {% assign title = site.name | append: ' - ' | append: site.after-name %}
+        {%- else -%}
+        {% assign title = site.name | append: " - " |append: page.title | append: " - " |append: site.after-name %}
+    {%- endif -%} 
+    <title>{{title}}</title>
+    <meta name="generator" content="{{site.generator}}" />
+    <meta property="og:title" content="{{title}}" />
+    {%- if page.author -%}
+    {%- assign author = page.author -%}
+    {%- else -%}
+    {%- assign author = site.author -%}
+    {%- endif -%}
+    <meta name="author" content="{{author}}" />
+    <meta name="twitter:creator" content="{{author}}">
+    {%- if page.language -%}
+    {%- assign lang = page.language -%}
+    {%- elsif site.language -%}
+    {%- assign lang = site.language -%}
+    {%- else -%}
+    {%- assign lang = "en_US" -%}
+    {%- endif -%}
+    <meta property="og:locale" content="{{lang}}" />
+    {%- if page.description -%}
+    {%- assign descr = page.description -%}
+    {%- else -%}
+    {%- assign descr = site.description -%}
+    {%- endif -%}
+    <meta name="description" content="{{descr}}" />
+    <meta property="og:description" content="{{descr}}" />
+    <link rel="canonical" href="{{site.url}}" />
+    <meta property="og:url" content="{{site.url}}" />
+    <meta property="og:site_name" content="{{site.name}}" />
     <!-- Adding meta-tags that are not added by seo plugin -->
     <meta property="og:section" content="Cloud Computing" />
     {%- if page.tags -%}
@@ -30,21 +62,49 @@
     {%- endif -%}
 
     <meta http-equiv="content-language" content="en" />
-    <!-- for twitter -->
+    <!-- for twitter & facebook -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="David Gatti">
 
-    <meta name="twitter:title" content="{{site.name}} | {{page.title}}">
+    <meta name="twitter:title" content="{{title}}">
     {%- if page.description -%}
     <meta name="twitter:description" content="{{page.description}}">
     {%- endif -%}
     {%- if page.image -%}
     {%- if page.image.path -%}
+    <meta property="og:image" content="{{site.url}}{{page.image.path}}" />
     <meta name="twitter:image" content="{{site.url}}{{page.image.path}}">
     {%- else -%}
     <meta name="twitter:image" content="{{site.url}}{{page.image}}">
+    <meta property="og:image" content="{{site.url}}{{page.image}}" />
     {%- endif -%}
     {%- endif -%}
+
+    <!-- application/ld+json -->
+
+    <script type="application/ld+json">
+    {"@type":"WebSite",
+    "url":"{{site.url}}",
+    {%- if page.image -%}
+    "image":{
+        "alt":"og-image",
+    {%- if page.image.path -%}
+    "url":"{{site.url}}{{page.image.path}}",
+    {%- else -%}
+    "url":"{{site.url}}{{page.image}}",
+    {%- endif -%}
+    {%- if page.image.height  -%}
+        "height":"{{page.image.height}}",
+    {%- endif -%}
+    {%- if page.image.width  -%}
+        "height":"{{page.image.width}}",
+    {%- endif -%}
+    {%- endif -%}
+    "@type":"imageObject"},
+    "author":{
+    "@type":"Person",
+    "name":"{{author}}"},
+    "description":"{{descr}}",
+    "name":"{{title}}","headline":"{{page.title}}","@context":"https://schema.org"}</script>
 
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
