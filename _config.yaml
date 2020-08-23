@@ -9,7 +9,7 @@ pagination:
 permalink: articles/:categories/:title:output_ext
 gems:
   - jekyll-paginate-v2
-url: "https://test-8e6c05.netlify.app"
+url: "https://consulting.0x4447.com"
 plugins:
   - jekyll-paginate-v2
   - jekyll-feed
