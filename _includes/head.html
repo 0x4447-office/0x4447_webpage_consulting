@@ -1,20 +1,20 @@
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169327122-1"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169327122-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'UA-169327122-1');
-    </script>
+    </script> -->
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     {% feed_meta %}
 
-    {% if page.type == 'articles' %}
+    {% if page.layout == 'post' %}
     {% assign title = page.title | append: " - " | append: site.after-name %}
         {% elsif page.type == 'home' %}
         {% assign title = site.name | append: ' - ' | append: site.after-name %}
