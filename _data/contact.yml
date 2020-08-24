@@ -1,52 +1,70 @@
-states:
-  - state: Alabama"
-  - state: Alaska
-  - state: Arizona
-  - state: Arkansas
-  - state: California
-  - state: Colorado
-  - state: Connecticut
-  - state: Delaware
-  - state: District Of Columbia
-  - state: Florida
-  - state: Georgia
-  - state: Hawai
-  - state: Idaho
-  - state: Illinois
-  - state: Indiana
-  - state: Iowa
-  - state: Kans
-  - state: Kentucky
-  - state: Louisiana
-  - state: Maine
-  - state: Maryland
-  - state: Massachusetts
-  - state: Michigan
-  - state: Minnesota
-  - state: Mississippi
-  - state: Missouri
-  - state: Montana
-  - state: Nebraska
-  - state: Nevada
-  - state: New Hampshire
-  - state: New Jersey
-  - state: New Mexico
-  - state: New York
-  - state: North Carolina
-  - state: North Dakota
-  - state: Ohio
-  - state: Oklahoma
-  - state: Oregon
-  - state: Pennsylvania
-  - state: Rhode Island
-  - state: South Carolina
-  - state: South Dakota
-  - state: Tennessee
-  - state: Texas
-  - state: Utah
-  - state: Vermont
-  - state: Virginia
-  - state: Washington
-  - state: West Virginia
-  - state: Wisconsin
-  - state: Wyoming
+State:
+  - value: Alabama
+  - value: Alaska
+  - value: Arizona
+  - value: Arkansas
+  - value: California
+  - value: Colorado
+  - value: Connecticut
+  - value: Delaware
+  - value: District Of Columbia
+  - value: Florida
+  - value: Georgia
+  - value: Hawai
+  - value: Idaho
+  - value: Illinois
+  - value: Indiana
+  - value: Iowa
+  - value: Kans
+  - value: Kentucky
+  - value: Louisiana
+  - value: Maine
+  - value: Maryland
+  - value: Massachusetts
+  - value: Michigan
+  - value: Minnesota
+  - value: Mississippi
+  - value: Missouri
+  - value: Montana
+  - value: Nebraska
+  - value: Nevada
+  - value: New Hampshire
+  - value: New Jersey
+  - value: New Mexico
+  - value: New York
+  - value: North Carolina
+  - value: North Dakota
+  - value: Ohio
+  - value: Oklahoma
+  - value: Oregon
+  - value: Pennsylvania
+  - value: Rhode Island
+  - value: South Carolina
+  - value: South Dakota
+  - value: Tennessee
+  - value: Texas
+  - value: Utah
+  - value: Vermont
+  - value: Virginia
+  - value: Washington
+  - value: West Virginia
+  - value: Wisconsin
+  - value: Wyoming
+Industry:
+  - value: Agriculture, Forestry, Fishing and Hunting in the US
+  - value: Mining in the US
+  - value: Utilities in the US
+  - value: Construction in the US
+  - value: Manufacturing in the US
+  - value: Wholesale Trade in the US
+  - value: Retail Trade in the US
+  - value: Transportation and Warehousing in the US
+  - value: Information in the US
+  - value: Finance and Insurance in the US
+  - value: Real Evalue and Rental and Leasing in the US
+  - value: Professional, Scientific and Technical Services in the US
+  - value: Administration, Business Support and Waste Management Services
+  - value: Healthcare and Social Assistance in the US
+  - value: Arts, Entertainment and Recreation in the US
+  - value: Accommodation and Food Services in the US
+  - value: Other Services (except Public Administration) in the US
