@@ -12,11 +12,9 @@ img[src*="#responsive"] {
   display: inline-block;
   white-space: normal;
 }
-.divider {
-    height: 105px;
+.textarea_row {
+  margin-top: -35px;
 }
-@media (min-width: 768px) {
-  .contact_form textarea {
-    height: 55px;
-  }
+.textarea_row textarea {
+  height: 300px;
 }
