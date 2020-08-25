@@ -19,7 +19,7 @@
         {% elsif page.type == 'home' %}
         {% assign title = site.name | append: ' - ' | append: site.after-name %}
         {%- else -%}
-        {% assign title = site.name | append: " - " |append: page.title | append: " - " |append: site.after-name %}
+        {% assign title = site.name | append: " - " | append: page.title | append: " - " | append: site.after-name %}
     {%- endif -%} 
     <title>{{title}}</title>
     <meta name="generator" content="{{site.generator}}" />
