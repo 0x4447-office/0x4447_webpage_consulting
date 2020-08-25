@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Articles - How To
+title: How To
 permalink: /articles/how_to/
 meta_description: Articles - How To Category
 pagination: 
