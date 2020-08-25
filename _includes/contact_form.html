@@ -1,0 +1,321 @@
+<script src="/assets/js/aws-sdk-2.656.0.min.js"></script>
+
+<!-- FORM -->
+
+<section class="pt-8 pt-md-11 pb-8 pb-md-11 contact_form">
+  <div class="container">
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-12 col-lg-10">
+
+        <!-- Form -->
+        <form onsubmit='send_message(event)'>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="form-group mb-5">
+
+                <!-- Label -->
+                <label for="contactName">
+                  Full name
+                </label>
+
+                <!-- Input -->
+                <input type="text" name="contactName" minlength=1 required class="form-control" id="contact_name"
+                  placeholder="John Doe">
+
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="form-group mb-5">
+
+                <!-- Label -->
+                <label for="contactEmail">
+                  Email
+                </label>
+
+                <!-- Input -->
+                <input type="email" name="contactEmail" required class="form-control" id="contact_email"
+                  placeholder="john.doe@example.com">
+
+              </div>
+            </div>
+          </div> <!-- / .row -->
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="form-group mb-5">
+
+                <!-- Label -->
+                <label for="companyName">
+                  Company Name
+                </label>
+
+                <!-- Input -->
+                <input type="text" name="companyName" required class="form-control" id="contact_company_name"
+                  placeholder="Example, LLC">
+
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="form-group mb-5">
+
+                <!-- Label -->
+                <label for="jobTitle">
+                  Job Title
+                </label>
+
+                <!-- Input -->
+                <input type="text" name="jobTitle" required class="form-control" id="contact_job_title"
+                  placeholder="CEO, CTO, VP of ...">
+
+              </div>
+            </div>
+          </div> <!-- / .row -->
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="form-group mb-5">
+
+                <!-- select state or industry -->
+                {%- assign p = include.select -%}
+                <!-- Label -->
+                <label for="statePicker">
+                  {{p}}
+                </label>
+                <select class="selectpicker form-control" style="width:100%" name="statePicker" id="states"
+                  data-size="12" title="Select {{p}}" data-live-search="true">
+                  {%- for item in site.data.contact.[p] -%}
+                  <option value="{{item.value}}">
+                    {{item.value}}
+                  </option>
+                  {%- endfor -%}
+                </select>
+                <!-- end select-->
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="form-group mb-7 mb-md-9">
+
+                <!-- Label -->
+                <label for="contactTags">
+                  AWS Services
+                </label>
+
+                <!-- Input -->
+                <select class="selectpicker form-control" style="width:50%" name="contactTags" id="tags" required
+                  data-live-search="true" data-size="12" multiple title="Select an AWS Service">
+
+                </select>
+
+              </div>
+            </div>
+          </div> <!-- / .row -->
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group mb-7 mb-md-9">
+
+                <!-- Label -->
+                <label for="contactMessage">
+                  What can we help you with?
+                </label>
+
+                <!-- Input -->
+                <textarea class="form-control" required minlength=10 id="contact_message" rows="5"
+                  placeholder="Tell us what we can help you with!"></textarea>
+
+              </div>
+            </div>
+          </div> <!-- / .row -->
+          <div class="row justify-content-center">
+            <div class="col-auto">
+
+              <!-- Submit -->
+
+              <button type="submit" id="submit_button" class="btn btn-primary lift">
+                Send message
+              </button>
+
+            </div>
+          </div> <!-- / .row -->
+          <div class="mt-5 alert alert-light" id='alert' role="alert" hidden>
+            Your message has been sent successfully!
+          </div>
+        </form>
+
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>
+
+<script>
+
+  //
+  //  1.  Looping over all the AWS services to then populate the drop donw.
+  //
+  {%for category in site.data.aws_services %}
+
+  //
+  //  1.  On ce we have the cateogry object, we can loop over al lthe 
+  //      services inside the catagory.
+  //
+  {% for service in category %}
+
+  //
+  //  1.  And now we are working with a single service and are able to access
+  //       the data of that service.
+  //
+  {% for s in service %}
+
+  //
+  //  1.  If service name actually a string and not None
+  //
+  if ('{{s.name}}'.length > 1) {
+    //
+    //  1.  Create option elements from service names
+    //
+    let option = $('<option></option>').text('{{s.name}}').attr('value', '{{s.name}}')[0];
+
+    //
+    //  2.  Populate select element with each option created.
+    //
+    $('#tags').append(option);
+
+  }
+  {% endfor %}
+
+  {% endfor %}
+
+  {% endfor %}
+
+  //
+  //  2.  Generate the AWS object with the Unuthorized Cognito credentials.
+  //
+  AWS.config.update({
+    region: "us-east-1",
+    credentials: new AWS.CognitoIdentityCredentials({
+      IdentityPoolId: "us-east-1:871c0d0b-3977-460d-bb91-acf703669f76"
+    })
+  });
+
+  //
+  //  3.  Initializing s3 object
+  //
+  let s3 = new AWS.S3({
+    apiVersion: '2006-03-01'
+  });
+
+  // 
+  //  4.  Function to send the email.
+  //
+  function send_message(event) {
+    //
+    //  1.  Preventign the default HTML form actions, so we can take over
+    //      and bend the form will to our liking.
+    //
+    event.preventDefault();
+
+    //
+    //  2.  Get information from corresponding fields.
+    //
+    let message = $('#contact_message')[0].value;
+    let email = $('#contact_email')[0].value;
+    let fullname = $('#contact_name')[0].value;
+    let company_name = $('#contact_company_name')[0].value;
+    let job_title = $('#contact_job_title')[0].value;
+    let state = $('#states')[0].value;
+    let tags = $('#tags')[0].nextElementSibling.title;
+
+    //
+    //  3.  Disable the fields
+    //
+    $('#contact_message').attr("disabled", true);
+    $('#contact_email').attr("disabled", true);
+    $('#contact_name').attr("disabled", true);
+    $('#contact_company_name').attr("disabled", true);
+    $('#contact_job_title').attr("disabled", true);
+    $('#states').attr("disabled", true);
+    $('#submit_button').attr("disabled", true);
+    $('#submit_button').text('Sending...');
+    $('#tags').attr("disabled", true);
+
+    //
+    //  4.  Get the time zone the browser is in.
+    //
+    let tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+    //
+    //  5.  This array is used to format the body of the message.
+    //
+    let body_raw = [
+      message,
+      '\n',
+      '- Company Name: ' + company_name,
+      '- Job Title: ' + job_title,
+      '- State: ' + state,
+      '- Time zone: ' + tz,
+      '- Tags: ' + tags
+    ];
+
+    //
+    //  6.  Once we have the body formated how we want we join the array
+    //      in to a single string, which is going to be the body of the message.
+    //  
+    let body = body_raw.join('\n');
+
+    //
+    //  7.  create a JSON object for S3.
+    //
+    let json = {
+      "subject": "Email from Consulting page.",
+      "body": body,
+      "emails": {
+        "to": {
+          "name": "David Gatti",
+          "email": "david@0x4447.com"
+        },
+        "reply_to": {
+          "name": fullname,
+          "email": email
+        }
+      }
+    }
+
+    //
+    //  8.  Stringify JSON
+    //
+    let data = JSON.stringify(json)
+
+    //
+    //  9.  Convert string to an ArrayBuffer
+    //
+    let encoder = new TextEncoder();
+    let array_buffer = encoder.encode(data)
+
+    //
+    //  10.  Prepare parameters for putObject function
+    //
+    let params = {
+      Body: array_buffer,
+      Bucket: "0x4447-web-us-east-1-smtp",
+      Key: Math.round((new Date()).getTime() / 1000) + ".json"
+    }
+
+    //
+    //  11.  Call putObject to send json to S3 Bucket
+    //
+    s3.putObject(params, function (error, data) {
+
+      //
+      //  1.  CHeck for internal erros.
+      //
+      if (error) {
+        return console.log(error);
+      }
+
+      //
+      //  2.  Send user to thank you page after successful submit.
+      //
+      window.location.replace('/contact/thankyou/')
+
+    })
+  }
+</script>
