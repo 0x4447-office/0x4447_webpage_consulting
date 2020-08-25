@@ -1,3 +1,20 @@
 img[src*="#responsive"] {
-    width:100%
+  width: 100%;
+}
+.bootstrap-select .dropdown-menu {
+  z-index: 1000;
+  max-height: 400px;
+}
+.bootstrap-select .dropdown-menu li a span.text {
+  margin-bottom: 5px;
+  overflow-wrap: break-word;
+  width: 200px;
+  display: inline-block;
+  white-space: normal;
+}
+.textarea_row {
+  margin-top: -35px;
+}
+.textarea_row textarea {
+  height: 300px;
 }

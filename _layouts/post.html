@@ -6,7 +6,6 @@ seo:
 <!DOCTYPE html>
 <html>
 {% include head.html %}
-
 <body>
 
 {% include nav.html %}
@@ -37,12 +36,19 @@ seo:
       <div class="col-12 col-md-12">
       <img src={{ page.header }} width='100%' class="mb-5" alt="{{ page.title }}"/>
           {{ page.content }}
-        <h2>Contact</h2>
-          <p>You can get in touch with David through the <a href='/contact/'>contact</a> page or schedule a meeting with him right away on the <a href='/schedule/'>schedule</a> page.</p>
         <h2>Sharing is Caring</h2>
           <p>If you found this article useful, consider sharing it with someone you think could benefit from it.</p>
+
+          <div class="contact_form">
+          <h2>Contact David Today</h2>
+          <p>Please describe your situation and your cloud computing needs.</p>
+          {% include contact_form.html select ="Industry" %}
+          </div>
+          
       </div>
       </div>
+
+
     </div> <!-- / .row -->
   </div> <!-- / .container -->
 </section>
