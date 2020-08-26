@@ -21,3 +21,9 @@ description: "Drive business growth with personalized AWS consulting through 0x4
 author: David Gatti
 after-name: "0x4447"
 generator: Jekyll v4.1.1
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - assets/libs/flickity-fade/sandbox/
+  #- assets/libs/typed.js/index.html
