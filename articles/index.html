@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Articles
+title: Our Articles
+type : articles
 meta_description: 'Articles Page'
 ---
 <section class="pt-6 pt-md-8 pb-8 mb-md-8">
@@ -10,7 +11,7 @@ meta_description: 'Articles Page'
   {% assign color = "#DA5988,#FF5A5F,#0082C9,#6772E5" %}
   <div class="row ml-5 mr-5">
     {% for category in site.categories %}
-    {% assign idx = forloop.index | minus:1 | modulo:4 %}
+    {% assign idx = forloop.index | minus: 1 | modulo: 4 %}
     {% assign curr_color = color | split:',' | slice:idx %}
         <div class="col-md-6 col-12 mt-5">
           <!-- Card -->

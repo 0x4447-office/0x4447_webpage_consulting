@@ -1,15 +1,17 @@
 ---
 layout: default
-title: Home
+type: home
+
+title: 
 description: 'Drive business growth with personalized AWS consulting through 0x4447 to implement cost-effective customer
 solutions built on scalable cloud infrastructure.'
 published_time: 2020-08-07
 author : David Gatti
 image :
-path : "/assets/img/illustrations/illustration-4.png"
-height: 480
-width : 720
-alt : og-image
+  path : "/assets/img/illustrations/illustration-4.png"
+  height: 480
+  width : 720
+  alt : og-image
 tags : [Cloud AWS]
 ---
 <section class="position-relative pt-12 pt-md-14 mt-n11">
@@ -19,14 +21,15 @@ tags : [Cloud AWS]
     {%- include logo.svg -%}
   </div>
 
-  {%- assign home = site.data.home -%}
+{%- assign home = site.data.home -%}
 
   <!-- Content -->
   <div class="container">
     <div class="row align-items-center text-center text-md-left">
       <div class="col-12 col-md-6">
         <!-- Image -->
-        <img src="{{home.content.image}}" alt="AWS Cloud Consulting" class="img-fluid mw-130 float-right mb-6 mb-md-0">
+        <img src="{{home.content.image}}" alt="AWS Cloud Consulting"
+          class="img-fluid mw-130 float-right mb-6 mb-md-0">
       </div>
       <div class="col-12 col-md-6">
 

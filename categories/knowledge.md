@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Articles - Knowledge
+title: Knowledge
 permalink: /articles/knowledge/
 meta_description: Articles - Knowledge Category
 pagination: 

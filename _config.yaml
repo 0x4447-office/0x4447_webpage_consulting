@@ -16,4 +16,8 @@ plugins:
   - jekyll-environment-variables  
   - jekyll-sitemap
   - jekyll-seo-tag
-name: "0x4447, LLC. Consulting"
+name: AWS Cloud Consulting
+description: "Drive business growth with personalized AWS consulting through 0x4447 to implement cost-effective customer solutions built on scalable cloud infrastructure."
+author: David Gatti
+after-name: "0x4447"
+generator: Jekyll v4.1.1
