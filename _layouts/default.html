@@ -1,20 +1,20 @@
----
----
-<html>
-    
-    {% include head.html %}
-    {% include nav.html %}
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{%- include head.html -%}
 
     <body class="d-flex flex-column">
 
+    {%- include nav.html -%}
+
         <main role="main" class="flex-shrink-0">
-            {{ content }}
-        </main>
+        <div class="wrapper">
+            {{ content }}
+        </div>
+    </main>
 
-        <footer class="footer mt-auto">
-            <span class="text-muted">{% include footer.html %}</span>
-        </footer>
+    {%- include footer.html -%}
 
-    </body>
+</body>
 
 </html>
