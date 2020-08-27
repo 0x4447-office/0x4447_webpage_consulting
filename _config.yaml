@@ -7,8 +7,6 @@ pagination:
   sort_field: 'date'
   sort_reverse: true
 permalink: articles/:categories/:title:output_ext
-gems:
-  - jekyll-paginate-v2
 url: "https://consulting.0x4447.com"
 plugins:
   - jekyll-paginate-v2
