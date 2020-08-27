@@ -18,3 +18,10 @@ img[src*="#responsive"] {
 .textarea_row textarea {
   height: 300px;
 }
+/* Footer */
+body {
+  min-height: 100vh;
+}
+.footer_shape {
+  margin-top: auto;
+}
