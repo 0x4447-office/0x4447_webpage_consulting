@@ -18,9 +18,32 @@ img[src*="#responsive"] {
 .textarea_row textarea {
   height: 300px;
 }
-.article_card_img {
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
+/* Footer */
+body {
+  min-height: 100vh;
+}
+.footer_shape {
+  margin-top: auto;
+}
+/* Article card image size */
+.card_image_box {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+@media (min-width: 768px) {
+  .card_image_box {
+    min-height: 293px;
+    overflow: hidden;
+  }
+}
+@media (min-width: 992px) {
+  .card_image_box {
+    min-height: 396px;
+  }
+}
+@media (min-width: 1024px) {
+  .card_image_box {
+    min-height: 430px;
+  }
 }
