@@ -25,3 +25,25 @@ body {
 .footer_shape {
   margin-top: auto;
 }
+/* Article card image size */
+.card_image_box {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+@media (min-width: 768px) {
+  .card_image_box {
+    min-height: 293px;
+    overflow: hidden;
+  }
+}
+@media (min-width: 992px) {
+  .card_image_box {
+    min-height: 396px;
+  }
+}
+@media (min-width: 1024px) {
+  .card_image_box {
+    min-height: 430px;
+  }
+}
