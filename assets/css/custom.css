@@ -26,7 +26,8 @@ body {
   margin-top: auto;
 }
 /* Article card image size */
-.card_image_box {
+.card_image_box,
+.card_text_box {
   display: flex;
   align-items: center;
   justify-items: center;
