@@ -1,0 +1,5 @@
+{% for post in site.posts %}
+  {% if post.isFeatured == true %}
+    {%- include post-featured.html post=post -%}
+  {% endif %}
+{% endfor %}

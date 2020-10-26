@@ -2,9 +2,12 @@
 title: How to hire the technical team
 image: /assets/img/articles/how-to-hire-the-technical-team/cover.png
 header: /assets/img/articles/how-to-hire-the-technical-team/header.png
-layout: post
+layout: blog-post
 description: how can I hire technical people when I myself know nothing about the technology world?
 categories: [how_to]
+isFeatured: false
+author: David Gatti
+authorAvatar: /assets/img/avatars/avatar-1.jpg
 ---
 
 This article is meant for CEOs, CTOs, and Managers. The goal is to give a better understanding of how to hire technical people by answering a common raised by clients: *how can I hire technical people when I myself know nothing about the technology world*?

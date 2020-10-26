@@ -2,9 +2,12 @@
 title: How to understand DynamoDB
 image: /assets/img/articles/how-to-understand-dynamodb/cover.png
 header: /assets/img/articles/how-to-understand-dynamodb/header.png
-layout: post
+layout: blog-post
 description: Am I doing DynamoDB the right way?
 categories: [how_to]
+isFeatured: false
+author: David Gatti
+authorAvatar: /assets/img/avatars/avatar-1.jpg
 ---
 
 This article is meant for anyone who wants to better understand DynamoDB after experiencing that your AWS bill for DDB is too high, the complexity is too big, or the promised speed is not there. This article presents an easier question: Am I doing DynamoDB the right way?

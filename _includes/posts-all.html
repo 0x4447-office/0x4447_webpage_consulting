@@ -1,0 +1,4 @@
+{% assign posts = site.posts | where_exp:"post","post.url != page.url" %}
+{% for post in posts limit:include.limit %}
+  {%- include post-regular.html post=post -%}
+{% endfor %}
