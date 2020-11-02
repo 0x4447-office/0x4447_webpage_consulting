@@ -1,0 +1,57 @@
+<div class="col-12 col-md-6 col-lg-4 d-flex">
+      
+    <!-- Card -->
+    <div class="card mb-6 shadow-light-lg lift lift-lg">
+
+      <!-- Image -->
+      <a class="card-img-top" href="{{ post.url }}">
+
+        <!-- Image -->
+        <img src="{{ post.image }}" alt="..." class="card-img-top">
+
+        <!-- Shape -->
+        <div class="position-relative">
+          <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+            {%- include assets/img/shapes/curves/curve-3.svg -%}
+          </div>
+        </div>
+
+      </a>
+
+      <!-- Body -->
+      <a class="card-body" href="{{ post.url }}">
+
+        <!-- Heading -->
+        <h3>
+          {{ post.title }}
+        </h3>
+
+        <!-- Text -->
+        <p class="mb-0 text-muted">
+          {{ post.description }}
+        </p>
+
+      </a>
+        
+      <!-- Meta -->
+      <a class="card-meta mt-auto" href="{{ post.url }}">
+
+        <!-- Divider -->
+        <hr class="card-meta-divider">
+        
+        <!-- Author -->
+        <h6 class="text-uppercase text-muted mr-2 mb-0">
+          {{ post.author }}
+        </h6>
+        
+        <!-- Date -->
+        <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+          <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%b %d" }}</time>
+        </p>
+
+      </a>
+
+    </div>
+
+  </div>
+  

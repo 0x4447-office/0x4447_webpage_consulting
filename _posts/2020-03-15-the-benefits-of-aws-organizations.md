@@ -3,9 +3,12 @@ title: The benefits of AWS organizations
 image: /assets/img/articles/the-benefits-of-aws-organizations/og.png
 cover: /assets/img/articles/the-benefits-of-aws-organizations/cover.png
 header: /assets/img/articles/the-benefits-of-aws-organizations/header.png
-layout: post
+layout: blog-post
 description: The goal is to show you the benefits of managing your AWS infrastructure using Organizations.
 categories: [knowledge]
+isFeatured: false
+author: David Gatti
+authorAvatar: /assets/img/avatars/avatar-1.jpg
 ---
 
 This article is meant for CEOs, CTOs, and managers who want to understand the benefits of managing AWS infrastructure using Organizations, by answering a common question clients have: *Why spend the time setting up AWS Organizations?* 

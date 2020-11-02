@@ -1,0 +1,5 @@
+{% for post in site.posts limit:include.limit %}
+  {% if post.isFeatured != true %}
+    {%- include post-regular.html post=post -%}
+  {% endif %}
+{% endfor %}

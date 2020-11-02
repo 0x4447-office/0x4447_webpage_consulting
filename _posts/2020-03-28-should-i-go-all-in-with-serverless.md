@@ -3,9 +3,12 @@ title: Should I go all in with Serverless?
 image: /assets/img/articles/should-i-go-all-in-with-serverless/og.png
 cover: /assets/img/articles/should-i-go-all-in-with-serverless/cover.png
 header: /assets/img/articles/should-i-go-all-in-with-serverless/header.png
-layout: post
+layout: blog-post
 description: The goal is to better understand Serverless technology and how it affects your costs as your project grows.
 categories: [knowledge]
+isFeatured: false
+author: David Gatti
+authorAvatar: /assets/img/avatars/avatar-1.jpg
 ---
 
 This article is meant for CEOs, CTOs, and managers who want to make a more educated decision about building products in the cloud, by answering a common question clients have: *Should I go serverless or build a project with regular servers?*

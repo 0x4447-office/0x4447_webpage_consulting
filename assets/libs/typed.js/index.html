@@ -1,6 +1,3 @@
----
-sitemap: false
----
 <!doctype html>
 <html lang="en">
 <head>
@@ -54,6 +51,7 @@ sitemap: false
     backDelay: 500,
     startDelay: 1000,
     loop: false,
+    onBegin: function(self) { prettyLog('onBegin ' + self) },
     onComplete: function(self) { prettyLog('onCmplete ' + self) },
     preStringTyped: function(pos, self) { prettyLog('preStringTyped ' + pos + ' ' + self); },
     onStringTyped: function(pos, self) { prettyLog('onStringTyped ' + pos + ' ' + self) },

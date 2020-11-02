@@ -2,9 +2,12 @@
 title: The best serverless database combo on AWS
 image: /assets/img/articles/the-best-serverless-database-combo-on-aws/cover.png
 header: /assets/img/articles/the-best-serverless-database-combo-on-aws/header.png
-layout: post
+layout: blog-post
 description: What is the best serverless database combo on AWS?
 categories: [experience]
+isFeatured: false
+author: David Gatti
+authorAvatar: /assets/img/avatars/avatar-1.jpg
 ---
 
 This article is meant for anyone who wants to better understand Serverless databases to get the best performance at the right price. This article presents an easier question: What is the best serverless database combo on AWS?
@@ -59,7 +62,7 @@ S3's support of SQL is feature worth exploring and taking the time to understand
 
 ## Real life example
 
-![example](/assets/img/articles/the-best-serverless-database-combo-on-aws/s3_ddb_example.png)
+![example](/assets/img/articles/the-best-serverless-database-combo-on-aws/s3_ddb_example.png#responsive)
 
 The above screenshot is an example of how to organize your data between DynamoDB (in blue) and S3 (in red) using [Amazon.com](http://amazon.com) as a real life example. Of course this is just an idea to show how the approach explained above could be implemented, and it does not mean this is how you should always do it, or how Amazon should do it. 
 

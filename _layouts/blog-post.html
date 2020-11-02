@@ -1,0 +1,131 @@
+---
+layout: default
+---
+
+    <!-- IMAGE
+    ================================================== -->
+    <section data-jarallax data-speed=".8" class="py-12 py-md-15 bg-cover jarallax" style="background-image: url({{ page.header }});"></section>
+
+    <!-- HEADER
+    ================================================== -->
+    <section class="pt-8 pt-md-11">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+
+            <!-- Heading -->
+            <h1 class="display-4 text-center">
+              {{ page.title }}
+            </h1>
+
+            <!-- Meta -->
+            <div class="row align-items-center py-5 border-top border-bottom">
+              <div class="col-auto">
+
+              </div>
+              <div class="col ml-n5">
+
+                <!-- Name -->
+                <h6 class="text-uppercase mb-0">
+                  {{ page.author }}
+                </h6>
+
+                <!-- Date -->
+                <time class="font-size-sm text-muted" datetime="{{ post.date | date: "%Y-%m-%d" }}">
+                  Published on {{ page.date | date: "%b %d, %Y" }}
+                </time>
+
+              </div>
+              <div class="col-auto">
+
+                <!-- Share -->
+                <span class="h6 text-uppercase text-muted d-none d-md-inline mr-4">
+                  Share:
+                </span>
+
+                <!-- Icons -->
+                <ul class="d-inline list-unstyled list-inline list-social">
+                  <li class="list-inline-item list-social-item mr-3">
+                    <a href="https://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url }}&title={{ page.title | url_escape }}" class="text-decoration-none">
+                      <img src="/assets/img/icons/social/facebook.svg" class="list-social-icon" alt="...">
+                    </a>
+                  </li>
+                  <li class="list-inline-item list-social-item mr-3">
+                    <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title | url_escape }}" class="text-decoration-none">
+                      <img src="/assets/img/icons/social/twitter.svg" class="list-social-icon" alt="...">
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- SECTION
+    ================================================== -->
+    <section class="pt-6 pt-md-8">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+            {{ page.content }}
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- SECTION
+    ================================================== -->
+    <section class="pt-6 pt-md-8 pb-8 pb-md-11">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+              <h2>Sharing is Caring</h2>
+              <p>If you found this article useful, consider sharing it with someone you think could benefit from it.</p>
+              
+              <div class="contact_form">
+                <h2>Contact David Today</h2>
+                <p>Please describe your situation and your cloud computing needs.</p>
+                {% include contact_form.html select ="Industry" %}
+              </div>
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- SHAPE
+    ================================================== -->
+    <div class="position-relative">
+      <div class="shape shape-bottom shape-fluid-x svg-shim text-light">
+        {%- include assets/img/shapes/curves/curve-1.svg -%}
+      </div>
+    </div>
+
+    <!-- ARTICLES
+    ================================================== -->
+    <section class="pt-7 pt-md-10 bg-light">
+      <div class="container">
+        <div class="row align-items-center mb-5">
+          <div class="col-12 col-md">
+
+            <!-- Heading -->
+            <h3 class="mb-0">
+              Latest Stories
+            </h3>
+
+            <!-- Text -->
+            <p class="mb-0 text-muted">
+              Here’s what we've been up to recently.
+            </p>
+
+          </div>
+          
+        </div> <!-- / .row -->
+        <div class="row">
+          {%- include posts-all.html limit=3 -%}
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>

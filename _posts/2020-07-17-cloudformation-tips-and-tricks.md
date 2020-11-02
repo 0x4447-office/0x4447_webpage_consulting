@@ -2,9 +2,12 @@
 title: CloudFormation Tips and Tricks
 image: /assets/img/articles/cloudformation-tips-and-tricks/cover.jpg
 header: /assets/img/articles/cloudformation-tips-and-tricks/header.jpg
-layout: post
+layout: blog-post
 description: The goal is to give a better understanding of what CloudFormation is and why it should be used for every AWS project.
 categories: [knowledge]
+isFeatured: false
+author: David Gatti
+authorAvatar: /assets/img/avatars/avatar-1.jpg
 ---
 
 This article is meant for CEOs, CTOs, and Managers. The goal is to give a better understanding of what CloudFormation is and why it should be used for every AWS project, by answering a common question clients have: *What are the the most important things our team should be aware of when working on a CF file?*
