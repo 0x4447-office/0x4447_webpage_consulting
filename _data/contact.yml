@@ -51,20 +51,20 @@ State:
   - value: Wisconsin
   - value: Wyoming
 Industry:
-  - value: Agriculture, Forestry, Fishing and Hunting in the US
-  - value: Mining in the US
-  - value: Utilities in the US
-  - value: Construction in the US
-  - value: Manufacturing in the US
-  - value: Wholesale Trade in the US
-  - value: Retail Trade in the US
-  - value: Transportation and Warehousing in the US
-  - value: Information in the US
-  - value: Finance and Insurance in the US
-  - value: Real Evalue and Rental and Leasing in the US
-  - value: Professional, Scientific and Technical Services in the US
+  - value: Agriculture, Forestry, Fishing and Hunting
+  - value: Mining
+  - value: Utilities
+  - value: Construction
+  - value: Manufacturing
+  - value: Wholesale Trade
+  - value: Retail Trade
+  - value: Transportation and Warehousing
+  - value: Information
+  - value: Finance and Insurance
+  - value: Real Evalue and Rental and Leasing
+  - value: Professional, Scientific and Technical Services
   - value: Administration, Business Support and Waste Management Services
-  - value: Healthcare and Social Assistance in the US
-  - value: Arts, Entertainment and Recreation in the US
-  - value: Accommodation and Food Services in the US
-  - value: Other Services (except Public Administration) in the US
+  - value: Healthcare and Social Assistance
+  - value: Arts, Entertainment and Recreation
+  - value: Accommodation and Food Services
+  - value: Other
