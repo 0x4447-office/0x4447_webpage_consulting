@@ -43,16 +43,47 @@ layout: default
                   Share:
                 </span>
 
+                {% assign shareUrl = site.url | append: page.url | url_encode %}
+                {% assign shareTitle = page.title | url_encode %}
+                {% assign shareSource = site.name | url_encode %}
+                {% assign shareSummary = page.description | url_encode %}
+
                 <!-- Icons -->
                 <ul class="d-inline list-unstyled list-inline list-social">
                   <li class="list-inline-item list-social-item mr-3">
-                    <a href="https://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url }}&title={{ page.title | url_escape }}" class="text-decoration-none">
-                      <img src="/assets/img/icons/social/facebook.svg" class="list-social-icon" alt="...">
+                    <a
+                      href="https://www.facebook.com/sharer.php?u={{ shareUrl }}&title={{ shareTitle }}"
+                      class="text-decoration-none"
+                    >
+                      <img
+                        src="/assets/img/icons/social/facebook.svg"
+                        class="list-social-icon"
+                        alt="Share on Facebook"
+                      >
                     </a>
                   </li>
                   <li class="list-inline-item list-social-item mr-3">
-                    <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title | url_escape }}" class="text-decoration-none">
-                      <img src="/assets/img/icons/social/twitter.svg" class="list-social-icon" alt="...">
+                    <a
+                      href="https://twitter.com/intent/tweet?url={{ shareUrl }}&text={{ shareTitle }}"
+                      class="text-decoration-none"
+                    >
+                      <img
+                        src="/assets/img/icons/social/twitter.svg"
+                        class="list-social-icon"
+                        alt="Share on Twitter"
+                      >
+                    </a>
+                  </li>
+                  <li class="list-inline-item list-social-item">
+                    <a
+                      href="https://www.linkedin.com/shareArticle?mini=true&url={{ shareUrl }}&title={{ shareTitle }}&source={{ shareSource }}&summary={{ shareSummary }}"
+                      class="text-decoration-none"
+                    >
+                      <img
+                        src="/assets/img/icons/social/linkedin.svg"
+                        class="list-social-icon"
+                        alt="Share on LinkedIn"
+                      >
                     </a>
                   </li>
                 </ul>
