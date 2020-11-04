@@ -31,9 +31,9 @@ layout: default
                 </h6>
 
                 <!-- Date -->
-                <time class="font-size-sm text-muted" datetime="{{ post.date | date: "%Y-%m-%d" }}">
-                  Published on {{ page.date | date: "%b %d, %Y" }}
-                </time>
+                <p class="font-size-sm text-muted">
+                  {%- include timestamp.html preText="Published on " entity=page -%}
+                </p>
 
               </div>
               <div class="col-auto">
