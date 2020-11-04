@@ -1,5 +1,5 @@
 ---
-layout: blog-post
+layout: article
 title: How to lower EC2 Costs
 image: /assets/img/articles/how-to-lower-ec2-costs/og.png
 cover: /assets/img/articles/how-to-lower-ec2-costs/cover.png

@@ -14,7 +14,7 @@
 
     {% feed_meta %}
 
-    {% if page.layout == 'post' %}
+    {% if page.layout == 'article' %}
     {% assign title = page.title | append: " - " | append: site.after-name %}
         {% elsif page.type == 'home' %}
         {% assign title = site.name | append: ' - ' | append: site.after-name %}

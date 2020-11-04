@@ -2,7 +2,7 @@
 title: How to understand DynamoDB
 image: /assets/img/articles/how-to-understand-dynamodb/cover.png
 header: /assets/img/articles/how-to-understand-dynamodb/header.png
-layout: blog-post
+layout: article
 description: Am I doing DynamoDB the right way?
 categories: [how_to]
 isFeatured: false
