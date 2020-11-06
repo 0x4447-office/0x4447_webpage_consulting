@@ -80,15 +80,24 @@
                 <label for="statePicker">
                   {{p}}
                 </label>
-                <select class="selectpicker form-control" style="width:100%" name="statePicker" id="states"
-                  data-size="12" title="Select {{p}}" data-live-search="true">
-                  {%- for item in site.data.contact.[p] -%}
-                  <option value="{{item.value}}">
-                    {{item.value}}
-                  </option>
-                  {%- endfor -%}
-                </select>
-                <!-- end select-->
+                <div class="shame__selectpicker">
+                  <select
+                    class="selectpicker show-tick show-menu-arrow"
+                    name="statePicker"
+                    id="states"
+                    title="Select {{p}}"
+                    data-live-search="true"
+                    data-size="12"
+                    data-style="btn-light"
+                  >
+                    {%- for item in site.data.contact.[p] -%}
+                      <option value="{{item.value}}">
+                        {{item.value}}
+                      </option>
+                    {%- endfor -%}
+                  </select>
+                  <!-- end select-->
+                </div>
               </div>
             </div>
 
@@ -101,10 +110,20 @@
                 </label>
 
                 <!-- Input -->
-                <select class="selectpicker form-control" style="width:50%" name="contactTags" id="tags" required
-                  data-live-search="true" data-size="12" multiple title="Select an AWS Service">
-
-                </select>
+                <div class=" shame__selectpicker">
+                  <select
+                    class="selectpicker show-tick show-menu-arrow"
+                    name="contactTags"
+                    id="tags"
+                    title="Select an AWS Service"
+                    required
+                    multiple
+                    data-live-search="true"
+                    data-size="12"
+                    data-style="btn-light"
+                  >
+                  </select>
+                </div>
 
               </div>
             </div>
