@@ -2,7 +2,7 @@
 title: CloudFormation Tips and Tricks
 image: /assets/img/articles/cloudformation-tips-and-tricks/cover.jpg
 header: /assets/img/articles/cloudformation-tips-and-tricks/header.jpg
-layout: blog-post
+layout: article
 description: The goal is to give a better understanding of what CloudFormation is and why it should be used for every AWS project.
 categories: [knowledge]
 isFeatured: false

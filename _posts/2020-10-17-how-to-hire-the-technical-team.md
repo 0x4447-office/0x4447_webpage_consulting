@@ -2,7 +2,7 @@
 title: How to hire the technical team
 image: /assets/img/articles/how-to-hire-the-technical-team/cover.png
 header: /assets/img/articles/how-to-hire-the-technical-team/header.png
-layout: blog-post
+layout: article
 description: how can I hire technical people when I myself know nothing about the technology world?
 categories: [how_to]
 isFeatured: false

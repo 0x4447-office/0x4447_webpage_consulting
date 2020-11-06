@@ -2,7 +2,7 @@
 title: How to organize a project with CloudFormation
 image: /assets/img/articles/how-to-organize-a-project-with-cloudformation/cover.png
 header: /assets/img/articles/how-to-organize-a-project-with-cloudformation/header.png
-layout: blog-post
+layout: article
 description: How should a project be broken down to keep it flexible?
 categories: [how_to]
 isFeatured: true
