@@ -1,0 +1,13 @@
+---
+layout: client
+slug: atkins
+subtitle: TODO1
+info: 'TODO info'
+opinion: 'TODO opinion'
+---
+
+<p>Atkins relied heavily on video editing software and recognized that its process was hemorrhaging costs. Atkins was using different Windows machines with video editing software and was then having to upload huge data sets to its website. David came up with the solution to simplify costs by creating a server running on AWS with a Windows operating system, graphic art, and Nvidia Cuda so that Atkins would have a video editing rig in the cloud. The cloud video editing rig was more powerful and much faster than the desktop environment.</p>
+
+<p>that’s not all, because David made video editing in the cloud possible because of a Samba server and an open VPN server, which are 2 of his products. The Samba server allowed Atkins to have access to video files from a local computer just by mounting the drive locally, and then by doing the same thing on the Windows server. Access to files was more straightforward, faster, and simpler. With Atkins now using a Samba server, it meant that the same drive could be shared in multiple places to allow uploading with little effort and to easily edit videos in the cloud. The open VPN server that David implemented meant that the video editing rig in the cloud was hidden on a private network and a private subnet so that there was no risk and no malicious actors could gain access to the machine, because there was no public access to the rig.</p>
+
+<p>David also went above and beyond to save Atkins additional time and costs. David implemented a lambda function that would monitor the instance and turn the server off after a few hours when not in use and the CPU usage was low. This preserved costs by preventing the video editing server from constantly running. David also created a desktop app that would allow Atkins employees to turn off the instance when it wasn't needed, which prevented them from having to go through the AWS console. David also included clear and concise documentation to easily understand the app's function and how to use it.</p>
