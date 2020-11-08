@@ -26,3 +26,21 @@ e.g.
 ```
 ![alt text](/path/to/image.png#responsive)
 ```
+
+# How to add a new category
+
+- copy `/articles/experience/index.html` to `/articles/cheeseburgers/index.html`, e.g.
+
+```
+---
+layout: articles
+category:
+    name: Cheeseburgers
+    slug: cheeseburgers
+---
+
+{%- include category-section.html category=page.category -%}
+
+```
+
+- tag your new post with `cheeseburgers`

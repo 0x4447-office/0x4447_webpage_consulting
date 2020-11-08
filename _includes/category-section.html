@@ -1,0 +1,15 @@
+<section class="pt-7 pt-md-10 pb-10 pb-md-13">
+    <div class="container">
+      <div class="row align-items-center mb-5">
+        <div class="col-12 col-md">
+          <!-- Heading -->
+          <h1 class="mb-0">
+            {{ include.category.name }}
+          </h1>
+        </div>
+      </div> <!-- / .row -->
+      <div class="row">
+        {%- include posts-category.html category=include.category -%}
+      </div>
+    </div> <!-- / .container -->
+  </section>
