@@ -1,13 +1,13 @@
 ---
-title: How to organize a project with CloudFormation
-image: /assets/img/articles/how-to-organize-a-project-with-cloudformation/cover.jpg
-header: /assets/img/articles/how-to-organize-a-project-with-cloudformation/header.jpg
 layout: article
+title: How to organize a project with CloudFormation
+cover: /assets/img/articles/how-to-organize-a-project-with-cloudformation/cover.jpg
+header: /assets/img/articles/how-to-organize-a-project-with-cloudformation/header.jpg
+image: /assets/img/articles/how-to-organize-a-project-with-cloudformation/image.jpg
 description: How should a project be broken down to keep it flexible?
 categories: [how_to]
 isFeatured: false
 author: David Gatti
-authorAvatar: /assets/img/avatars/avatar-1.jpg
 ---
 
 This article is meant for CEOs, CTOs, and Managers. The goal is to give a better understanding of how to organize a project with CloudFormation, by answering a common question clients have: *How should a project be broken down to keep it flexible?*

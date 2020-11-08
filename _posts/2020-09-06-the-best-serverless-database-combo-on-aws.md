@@ -1,13 +1,13 @@
 ---
-title: The best serverless database combo on AWS
-image: /assets/img/articles/the-best-serverless-database-combo-on-aws/cover.jpg
-header: /assets/img/articles/the-best-serverless-database-combo-on-aws/header.jpg
 layout: article
+title: The best serverless database combo on AWS
+cover: /assets/img/articles/the-best-serverless-database-combo-on-aws/cover.jpg
+header: /assets/img/articles/the-best-serverless-database-combo-on-aws/header.jpg
+image: /assets/img/articles/the-best-serverless-database-combo-on-aws/image.jpg
 description: What is the best serverless database combo on AWS?
 categories: [experience]
 isFeatured: false
 author: David Gatti
-authorAvatar: /assets/img/avatars/avatar-1.jpg
 ---
 
 This article is meant for anyone who wants to better understand Serverless databases to get the best performance at the right price. This article presents an easier question: What is the best serverless database combo on AWS?
