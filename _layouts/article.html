@@ -108,18 +108,31 @@ layout: default
             {{ page.content }}
             <h2>Sharing is Caring</h2>
             <p>If you found this article useful, consider sharing it with someone you think could benefit from it.</p>
-            <div class="contact_form">
-              <h2>Contact David Today</h2>
-              <p>Please describe your situation and your cloud computing needs.</p>
-            </div>
+            <h2>Contact David Today</h2>
+            <p>Please describe your situation and your cloud computing needs.</p>
           </div>
         </div> <!-- / .row -->
       </div> <!-- / .container -->
     </section>
 
-    <!-- --- CONTACT FORM --- -->
-    {% include contact_form.html select ="Industry" %}
-    <!-- --- CONTACT FORM --- -->
+<!-- FORM
+    ================================================== -->
+    <section class="pt-8 pt-md-11 pb-8 pb-md-14">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            
+            <!-- Card -->
+            <div class="card card-border border-primary shadow-light-lg">
+              <div class="card-body">
+                {% include contact_form.html select ="Industry" %}
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
 
     <!-- ARTICLES
     ================================================== -->
