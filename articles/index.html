@@ -4,50 +4,33 @@ title: Our Articles
 description: Articles page
 ---
 
-<!-- ARTICLES
-================================================== -->
 <section class="pt-7 pt-md-10">
   <div class="container">
     {%- include posts-featured.html limit=3 -%}
   </div> <!-- / .container -->
 </section>
 
-<!-- ARTICLES
-================================================== -->
-<section class="pt-7 pt-md-10 pb-10 pb-md-13">
-  <div class="container">
-    <div class="row align-items-center mb-5">
-      <div class="col-12 col-md">
-        
-        <!-- Heading -->
-        <h3 class="mb-0">
-          Latest Articles
-        </h3>
+    <!-- ARTICLES
+    ================================================== -->
+    <section class="pt-7 pt-md-10 pb-10 pb-md-13">
+      <div class="container">
+        <div class="row align-items-center mb-5">
+          <div class="col-12 col-md">
 
-        <!-- Text -->
-        <p class="mb-0 text-muted">
-          Some things that I learned over time.
-        </p>
+            <!-- Heading -->
+            <h3 class="mb-0">
+              Latest Articles
+            </h3>
 
             <!-- Text -->
-            <p class="lead mb-0 text-white-75">
-              My thoughts, experience and knowledge as a memory dump.
+            <p class="mb-0 text-muted">
+              Some things that I learned over time.
             </p>
 
           </div>
         </div> <!-- / .row -->
+        <div class="row">
+          {%- include posts-regular.html limit=1000 -%}
+        </div>
       </div> <!-- / .container -->
     </section>
-
-    <!-- SHAPE
-    ================================================== -->
-    <div class="position-relative">
-      <div class="shape shape-bottom shape-fluid-x svg-shim text-light">
-        {%- include assets/img/shapes/curves/curve-1.svg -%}
-      </div>
-    </div> <!-- / .row -->
-    <div class="row">
-      {%- include posts-regular.html limit=1000 -%}
-    </div>
-  </div> <!-- / .container -->
-</section>
