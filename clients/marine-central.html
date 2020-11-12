@@ -1,0 +1,17 @@
+---
+layout: client
+slug: marine-central
+subtitle: "Reorganize the whole AWS infrastructure and stabilize the product." 
+info: "Marine Services Database for all sailors."
+opinion: "n/a"
+---
+
+<p>Marine Central wanted to reorganize a massive project because they were starting to realize that they had little-to-no control over the project, no progress was being made, and the project was getting too expensive to continue. Despite having a dedicated team of developers, Marine Central still struggled to stay organized and had difficulties implementing new features.</p>
+
+<p>David came in at a crucial time when Marine Central’s developers were trying to massage the code inside the production server, which inadvertently affected production stability and was doing more harm than good. David’s stabilized Marine Central’s projects through comprehensive reorganization and by forcing their developers to work according to industry standards. </p>
+
+<p>David organized Marine Central’s AWS infrastructure and used Rsyslog, one of the products that he makes for the AWS Marketplace, to centralize all servers and application logs in order for the developers to more easily and securely access productions logs without being able to access and harm the production server themselves. This resulted in David minimizing Marine Central's AWS costs because they no longer had to use the AWS CloudWatch Logs service, which is very expensive when at a high volume of logs.</p>
+
+<p>David also reorganized Marine Central's AWS account and reorganized everything using the AWS best practices of AWS Organization, by creating Production and Development accounts. This allowed Marine Central's developers to test their work in a safe environment that is identical to the one running in production. Additionally, David containerized all the software so that the developers could mimic the local environment before pushing the code into AWS for final testing.</p>
+
+<p>Lastly, David consolidated the stacks into multiple CloudFormation files, which made it easier to manage, keep track of changes, and allowed redeployment in more than one AWS Account.</p>
