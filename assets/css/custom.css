@@ -61,6 +61,10 @@ body {
   border: 1px solid #f1f4f8;
 }
 
+.shame__selectpicker .dropdown-toggle {
+  background-color: #fff;
+}
+
 .shame__selectpicker .dropdown-menu {
   padding: 1rem 0 0;
 }
