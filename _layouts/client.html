@@ -54,22 +54,24 @@ layout: default
             </div>
           </div>
 
-          <!-- Card -->
-          <div class="card shadow-light-lg">
-            <div class="card-body">
-              
-              <!-- Heading -->
-              <h4>
-                Company Testimonial
-              </h4>
+          {% if page.opinion %}
+            <!-- Card -->
+            <div class="card shadow-light-lg">
+              <div class="card-body">
+                
+                <!-- Heading -->
+                <h4>
+                  Company Testimonial
+                </h4>
 
-              <!-- Text -->
-              <p class="font-size-sm text-gray-800">
-                {{ page.opinion }}
-              </p>
+                <!-- Text -->
+                <p class="font-size-sm text-gray-800">
+                  {{ page.opinion }}
+                </p>
 
+              </div>
             </div>
-          </div>
+          {% endif %}
 
         </div>
       </div> <!-- / .row -->
