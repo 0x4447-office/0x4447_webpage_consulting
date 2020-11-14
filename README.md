@@ -8,13 +8,14 @@ This this website contains all the details related to the Consulting experities 
 - gem install jekyll bundler
 - bundle exec jekyll serve
 
-# How to set header image to posts
+# How to set cover image to articles
 
-When creating a post, to add the header image in the beginning of the content; use header variable and address it to the image path.
+When creating an article, to add the cover image in the beginning of the content; use the `cover` variable and address it to the image path.
+
 e.g.
 ```
 --- 
-header: /path/to/header.png
+cover: /path/to/cover.jpg
 ---
 {CONTENT HERE}
 ```

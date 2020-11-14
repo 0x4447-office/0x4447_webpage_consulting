@@ -2,8 +2,8 @@
 layout: article
 title: The best serverless database combo on AWS
 cover: /assets/img/articles/the-best-serverless-database-combo-on-aws/cover.jpg
-header: /assets/img/articles/the-best-serverless-database-combo-on-aws/header.jpg
-image: /assets/img/articles/the-best-serverless-database-combo-on-aws/image.jpg
+featured: /assets/img/articles/the-best-serverless-database-combo-on-aws/featured.jpg
+preview: /assets/img/articles/the-best-serverless-database-combo-on-aws/preview.jpg
 description: What is the best serverless database combo on AWS?
 categories: [experience]
 isFeatured: false
