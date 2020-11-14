@@ -8,7 +8,7 @@
       <div class="col-12 col-md-4 text-center" data-aos="fade-up" data-aos-delay="100">
         <!-- Icon -->
         <div class="icon text-primary mb-3">
-          <img src="{{item.icon}}">
+          <img src="data:image/png;base64,{%- include {{ item.icon | append: '.base64' }} -%}" />
         </div>
 
         <!-- Heading -->
