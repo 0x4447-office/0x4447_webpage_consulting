@@ -75,6 +75,8 @@ body {
 }
 
 .shame__selectpicker .dropdown-toggle {
+  color: #869ab8 !important;
+  font-weight: 400;
   background-color: #fff;
 }
 
