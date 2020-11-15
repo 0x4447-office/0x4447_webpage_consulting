@@ -1,6 +1,8 @@
 ---
 layout: article
 title: How to lower EC2 Costs
+image:
+    path: /assets/img/articles/how-to-lower-ec2-costs/featured.jpg
 cover: /assets/img/articles/how-to-lower-ec2-costs/cover.jpg
 featured: /assets/img/articles/how-to-lower-ec2-costs/featured.jpg
 preview: /assets/img/articles/how-to-lower-ec2-costs/preview.jpg

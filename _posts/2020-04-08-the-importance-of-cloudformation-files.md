@@ -1,6 +1,8 @@
 ---
 layout: article
 title: The Importance of CloudFormation Files
+image:
+    path: /assets/img/articles/the-importance-of-cloudformation-files/featured.jpg
 cover: /assets/img/articles/the-importance-of-cloudformation-files/cover.jpg
 featured: /assets/img/articles/the-importance-of-cloudformation-files/featured.jpg
 preview: /assets/img/articles/the-importance-of-cloudformation-files/preview.jpg

@@ -1,6 +1,8 @@
 ---
 layout: article
 title: How to organize a project with CloudFormation
+image:
+    path: /assets/img/articles/how-to-organize-a-project-with-cloudformation/featured.jpg
 cover: /assets/img/articles/how-to-organize-a-project-with-cloudformation/cover.jpg
 featured: /assets/img/articles/how-to-organize-a-project-with-cloudformation/featured.jpg
 preview: /assets/img/articles/how-to-organize-a-project-with-cloudformation/preview.jpg

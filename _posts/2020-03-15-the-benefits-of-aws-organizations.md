@@ -1,6 +1,8 @@
 ---
 layout: article
 title: The benefits of AWS organizations
+image:
+    path: /assets/img/articles/the-benefits-of-aws-organizations/featured.jpg
 cover: /assets/img/articles/the-benefits-of-aws-organizations/cover.jpg
 featured: /assets/img/articles/the-benefits-of-aws-organizations/featured.jpg
 preview: /assets/img/articles/the-benefits-of-aws-organizations/preview.jpg
