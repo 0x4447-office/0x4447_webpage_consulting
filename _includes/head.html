@@ -14,14 +14,21 @@
 
     {% feed_meta %}
 
-    {% comment %}title configuration{% endcomment %}
-    {% assign comboName = site.name | append: site.title-sep | append: site.after-name %}
-    {% if page.layout == 'article' %}
-        {% assign title = page.title | append: site.title-sep | append: comboName %}
-    {% elsif page.type == 'home' %}
-        {% assign title = comboName | append: site.title-sep | append: site.description %}
-    {%- else -%}
-        {% assign title = page.title | append: site.title-sep | append: comboName %}
+    {% comment %} title configuration {% endcomment %}
+
+    {% if page.type == 'home' %}
+        {% assign title = site.name | append: site.title-sep | append: site.after-name %}
+    {% else %}
+        {% if page.layout == 'article' %}
+            {% assign title = page.title | append: site.title-sep | append: site.after-name %}
+        {% else %}
+            {% if page.layout == 'client' %}
+                {% assign title = page.subtitle | append: site.title-sep | append: site.after-name %}
+            {% else %}
+                {% comment %} default {% endcomment %}
+                {% assign title = page.title | append: site.title-sep | append: site.after-name %}
+            {%- endif -%}
+        {%- endif -%}
     {%- endif -%}
     <title>{{title}}</title>
 
