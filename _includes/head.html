@@ -26,6 +26,7 @@
     <title>{{title}}</title>
 
     <meta name="generator" content="{{site.generator}}" />
+
     {%- if page.author -%}
     {%- assign author = page.author -%}
     {%- else -%}
@@ -52,7 +53,7 @@
     <meta property="article:modified_time" content="page.{{modified_time}}" />
     {%- endif -%}
     <meta name="author" content="{{author}}" />
-    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:title" content="{{title}}" />
     <meta property="og:locale" content="{{lang}}" />
     <meta property="og:description" content="{{descr}}" />
     <meta property="og:url" content="{{page.url | absolute_url}}" />
@@ -64,7 +65,7 @@
  
     <meta name="twitter:creator" content="{{author}}">
     <meta http-equiv="content-language" content="en" />
-    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:title" content="{{title}}">
     {%- if page.description -%}
     <meta name="twitter:description" content="{{page.description}}">
     <meta name="twitter:card" content="summary_large_image">
@@ -104,7 +105,7 @@
     "@type":"Person",
     "name":"{{author}}"},
     "description":"{{descr}}",
-    "name":"{{ title }}","headline":"{{page.title}}","@context":"https://schema.org"}</script>
+    "name":"{{title}}","headline":"{{page.title}}","@context":"https://schema.org"}</script>
 
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
