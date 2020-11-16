@@ -1,9 +1,11 @@
 ---
 layout: article
 title: The Importance of CloudFormation Files
+image:
+    path: /assets/img/articles/the-importance-of-cloudformation-files/featured.jpg
 cover: /assets/img/articles/the-importance-of-cloudformation-files/cover.jpg
-header: /assets/img/articles/the-importance-of-cloudformation-files/header.jpg
-image: /assets/img/articles/the-importance-of-cloudformation-files/image.jpg
+featured: /assets/img/articles/the-importance-of-cloudformation-files/featured.jpg
+preview: /assets/img/articles/the-importance-of-cloudformation-files/preview.jpg
 description: The goal is to give a better understanding of what CloudFormation is and why it should be used for every AWS project.
 categories: [knowledge]
 isFeatured: false

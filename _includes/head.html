@@ -66,14 +66,10 @@
     <meta name="twitter:description" content="{{page.description}}">
     <meta name="twitter:card" content="summary_large_image">
     {%- endif -%}
-    {%- if page.image -%}
-    {%- if page.image.path -%}
-    <meta property="og:image" content="{{site.url}}{{page.image.path}}" />
-    <meta name="twitter:image" content="{{site.url}}{{page.image.path}}">
-    {%- else -%}
-    <meta name="twitter:image" content="{{site.url}}{{page.image}}">
-    <meta property="og:image" content="{{site.url}}{{page.image}}" />
-    {%- endif -%}
+
+    {%- if page.image and page.image.path -%}
+        <meta property="og:image" content="{{ site.url }}{{ page.image.path }}" />
+        <meta name="twitter:image" content="{{ site.url }}{{ page.image.path }}" />
     {%- endif -%}
 
     <!-- application/ld+json -->
@@ -86,8 +82,6 @@
         "alt":"og-image",
     {%- if page.image.path -%}
     "url":"{{site.url}}{{page.image.path}}",
-    {%- else -%}
-    "url":"{{site.url}}{{page.image}}",
     {%- endif -%}
     {%- if page.image.height  -%}
         "height":"{{page.image.height}}",

@@ -1,9 +1,11 @@
 ---
 layout: article
 title: How to understand DynamoDB
+image:
+    path: /assets/img/articles/how-to-understand-dynamodb/featured.jpg
 cover: /assets/img/articles/how-to-understand-dynamodb/cover.jpg
-header: /assets/img/articles/how-to-understand-dynamodb/header.jpg
-image: /assets/img/articles/how-to-understand-dynamodb/image.jpg
+featured: /assets/img/articles/how-to-understand-dynamodb/featured.jpg
+preview: /assets/img/articles/how-to-understand-dynamodb/preview.jpg
 description: Am I doing DynamoDB the right way?
 categories: [how_to]
 isFeatured: false
