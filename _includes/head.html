@@ -14,15 +14,26 @@
 
     {% feed_meta %}
 
-    {% if page.layout == 'article' %}
-    {% assign title = page.title | append: " - " | append: site.after-name %}
-        {% elsif page.type == 'home' %}
-        {% assign title = site.name | append: ' - ' | append: site.after-name %}
-        {%- else -%}
-        {% assign title = site.name | append: " - " | append: page.title | append: " - " | append: site.after-name %}
-    {%- endif -%} 
-    <meta name="generator" content="{{site.generator}}" />
+    {% comment %} title configuration {% endcomment %}
+
+    {% if page.type == 'home' %}
+        {% assign title = site.name | append: site.title-sep | append: site.after-name %}
+    {% else %}
+        {% if page.layout == 'article' %}
+            {% assign title = page.title | append: site.title-sep | append: site.after-name %}
+        {% else %}
+            {% if page.layout == 'client' %}
+                {% assign title = page.subtitle | append: site.title-sep | append: site.after-name %}
+            {% else %}
+                {% comment %} default {% endcomment %}
+                {% assign title = page.title | append: site.title-sep | append: site.after-name %}
+            {%- endif -%}
+        {%- endif -%}
+    {%- endif -%}
     <title>{{title}}</title>
+
+    <meta name="generator" content="{{site.generator}}" />
+
     {%- if page.author -%}
     {%- assign author = page.author -%}
     {%- else -%}
