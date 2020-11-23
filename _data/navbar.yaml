@@ -1,8 +1,8 @@
 - name: Home
   url: /
 - name: Schedule
-  url: /schedule
+  url: /schedule.html
 - name: Contact
-  url: /contact
+  url: /contact.html
 - name: Articles
-  url: /articles
+  url: /articles.html

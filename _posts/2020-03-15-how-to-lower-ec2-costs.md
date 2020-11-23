@@ -7,7 +7,7 @@ cover: /assets/img/articles/how-to-lower-ec2-costs/cover.jpg
 featured: /assets/img/articles/how-to-lower-ec2-costs/featured.jpg
 preview: /assets/img/articles/how-to-lower-ec2-costs/preview.jpg
 description: The goal is to show you how to lower your AWS costs by 40 or even 75 percent within a few minutes (depending on the instance type and plan).
-categories: [how_to]
+categories: [how-to]
 isFeatured: false
 author: David Gatti
 ---

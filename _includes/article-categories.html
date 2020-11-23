@@ -3,12 +3,12 @@
     <h6 class="font-weight-bold text-uppercase text-muted mb-0">Tags:</h6>
   </div>
   <div class="col ml-n5">
-    <a class="badge badge-pill badge-secondary-soft" href="/articles/">
+    <a class="badge badge-pill badge-secondary-soft" href="/articles.html">
       <span class="h6 text-uppercase">All</span>
     </a>
     {% for p in site.pages %}
         {% if p.category %}
-            <a class="badge badge-pill badge-secondary-soft" href="/articles/{{ p.category.slug }}/">
+            <a class="badge badge-pill badge-secondary-soft" href="/articles/{{ p.category.slug }}.html">
                 <span class="h6 text-uppercase">{{ p.category.name }}</span>
             </a>
         {% endif %}

@@ -7,7 +7,7 @@ cover: /assets/img/articles/how-to-understand-dynamodb/cover.jpg
 featured: /assets/img/articles/how-to-understand-dynamodb/featured.jpg
 preview: /assets/img/articles/how-to-understand-dynamodb/preview.jpg
 description: Am I doing DynamoDB the right way?
-categories: [how_to]
+categories: [how-to]
 isFeatured: false
 author: David Gatti
 ---
