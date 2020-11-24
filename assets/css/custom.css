@@ -57,8 +57,9 @@ body {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 .shame__client__logo {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
+  max-height: 2em;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
