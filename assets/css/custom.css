@@ -140,3 +140,14 @@ body {
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.shame__button-icon__icon--negative,
+.shame__button-icon.active > .shame__button-icon__icon--positive {
+  display: initial;
+}
+
+.shame__button-icon__icon--positive,
+.shame__button-icon.active > .shame__button-icon__icon--negative {
+  display: none;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
