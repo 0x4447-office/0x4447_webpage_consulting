@@ -1,6 +1,6 @@
 - company_name: Atkins
   description: Expert Sinus Care. Your Solution for Sinus Problems
-  logo_name: atkinssinus.png
+  logo_name: atkinssinus.svg
   color: "#fcb555"
   slug: atkins
   url:
@@ -8,7 +8,7 @@
     href: "https://www.atkinssinus.com"
 - company_name: Applied Behavioral Finance
   description: Highly customized and precise retirement plans.
-  logo_name: applied_behavioral_finance.png
+  logo_name: applied_behavioral_finance.svg
   color: "#209e49"
   slug: applied-behavioral-finance
   url:
@@ -16,7 +16,7 @@
     href: "https://appliedbehavioralfinanceinc.com"
 - company_name: Vocatales
   description: Discover the wondrous new world of storytelling.
-  logo_name: vocatales.png
+  logo_name: vocatales.svg
   color: "#FF5A5F"
   slug: vocatales
   url:
@@ -24,7 +24,7 @@
     href: "https://www.vocatales.com/"
 - company_name: Webcorp
   description: The Job Application... Reinvented
-  logo_name: webcorp.png
+  logo_name: webcorp.svg
   color: "#38a2ff"
   slug: webcorp
   url:
@@ -40,7 +40,7 @@
     href: "https://www.security7.net/"
 - company_name: Sequr
   description: Cloud based physical-access control.
-  logo_name: sequr.png
+  logo_name: sequr.svg
   color: "#478eca"
   slug: sequr
   url:
@@ -48,7 +48,7 @@
     href: "https://www.sequr.io/"
 - company_name: Marine Central
   description: Marine Services Database for all sailors.
-  logo_name: marinecentral.jpg
+  logo_name: marinecentral.svg
   color: "#8ac4e9"
   slug: marine-central
   url:
@@ -56,7 +56,7 @@
     href: "https://marinecentral.com/"
 - company_name: Tonic HQ
   description: Building your staffing business through technology.
-  logo_name: tonichq.png
+  logo_name: tonichq.svg
   color: "#18afa3"
   slug: tonic-hq
   url:
