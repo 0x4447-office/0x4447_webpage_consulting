@@ -4,9 +4,10 @@ layout: default
 
     <!-- IMAGE
     ================================================== -->
+    {% assign base64EncodedCoverImage = page.cover | append: '.base64' %}
     <section
       class="py-10 py-md-14 shame__bg-contain bg-white"
-      style="background-image: url({{ page.cover }});"
+      style="background-image: url({%- include {{ base64EncodedCoverImage }} -%});"
     ></section>
 
     <!-- SHAPE
