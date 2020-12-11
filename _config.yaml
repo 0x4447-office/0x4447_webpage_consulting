@@ -1,3 +1,4 @@
+permalink: articles/:categories/:title:output_ext
 url: "https://consulting.0x4447.com"
 plugins:
   - jekyll-paginate-v2

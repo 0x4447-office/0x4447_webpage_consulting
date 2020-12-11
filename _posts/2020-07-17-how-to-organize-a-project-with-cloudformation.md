@@ -7,7 +7,7 @@ cover: /assets/img/articles/how-to-organize-a-project-with-cloudformation/cover.
 featured: /assets/img/articles/how-to-organize-a-project-with-cloudformation/featured.jpg
 preview: /assets/img/articles/how-to-organize-a-project-with-cloudformation/preview.jpg
 description: How should a project be broken down to keep it flexible?
-categories: [how-to]
+categories: [how_to]
 isFeatured: false
 author: David Gatti
 ---
