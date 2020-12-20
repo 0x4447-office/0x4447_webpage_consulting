@@ -3,7 +3,7 @@ layout: article
 title: How to organize a project with CloudFormation
 image:
     path: /assets/img/articles/how-to-organize-a-project-with-cloudformation/featured.jpg
-cover: /assets/img/articles/how-to-organize-a-project-with-cloudformation/cover.jpg
+cover: /assets/img/articles/how-to-organize-a-project-with-cloudformation/cover.jpg.base64
 featured: /assets/img/articles/how-to-organize-a-project-with-cloudformation/featured.jpg
 preview: /assets/img/articles/how-to-organize-a-project-with-cloudformation/preview.jpg
 description: How should a project be broken down to keep it flexible?
