@@ -26,7 +26,7 @@ More importantly if you have an organization account and under that you have doz
 
 The billing page is the most important thing to use when it comes to getting an idea of what is going on in the account. Once you know where the money goes, we can go into the details and figure out if there is something that can be changed to lower the monthly bill.
 
-By the way: if you want to learn more about the benefits of AWS Organizations, check out this article ([https://consulting.0x4447.com/articles/knowledge/the-benefits-of-aws-organizations.html](https://consulting.0x4447.com/articles/knowledge/the-benefits-of-aws-organizations.html)).
+By the way: if you want to [learn more about the benefits of AWS Organizations](https://consulting.0x4447.com/articles/knowledge/the-benefits-of-aws-organizations.html), check out the article.
 
 ## Pay-By-The-Hour Services
 
@@ -36,7 +36,7 @@ The majority of the time, these services are turned on by employees temporarily 
 
 Thankfully this problem can not only can be quickly identified, but also be quickly solved by just simply turning off those unused servers. The simplest approach is to stop all the servers with less then 1% CPU time in the case of Linux, and 3% in the case of Windows instances. This approach allows you to stop paying for the servers, but also turn them back on when they are actually needed (Because if they are, someone somewhere should start screaming).
 
-On the other hand, if your servers are needed, then you are probably not taking advantage of the Reserved Instances features that AWS provides. With this service, instead of paying by the hour, you can pay up to 3 years upfront, and thus lowering your bill by 40% to 75%, check this article to find out more: [https://consulting.0x4447.com/articles/how_to/how-to-lower-ec2-costs.html](https://consulting.0x4447.com/articles/how_to/how-to-lower-ec2-costs.html).
+On the other hand, if your servers are needed, then you are probably not taking advantage of the Reserved Instances features that AWS provides. With this service, instead of paying by the hour, you can pay up to 3 years upfront, and thus [lowering your bill by 40% to 75%](https://consulting.0x4447.com/articles/how_to/how-to-lower-ec2-costs.html), check the article to find out more.
 
 ## Serverless Services
 
