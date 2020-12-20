@@ -3,12 +3,12 @@ layout: article
 title: How to hire the technical team
 image:
     path: /assets/img/articles/how-to-hire-the-technical-team/featured.jpg
-cover: /assets/img/articles/how-to-hire-the-technical-team/cover.jpg
+cover: /assets/img/articles/how-to-hire-the-technical-team/cover.jpg.base64
 featured: /assets/img/articles/how-to-hire-the-technical-team/featured.jpg
 preview: /assets/img/articles/how-to-hire-the-technical-team/preview.jpg
 description: how can I hire technical people when I myself know nothing about the technology world?
 categories: [how_to]
-isFeatured: true
+isFeatured: false
 author: David Gatti
 ---
 
