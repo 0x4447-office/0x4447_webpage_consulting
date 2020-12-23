@@ -3,7 +3,7 @@ layout: article
 title: Should I go all in with Serverless?
 image:
     path: /assets/img/articles/should-i-go-all-in-with-serverless/featured.jpg
-cover: /assets/img/articles/should-i-go-all-in-with-serverless/cover.jpg.base64
+cover: /assets/img/articles/should-i-go-all-in-with-serverless/cover.jpg
 featured: /assets/img/articles/should-i-go-all-in-with-serverless/featured.jpg
 preview: /assets/img/articles/should-i-go-all-in-with-serverless/preview.jpg
 description: The goal is to better understand Serverless technology and how it affects your costs as your project grows.
