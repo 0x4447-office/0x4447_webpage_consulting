@@ -4,17 +4,11 @@ layout: default
 
     <!-- IMAGE
     ================================================== -->
-    {% if page.cover contains ".base64" %}
-      <section
-        class="py-10 py-md-14 shame__bg-contain bg-white"
-        style="background-image: url({%- include {{ page.cover }} -%});"
-      ></section>
-    {% else %}
-      <section
-        class="py-10 py-md-14 shame__bg-contain bg-white"
-        style="background-image: url({{ page.cover }});"
-      ></section>
-    {% endif %}
+    
+    <section
+      class="py-10 py-md-14 shame__bg-contain bg-white"
+      style="background-image: url({{ page.cover }});"
+    ></section>
 
     <!-- SHAPE
     ================================================== -->

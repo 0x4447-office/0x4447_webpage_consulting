@@ -3,7 +3,7 @@ layout: article
 title: The benefits of AWS organizations
 image:
     path: /assets/img/articles/the-benefits-of-aws-organizations/featured.jpg
-cover: /assets/img/articles/the-benefits-of-aws-organizations/cover.jpg.base64
+cover: /assets/img/articles/the-benefits-of-aws-organizations/cover.jpg
 featured: /assets/img/articles/the-benefits-of-aws-organizations/featured.jpg
 preview: /assets/img/articles/the-benefits-of-aws-organizations/preview.jpg
 description: The goal is to show you the benefits of managing your AWS infrastructure using Organizations.
