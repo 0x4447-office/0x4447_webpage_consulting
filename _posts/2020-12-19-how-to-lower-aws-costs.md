@@ -12,7 +12,7 @@ isFeatured: true
 author: David Gatti
 ---
 
-This article is meant for CEOs, CTOs, and Managers. The goal is to give a better understanding of how to lower AWS costs by answering a common raised question by clients: *what is the simplest way to lower the AWS bill*?
+This article is meant for CEOs, CTOs, and Managers. The goal is to give a better understanding of how to lower AWS costs by answering a common raised question by clients: *What is the simplest way to lower the AWS bill*?
 
 # The mysticism
 
@@ -20,7 +20,7 @@ AWS costs are wrapped in mysticism due to mysterious practices by companies that
 
 # The AWS Billing Page
 
-AWS provides you with a very simple to use billing page, which brakes down all your costs based on the service, and the region. This makes it trivial to find the biggest expense in the account.
+AWS provides you with a very simple to use billing page, which brakes down all your costs based on the service, and the region. This makes it easy to find the biggest expense in the account.
 
 More importantly if you have an organization account and under that you have dozens of other AWS accounts, the billing page also provides you with a brake down based on the individual account under the organization. This makes it simple to find the account that is generating the biggest costs, while allowing you to then drill down to the service, and region.
 

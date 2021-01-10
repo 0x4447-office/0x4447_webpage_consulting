@@ -42,17 +42,15 @@ Since we are on the parameters topic, I highly recommend making sure all your pa
 
 Each resource described in the CloudFormation file must have a unique name as the JSON object Key. I recommend that you name them carefully, ideally with a simple pattern, because once the stack is deploy it can cause a lot of drama to change the name of the resource. For example:
 
-CloudFormation deploys changes by first making the new resource, and if all goes well, it deletes the old one. Such as, if you have a S3 bucket that you want to rename (renaming the bucket not the service object Key), then AWS will make the new bucket first, and when all is successful, it will delete the old one if empty.
+CloudFormation deploys changes by first making the new resource, and if all goes well, it deletes the old one. For example, if you have a S3 bucket that you want to rename (renaming the bucket not the service object Key), then AWS will make the new bucket first, and when all is successful, it will delete the old one if empty.
 
 But if you were to rename the object Key, then AWS will see the changes as: "I have to add a completely new service, while deleting the old one." But since AWS first makes resources and then deletes them, in this case you would get an error because AWS would try to make a S3 Bucket that already exists. Thus resulting in a update error.
 
 Instead, the solution is to rename the resource while also renaming the S3 Bucket by adding at the end of the name, for example, `1`. Deploying that will be sufficient, since now the buckets have unique names. Then remove the `1` from the name and update the stack again.
 
-This trick won't work in some AWS resources and you might be stuck.
+This trick won't work in some AWS resources and you might be stuck. Make sure your resource names are standardized, and always follow this standard, because once they are used it is going to be almost impossible to rename them.
 
-Make sure your resource names are standardized, and always follow this standard, because once they are used it is going to be almost impossible to rename them.
-
-CloudFormation is for people that like to be organized and keep everything neat. With this service, you can't just do something quick and later improve upon it; you have to have it right from the start - otherwise it is going to be complete misery later working with it.
+CloudFormation is for people that like to be organized and keep everything neat. With this service, you can't just do something quick and later improve upon it; you have to have it right from the start - otherwise it is going to be difficult to work with later.
 
 ## Don't refer to Resource Outputs in Another AWS CloudFormation Stack
 

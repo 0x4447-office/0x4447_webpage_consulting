@@ -6,17 +6,17 @@ image:
 cover: /assets/img/articles/how-to-lower-ec2-costs/cover.jpg
 featured: /assets/img/articles/how-to-lower-ec2-costs/featured.jpg
 preview: /assets/img/articles/how-to-lower-ec2-costs/preview.jpg
-description: The goal is to show you how to lower your AWS costs by 40 or even 75 percent within a few minutes (depending on the instance type and plan).
+description: Lower your AWS costs by 40 or even 75 percent within a few minutes (depending on the instance type and plan).
 categories: [how_to]
 isFeatured: false
 author: David Gatti
 ---
 
-This article is meant for CEOs, CTOs, and Managers. The goal is to show you how to lower your AWS costs by 40 or even 75 percent within a few minutes (depending on the instance type and plan), by answering a common question clients have: *What options do I have at my disposal to lower the AWS bill?*
+This article is meant for CEOs, CTOs, and Managers. The goal is lowering your AWS costs by 40 or even 75 percent within a few minutes (depending on the instance type and plan), by answering a common question clients have: *What options do I have at my disposal to lower the AWS bill?*
 
 ## What are Reserved Instances?
 
-If you pay for an instance upfront for a period of either one or three years, then your price for an instance can be 40 to 75 percent lower. The beauty of this is that if you buy a Reserved Instance, you don't have to make changes to your instances - no restart or reconfiguration is necessary. This is because a Reserved Instance is a billing concept. If you have two instances and you buy one Reserved Instance, AWS will automatically apply the discount for the instance that matches the type you bought. The entire process is transparent to you.
+If you pay for an instance upfront for a period of either one or three years, then your price for an instance can be 40 to 75 percent lower. The beauty of this is that if you buy a Reserved Instance, you don't have to make changes to your instances - no restart or reconfiguration is necessary. This is because a Reserved Instance is a billing concept. If you have two instances and you buy one Reserved Instance, AWS will automatically apply the discount for the instance that matches the type you bought. The entire process is seamless for you.
 
 ## What else should I know?
 

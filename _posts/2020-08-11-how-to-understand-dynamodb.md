@@ -12,17 +12,15 @@ isFeatured: false
 author: David Gatti
 ---
 
-This article is meant for anyone who wants to better understand DynamoDB after experiencing that your AWS bill for DDB is too high, the complexity is too big, or the promised speed is not there. This article presents an easier question: Am I doing DynamoDB the right way?
+This article is meant for anyone who wants to better understand DynamoDB after experiencing an AWS bill for DDB is too high, the complexity is too big, or the promised speed is not there. This article answers an easier question: Am I using DynamoDB the right way?
 
 ## Why I'm not getting DynamoDB
 
-You may be surprised, but 20+ years of SQL may not help you with this new AWS service, and the biggest reason is that you are probably comparing DynamoDB to MongoDB.
-
-Both are NoSQL but they still way different from each other. Just because you store data as JSON and there are no columns for fixed structure that you have to set upfront, doesn't mean they are the same.
+You may be surprised, but 20+ years of SQL may not help you with this new AWS service, and the biggest reason is that you are probably comparing DynamoDB to MongoDB. Both are NoSQL but still are very different from one another. Just because you store data as JSON and there are no columns for fixed structure that you have to set upfront, doesn't mean they are the same.
 
 ## MongoDB is self hosted, and this is a problem
 
-Because you can host MongoDB, it makes it hard for you to realize the incorrectness in the ongoing data structure that you have. Doing it wrong doesn't appear to cost you anything, because you don't have limits and you pay just for the server that MondoDB runs on. If the performance starts to be an issue, then you can always add a bigger server, and all the incorrectness gets hidden away.
+Because you can host MongoDB, it makes it hard for you to realize the incorrectness in the ongoing data structure that you have. Doing it wrong doesn't appear to cost you anything, because you don't have limits and you pay just for the server that MongoDB runs on. If the performance starts to be an issue, then you can always add a bigger server, and all the mistakes get hidden away.
 
 ## DynamoDB is the real NoSQL Database
 

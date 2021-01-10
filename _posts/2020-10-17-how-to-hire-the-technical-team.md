@@ -38,7 +38,7 @@ Once that is completed, I start making multiple CloudFormation files that descri
 
 # How to start with the right team
 
-If you have not yet start to put together a team, this section is for you. Here I want to give you a good frame of reference on how to look for technical people, while having little-to-no technical skills yourself. I believe that asking very technical question dose not allow you to find the best talent. For example, a law company won't ask a candidate if they memorized all the law books; they want to find out what type of person is in front of them. Just because you memorized paragraph 8 doesn't mean you are a good lawyer. The same analogy can be used in the technology world. Just because you know a "if()" statement or a function, doesn't make you a good developer - you just know how to code, and that is just a skill.
+If you have not yet start to put together a team, this section is for you. Here I want to give you a good frame of reference on how to look for technical people, while having little-to-no technical skills yourself. I believe that asking very technical questions does not allow you to find the best talent. For example, a law company won't ask a candidate if they memorized all the law books; they want to find out what type of person is in front of them. Just because you memorized paragraph 8 doesn't mean you are a good lawyer. The same analogy can be used in the technology world. Just because you know a "if()" statement or a function, doesn't make you a good developer - you just know how to code, and that is just a skill.
 
 ## What to focus on
 
@@ -52,7 +52,7 @@ Also, just because someone has been in the market for 20 years already, dose not
 
 Writing working code is not a skill; it is a trait. The skill is to make it presentable to others.
 
-Similarly with AWS. I interviews countless AWS “experts” who claim to know all that there is to know about AWS, yet when asked something more serious, they fail. As of writing this article, AWS has 170 services - just because an "expert" claimed to have used 3 of them doesn't mean they know how to use AWS. I have talked with a lot of candidates that claim they know AWS because they made and account and went over a simple tutorial on how to setup a Lambda. To them, this is the basic requirement to claim to know AWS.
+Similarly with AWS. I have interviewd countless AWS “experts” who claim to know all that there is to know about AWS, yet when asked something more serious, they fail. As of writing this article, AWS has 170 services - just because an "expert" claimed to have used 3 of them doesn't mean they know how to use AWS. I have talked with a lot of candidates that claim they know AWS because they made and account and went over a simple tutorial on how to setup a Lambda. To them, this is the basic requirement to claim to know AWS.
 
 A true AWS expert is someone that knows the ideology of the service, is able to mix and match all of this services to build a cost effective and extensible solution that can grow over time with the business, understands the pitfalls, knows how to get out of problems, and can figure out a new service within a week to combine it with the project if necessary. Not to mention they need to know how to automate everything in AWS, because nothing can be done by hand, as clicking things around with a mouse through the AWS console is something that can’t scale over time.
 
@@ -74,7 +74,7 @@ An expert also needs to understand what security is, how to provide only the req
 
 - **Do you make your bed in the morning?**
 
-    You want to hear a "yes." This should tell you that they are more organized than most and don't give up easily.
+    You want to hear a "Yes", this should tell you that they are more organized than most and don't give up easily.
     
 - **After how many years will you be done learning?**
 
@@ -96,8 +96,8 @@ An expert also needs to understand what security is, how to provide only the req
 
 Write a few paragraphs describing 5 tasks to be completed but not broken down into sections or a list. Then tell them to brake down your description into steps and technologies that need to be used to accomplish the task. What they come up with should: 
 
-- have all 5 things that need to be done;
-- should be easy to understand by you. If something is unclear, ask for clarification and see if they can simplify the step further.
+- Have all 5 things that need to be done.
+- Should be easy to understand by you. If something is unclear, ask for clarification and see if they can simplify the step further.
 
 Unclear explanations by people only means that either they don’t understand the technology or the problem itself. Either is a serious red flag, because people will create very complex solutions that will be hard to extend over time.
 

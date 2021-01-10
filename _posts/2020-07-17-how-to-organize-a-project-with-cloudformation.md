@@ -12,13 +12,13 @@ isFeatured: false
 author: David Gatti
 ---
 
-This article is meant for CEOs, CTOs, and Managers. The goal is to give a better understanding of how to organize a project with CloudFormation, by answering a common question clients have: *How should a project be broken down to keep it flexible?*
+This article is meant for CEOs, CTOs, and Managers. The goal is to give you a better understanding of how to organize a project with CloudFormation, by answering a common question clients have: *How should a project be broken down to keep it flexible?*
 
 ## Don't paint yourself in to a corner
 
-CloudFormation files are powerful, will simplify your life, and are easy to be reused in other projects, as mentioned in this article where I describe the beefiest of CloudFormation files.
+CloudFormation files are powerful, will simplify your life, and are easy to be reused in other projects. In this article where I describe the beefiest of CloudFormation files.
 
-But it is important to understand how to separate the files in to smaller stacks, because putting the whole project in to one big file will make your life harder, not to mention there is a limit of 200 services per file.
+It is important to understand how to separate the files in to smaller stacks. Putting your whole project in to one big file will make your life harder, not to mention there is a limit of 200 services per file.
 
 ## Harder how?
 

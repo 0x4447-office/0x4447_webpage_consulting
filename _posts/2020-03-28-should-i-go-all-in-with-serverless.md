@@ -12,7 +12,7 @@ isFeatured: false
 author: David Gatti
 ---
 
-This article is meant for CEOs, CTOs, and managers who want to make a more educated decision about building products in the cloud, by answering a common question clients have: *Should I go serverless or build a project with regular servers?*
+This article is meant for CEOs, CTOs, and managers who want to make a more educated decision about building products in the cloud. We will answer a common question clients have: *Should I go serverless or build a project with regular servers?*
 
 ## First
 
@@ -22,7 +22,7 @@ So the question becomes: Why this life cycle?
 
 ## Start with serverless
 
-One advantage of starting serverless is that it's inexpensive at the outset of the project. It will cost you virtually nothing to run during development, regardless of how many resources you use. In the beginning phase as you are acquiring customers, all you pay for is traffic generated. If you have to pause the project for any reason, then you don't have to delete anything or worry about starting over, because you can preserve the entire set up and just pay for storage. Then, when all is back to normal, you can resume the project right where you left it.
+One advantage of starting serverless is that is is not expensive at the outset of the project. It will cost you virtually nothing to run during development, regardless of how many resources you use. In the beginning phase as you are acquiring customers, all you pay for is traffic generated. If you have to pause the project for any reason, then you don't have to delete anything or worry about starting over, because you can preserve the entire set up and just pay for storage. Then, when all is back to normal, you can resume the project right where you left it.
 
 ## Move to managed servers to lower costs
 
