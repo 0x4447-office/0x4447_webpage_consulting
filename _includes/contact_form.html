@@ -79,31 +79,36 @@
             </div>
           </div> <!-- / .row -->
           <div class="row">
-            <div class="col-12">
+            <div class="col-12 col-md-6">
               <div class="form-group mb-5">
 
                 <!-- select state or industry -->
                 {%- assign p = include.select -%}
                 <!-- Label -->
-                <label for="states">
+                <label for="statePicker">
                   {{p}}
                 </label>
-                <div
-                  id="states"
-                  class="text-center"
-                >
-                  {%- for item in site.data.contact.[p] -%}
-                    <label class="btn btn-secondary-soft btn-xs mb-1 mr-1 shame__button-icon">
-                      &nbsp;<span class="fe fe-disc shame__button-icon__icon shame__button-icon__icon--positive"></span><span class="fe fe-circle shame__button-icon__icon shame__button-icon__icon--negative"></span>
-                      &nbsp;{{ item.value }}
-                    </label>
-                  {%- endfor -%}
+                <div class="shame__selectpicker">
+                  <select
+                    class="selectpicker show-tick show-menu-arrow"
+                    name="statePicker"
+                    id="states"
+                    title="Select {{p}}"
+                    data-live-search="true"
+                    data-size="12"
+                    data-style="btn-light"
+                  >
+                    {%- for item in site.data.contact.[p] -%}
+                      <option value="{{item.value}}">
+                        {{item.value}}
+                      </option>
+                    {%- endfor -%}
+                  </select>
+                  <!-- end select-->
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
+            <div class="col-12 col-md-6">
               <div class="form-group mb-7 mb-md-9">
 
                 <!-- Label -->
@@ -163,13 +168,6 @@
         </form>
 
 <script>
-
-  $('#states').children().click(function() {
-    $('#states').children().each(function() {
-      $(this).removeClass('active');
-    });
-    $(this).addClass('active');
-  });
 
   //
   //  1.  Looping over all the AWS services to then populate the drop donw.
@@ -245,12 +243,7 @@
     let lastName = $('#contact_last_name')[0].value;
     let company_name = $('#contact_company_name')[0].value;
     let job_title = $('#contact_job_title')[0].value;
-    let state = [];
-    $('#states').children().each(function() {
-      if ($(this).hasClass('active')) {
-        state.push(this.innerText.trim());
-      }
-    });
+    let state = $('#states')[0].value;
     let tags = $('#tags')[0].nextElementSibling.title;
 
     //
@@ -279,7 +272,7 @@
       '\n',
       '- Company Name: ' + company_name,
       '- Job Title: ' + job_title,
-      '- State: ' + state.join(', '),
+      '- State: ' + state,
       '- Time zone: ' + tz,
       '- Tags: ' + tags
     ];
