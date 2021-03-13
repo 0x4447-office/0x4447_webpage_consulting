@@ -5,6 +5,7 @@ This this website contains all the details related to the Consulting experities 
 # How to run locally
 
 - bundle install
+- gem install jekyll bundler
 - bundle exec jekyll serve
 
 # How to set cover image to articles
