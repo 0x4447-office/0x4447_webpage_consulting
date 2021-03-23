@@ -8,12 +8,10 @@ info: "Marine Services Database for all sailors."
 permalink: /clients/marine-central.html
 ---
 
-<p>Marine Central wanted to reorganize a massive project because they were starting to realize that they had little-to-no control over the project, no progress was being made, and the project was getting too expensive to continue. Despite having a dedicated team of developers, Marine Central still struggled to stay organized and had difficulties implementing new features.</p>
+<p>The Marine Central website is a catalog of services related to the marine world, where you can rent boats, find a captain or crew and find a service related to the marine world.</p>
 
-<p>David came in at a crucial time when Marine Central’s developers were trying to massage the code inside the production server, which inadvertently affected production stability and was doing more harm than good. David’s stabilized Marine Central’s projects through comprehensive reorganization and by forcing their developers to work according to industry standards. </p>
+<p>The website was up and running already but was struggling with reliability. The site was often down, and was not scaling properly in AWS. My job was to make the site stable, and help with code quality since every time the team added a new feature, they would unintentionally break something else.</p>
 
-<p>David organized Marine Central’s AWS infrastructure and used Rsyslog, one of the products that he makes for the AWS Marketplace, to centralize all servers and application logs in order for the developers to more easily and securely access productions logs without being able to access and harm the production server themselves. This resulted in David minimizing Marine Central's AWS costs because they no longer had to use the AWS CloudWatch Logs service, which is very expensive when at a high volume of logs.</p>
+<p>To solve these two problems I put the code in a Docker container and use AWS ECS to host those containers with the correct auto scaling setup. The goal of this solution was to fix auto scaling but also prevent the developers from having direct access to the server and directly fixing issues within the production server. This way they were forced to test their work using a Docker container in their local environment before pushing the changes in to the world. It took the developers few weeks to get used to the idea but eventually they recognized the benefit, and were happy to work with the added security.</p>
 
-<p>David also reorganized Marine Central's AWS account and reorganized everything using the AWS best practices of AWS Organization, by creating Production and Development accounts. This allowed Marine Central's developers to test their work in a safe environment that is identical to the one running in production. Additionally, David containerized all the software so that the developers could mimic the local environment before pushing the code into AWS for final testing.</p>
-
-<p>Lastly, David consolidated the stacks into multiple CloudFormation files, which made it easier to manage, keep track of changes, and allowed redeployment in more than one AWS Account.</p>
+<p>After this point the client had less worries about new features breaking other ones, and he had the peace of mind knowing that the website would grow with the new influx of clients and customers.</p>

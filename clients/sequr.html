@@ -7,8 +7,12 @@ info: "Cloud based physical-access control."
 # author: "Mrs TODO TODO"
 ---
 
-<p>Sequir was struggling to keep up with protocol to manage thousands of devices that controlled electronic access to doors, keypads, and other security protocol. Sequir was using technology that was outdated, and it needed an expert that understood low level protocols, how network sockets worked, and specifically how sockets worked in NodeJS. Sequir also needed its server to be able to handle these tens of thousands of devices.</p>
+<p>Sequr (now part of Genea) is a Access Control product targeted at managing access to physical buildings like office spaces and sky skyscrapers. The company had a humble beginning where it started managing access in gated communities with a SMS solution to give temporary access to guests of the owners.</p>
 
-<p>David was able to come in and handle the complex challenges facing Sequir. Because Sequir’s technology was so outdated, David had to start from scratch and create a server written in NodeJs that could interact with the more archaic IoT devices. He also had to convert Sequir’s old protocol into a standardized API, both of which would allow front-end developers to more easily interact with Sequir’s thousands of devices.</p>
+<p>Soon they wanted to extend their offering by managing access to bigger buildings using the world renowned HID system. The only problem was the complexity of the product. </p>
 
-<p>It took considerable time to develop the protocol because of the complexity of the project and the sensitive nature of Sequir’s client devices. When David was finished, Sequir had a dashboard where it was better able to manage its devices. Now any IoT device could connect to an EC2 instance, be acknowledged by the custom AWS server that David wrote, and be exposed over an API.</p>
+<p>The access control system was designed in the late 90's. It communicated over a socket connection and with a very oddly designed protocol.</p>
+
+<p>I was tasked to put a modern RESTfull API in front of the device to allow any developer to easily interact with the device anywhere in the world. The solution came down to a custom NodeJS server where the devices would connect, and the custom server would accept incoming API request and translate them on the fly in the archaic protocol to be sent to the selected device.</p>
+
+<p>The solution is working still to this day allowing the client to keep growing, and managing more buildings without the need of any type of modification to the architecture.</p>
