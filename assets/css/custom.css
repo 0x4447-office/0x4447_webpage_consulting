@@ -1,5 +1,12 @@
-img[src*="#responsive"] {
+img[src*="#responsive"],
+img[src*="#uncontain"] {
   width: 100%;
+}
+@media (min-width: 992px) {
+  img[src*="#uncontain"] {
+    width: unset;
+    margin-left: -25%;
+  }
 }
 .textarea_row {
   margin-top: -35px;
