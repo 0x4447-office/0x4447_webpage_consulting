@@ -34,13 +34,8 @@
 
                 <!-- Icon -->
                 <div class="img-fluid mb-5 w-50 svg-shim mx-auto" style="color: #FF5A5F;">
-                  {% if company.logo_name contains ".svg" %}
-                  <object data="/assets/img/clients/{{ company.logo_name }}" type="image/svg+xml"
-                    height="21px"></object>
-                  {% else %}
                   <img src="/assets/img/clients/{{ company.logo_name }}" height="21px"
                     alt="{{ company.company_name }} logo">
-                  {% endif %}
                 </div>
                 <!-- Text -->
                 <p class="text-gray-700 mb-5">
