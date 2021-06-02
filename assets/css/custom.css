@@ -21,6 +21,9 @@ body {
   align-items: center;
   justify-items: center;
 }
+.card-img-right {
+  padding: 4rem 2.5rem !important;
+}
 @media (min-width: 768px) {
   .card_image_box {
     min-height: 293px;
