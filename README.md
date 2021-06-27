@@ -1,47 +1,29 @@
-# 0x4447 Consulting
+# bootstrap-dashboard
 
-This this website contains all the details related to the Consulting experities of 0x4447, LLC.
+## Build Setup
 
-# How to run locally
+```bash
+# install dependencies
+$ npm install
 
-- bundle install
-- gem install jekyll bundler
-- bundle exec jekyll serve
+# serve with hot reload at localhost:3000
+$ npm run dev
 
-# How to set cover image to articles
+# build for production and launch server
+$ npm run build
+$ npm run start
 
-When creating an article, to add the cover image in the beginning of the content; use the `cover` variable and address it to the image path.
-
-e.g.
-```
---- 
-cover: /path/to/cover.jpg
----
-{CONTENT HERE}
+# generate static project
+$ npm run generate
 ```
 
-# How to add responsive images to posts
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
-To add responsive images in markdown add '#responsive' at the end of the image source path.
-e.g.
-```
-![alt text](/path/to/image.png#responsive)
-```
+## Content
 
-# How to add a new category
+Location: [/assets/content/pages/home](/assets/content/pages/home)
 
-- copy `/articles/experience/index.html` to `/articles/cheeseburgers/index.html`, e.g.
+Each section of website's homepage has a dedicated JSON file to keep it's content and provide easier way to manage the content of the page.  
+In case any additional configurations or content is required, please, create a new issue.  
 
-```
----
-layout: articles
-category:
-    name: Cheeseburgers
-    slug: cheeseburgers
----
-
-{%- include category-section.html category=page.category -%}
-
-```
-
-- tag your new post with `cheeseburgers`
+Note that most static text fields can contain HTML to allow additional styling options with theme supported classes. 

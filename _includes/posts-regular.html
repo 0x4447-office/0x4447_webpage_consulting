@@ -1,9 +1,0 @@
-{% comment %}
-  Get `limit` posts that aren't featured. Used for the articles page.
-{% endcomment %}
- 
-{% assign posts = site.posts | where_exp:"post", "post.isFeatured != true" %}
-
-{% for post in posts limit:include.limit %}
-  {%- include post-regular.html post=post -%}
-{% endfor %}
