@@ -2,6 +2,10 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  static: {
+    prefix: false,
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Landing WebApp',
@@ -24,16 +28,20 @@ export default {
         type: 'image/x-icon',
         href: '/favicon.ico',
       },
-      {
-        rel: 'stylesheet',
-        href: 'https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css',
-      },
+      // {
+      //   rel: 'stylesheet',
+      //   href: 'https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css',
+      // },
     ],
     script: [
-      // {
-      //   src: '/public/js/libs/bootstrap.bundle.min.js',
-      //   body: true,
-      // },
+      {
+        src: 'https://code.jquery.com/jquery-3.6.0.min.js',
+        body: false,
+      },
+      {
+        src: 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js',
+        body: true,
+      },
     ],
   },
 
@@ -65,6 +73,8 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/svg',
     '@nuxtjs/svg-sprite',
+    // https://content.nuxtjs.org/installation
+    '@nuxt/content',
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
