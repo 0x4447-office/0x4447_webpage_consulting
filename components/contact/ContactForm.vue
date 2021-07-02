@@ -9,13 +9,13 @@
 
           <!-- Input -->
           <input
+            id="contact_first_name"
             v-model="formData.firstName"
             type="text"
             name="contact_first_name"
             minlength="1"
             required
             class="form-control"
-            id="contact_first_name"
             placeholder="John"
           />
         </div>
@@ -27,13 +27,13 @@
 
           <!-- Input -->
           <input
+            id="contact_last_name"
             v-model="formData.lastName"
             type="text"
             name="contact_last_name"
             minlength="1"
             required
             class="form-control"
-            id="contact_last_name"
             placeholder="Doe"
           />
         </div>
@@ -44,16 +44,16 @@
       <div class="col-12">
         <div class="form-group mb-5">
           <!-- Label -->
-          <label for="contactEmail"> Email </label>
+          <label for="contact_email"> Email </label>
 
           <!-- Input -->
           <input
+            id="contact_email"
             v-model="formData.email"
             type="email"
-            name="contactEmail"
+            name="contact_email"
             required
             class="form-control"
-            id="contact_email"
             placeholder="john.doe@example.com"
           />
         </div>
@@ -64,16 +64,16 @@
       <div class="col-12 col-md-6">
         <div class="form-group mb-5">
           <!-- Label -->
-          <label for="companyName"> Company Name </label>
+          <label for="contact_company_name"> Company Name </label>
 
           <!-- Input -->
           <input
+            id="contact_company_name"
             v-model="formData.companyName"
             type="text"
             name="companyName"
             required
             class="form-control"
-            id="contact_company_name"
             placeholder="Example, LLC"
           />
         </div>
@@ -81,16 +81,16 @@
       <div class="col-12 col-md-6">
         <div class="form-group mb-5">
           <!-- Label -->
-          <label for="jobTitle"> Job Title </label>
+          <label for="contact_job_title"> Job Title </label>
 
           <!-- Input -->
           <input
+            id="contact_job_title"
             v-model="formData.jobTitle"
             type="text"
             name="jobTitle"
             required
             class="form-control"
-            id="contact_job_title"
             placeholder="CEO, CTO, VP of ..."
           />
         </div>
@@ -102,13 +102,13 @@
         <div class="form-group mb-5">
           <!-- select state or industry -->
           <!-- Label -->
-          <label for="statePicker">Industry</label>
+          <label for="states">Industry</label>
           <div class="shame__selectpicker">
             <select
+              id="states"
               v-model="formData.industry"
               class="selectpicker show-tick show-menu-arrow"
               name="statePicker"
-              id="states"
               title="Select "
               data-live-search="true"
               data-size="12"
@@ -129,14 +129,14 @@
       <div class="col-12 col-md-6">
         <div class="form-group mb-7 mb-md-9">
           <!-- Label -->
-          <label for="contactTags"> AWS Services </label>
+          <label for="tags"> AWS Services </label>
           <!-- Input -->
           <div class="shame__selectpicker">
             <select
+              id="tags"
               v-model="formData.awsServices"
               class="selectpicker show-tick show-menu-arrow"
               name="contactTags"
-              id="tags"
               title="Select an AWS Service"
               required
               multiple
@@ -161,15 +161,15 @@
       <div class="col-12">
         <div class="form-group mb-7 mb-md-9">
           <!-- Label -->
-          <label for="contactMessage"> What can we help you with? </label>
+          <label for="contact_message"> What can we help you with? </label>
 
           <!-- Input -->
           <textarea
+            id="contact_message"
             v-model="formData.message"
             class="form-control"
             required
             minlength="10"
-            id="contact_message"
             rows="5"
             placeholder="Tell us what we can help you with!"
           ></textarea>
@@ -181,13 +181,13 @@
       <div class="col-auto">
         <!-- Submit -->
 
-        <button type="submit" id="submit_button" class="btn btn-primary lift">
+        <button id="submit_button" type="submit" class="btn btn-primary lift">
           {{ buttonText }}
         </button>
       </div>
     </div>
     <!-- / .row -->
-    <div class="mt-5 alert alert-light" id="alert" role="alert" hidden>
+    <div id="alert" class="mt-5 alert alert-light" role="alert" hidden>
       Your message has been sent successfully!
     </div>
   </form>
@@ -229,6 +229,7 @@ export default {
   },
   mounted() {
     this.initContactForm()
+    jQuery('.selectpicker').selectpicker()
   },
   methods: {
     initContactForm() {
@@ -265,9 +266,9 @@ export default {
       //      in to a single string, which is going to be the body of the message.
       //
       const body = bodyRaw.join('\n')
-      console.log(body)
+
       const json = {
-        subject: 'Email from Home page.',
+        subject: 'Email from Consulting page.',
         body,
         emails: {
           to: {

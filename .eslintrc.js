@@ -19,4 +19,8 @@ module.exports = {
     'vue/no-v-html': 'off',
     'no-console': 'off',
   },
+  globals: {
+    $: true,
+    jQuery: true,
+  },
 }

@@ -57,7 +57,7 @@
                 <ul class="d-inline list-unstyled list-inline list-social">
                   <li class="list-inline-item list-social-item mr-3">
                     <a
-                      :href="`https://www.facebook.com/sharer.php?u=${shareUrl}&title=${shareTitle}`"
+                      :href="`https://www.facebook.com/sharer.php?u=${shareParams}`"
                       class="text-decoration-none"
                     >
                       <img
@@ -69,7 +69,7 @@
                   </li>
                   <li class="list-inline-item list-social-item mr-3">
                     <a
-                      :href="`https://twitter.com/intent/tweet?url=${shareUrl}&title=${shareTitle}`"
+                      :href="`https://twitter.com/intent/tweet?url=${shareParams}`"
                       class="text-decoration-none"
                     >
                       <img
@@ -82,7 +82,7 @@
                   <li class="list-inline-item list-social-item">
                     <a
                       onclick="window.open(this.href, 'linkedinwindow','left=20,top=20,width=600,height=700,toolbar=0,resizable=1'); return false;"
-                      :href="`https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${shareTitle}&source=${shareUrl}&summary=${shareTitle}`"
+                      :href="`https://www.linkedin.com/shareArticle?mini=true&url=${shareParams}&source=${shareUrl}&summary=${shareTitle}`"
                       class="text-decoration-none"
                     >
                       <img
@@ -163,9 +163,9 @@
         <!-- / .row -->
         <div class="row">
           <ArticleListItem
-            v-for="(article, index) in articles"
+            v-for="(articleItem, index) in articles"
             :key="index"
-            :article="article"
+            :article="articleItem"
           />
         </div>
         <!-- / .row -->
@@ -212,10 +212,13 @@ export default {
   },
   computed: {
     shareUrl() {
-      return this.$route.fullPath
+      return process.env.baseUrl + '' + this.$route.fullPath
     },
     shareTitle() {
       return this.article.title
+    },
+    shareParams() {
+      return `${this.shareUrl}&title=${this.shareTitle}`
     },
   },
 }

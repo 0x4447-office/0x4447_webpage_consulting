@@ -1,10 +1,10 @@
 <template>
-  <article>
+  <div>
     <!-- WELCOME
- ================================================== -->
+    ================================================== -->
     <section
-      class="py-10 py-md-14 bg-cover shame__background-image__contact"
-      :style="`background-image: url(/public/img/covers/contact.jpg)`"
+      class="py-10 py-md-14 bg-cover shame__background-image__schedule"
+      :style="`background-image: url(/public/img/covers/schedule.jpg)`"
     >
       <div class="container">
         <div class="row justify-content-center">
@@ -15,7 +15,9 @@
             </h1>
 
             <!-- Text -->
-            <p class="lead text-white-75 mb-0" v-html="data.description"></p>
+            <p class="lead text-white-75 mb-0">
+              {{ data.description }}
+            </p>
           </div>
         </div>
         <!-- / .row -->
@@ -31,27 +33,33 @@
       </div>
     </div>
 
-    <!-- FORM
-    ================================================== -->
-    <section class="pt-8 pt-md-11 pb-10 pb-md-13 contact_form">
+    <section class="pt-8 pt-md-7 pb-10 pb-md-13">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-12 col-md-12 col-lg-10">
-            <ContactForm />
-          </div>
+          <!-- Calendly inline widget begin -->
+          <div
+            class="calendly-inline-widget"
+            data-url="https://calendly.com/0x4447/schedule?hide_event_type_details=1"
+            style="min-width: 320px; height: 630px"
+          ></div>
+          <script
+            type="text/javascript"
+            src="https://assets.calendly.com/assets/external/widget.js"
+          ></script>
+          <!-- Calendly inline widget end -->
         </div>
         <!-- / .row -->
       </div>
       <!-- / .container -->
     </section>
-  </article>
+  </div>
 </template>
 
 <script>
-import data from '~/assets/content/pages/contact.json'
+import data from '~/assets/content/pages/schedule.json'
 
 export default {
-  name: 'Contact',
+  name: 'Schedule',
   data() {
     return {
       data,

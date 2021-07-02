@@ -1,4 +1,13 @@
 {
+  "head": {
+    "title": "Latest Articles",
+    "meta": {
+      "description": "Some things that I learned over time. ",
+      "ogTitle": "Articles"
+    }
+  },
+  "title": "Articles",
+  "description": "My thoughts, experience and knowledge as a memory dump.",
   "categories": [
     {
       "name": "All",

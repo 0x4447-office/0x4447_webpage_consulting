@@ -10,11 +10,13 @@
         <div class="row justify-content-center">
           <div class="col-12 col-md-10 col-lg-7 text-center">
             <!-- Heading -->
-            <h1 class="display-2 font-weight-bold text-white">Articles</h1>
+            <h1 class="display-2 font-weight-bold text-white">
+              {{ data.title }}
+            </h1>
 
             <!-- Text -->
             <p class="lead mb-0 text-white-75">
-              My thoughts, experience and knowledge as a memory dump.
+              {{ data.description }}
             </p>
           </div>
         </div>

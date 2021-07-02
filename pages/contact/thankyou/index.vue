@@ -1,10 +1,10 @@
 <template>
   <div class="container" style="padding-top: 10%">
     <div class="col-12">
-      <center>
+      <div class="text-center">
         <h1>{{ data.title }}</h1>
         <h2 class="text-gray-700">{{ data.description }}</h2>
-      </center>
+      </div>
     </div>
   </div>
 </template>

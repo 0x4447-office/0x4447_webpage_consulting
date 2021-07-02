@@ -1,4 +1,13 @@
 {
+  "head": {
+    "title": "Home",
+    "meta": {
+      "description": "Drive business growth with personalized AWS consulting through 0x4447 to implement cost-effective customer solutions built on scalable cloud infrastructure.",
+      "ogTitle": "Home"
+    }
+  },
+  "title": "AWS Cloud<br>Consulting",
+  "description": "David, the founder and CEO of 0x4447, has the specialized knowledge of AWS that allows you to get up to speed on AWS best practices in a matter of weeks, rather than years. With 0x4447, you will receive personalized AWS consulting to drive organizational and project-based growth built on scalable cloud infrastructure.",
   "content": {
     "image": "/img/index/aws-cloud-consulting.png",
     "title": "AWS Cloud<br>Consulting",
