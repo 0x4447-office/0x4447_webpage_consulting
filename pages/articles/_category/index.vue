@@ -83,11 +83,13 @@
 import ArticleListItem from '../../../components/articles/ArticleListItem'
 import ArticleCategories from '../../../components/articles/ArticleCategories'
 import ArticleFeaturedListItem from '../../../components/articles/ArticleFeaturedListItem'
+import headMixins from '../../../mixins/head-mixins'
 import data from '~/assets/content/pages/articles.json'
 
 export default {
   name: 'Articles',
   components: { ArticleListItem, ArticleCategories, ArticleFeaturedListItem },
+  mixins: [headMixins],
   async asyncData({ $content, params }) {
     let queryBuilder = $content('articles')
 

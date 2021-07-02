@@ -10,10 +10,12 @@
 </template>
 
 <script>
+import headMixins from '../../../mixins/head-mixins'
 import data from '~/assets/content/pages/thankyou.json'
 
 export default {
   name: 'Thankyou',
+  mixins: [headMixins],
   data() {
     return {
       data,

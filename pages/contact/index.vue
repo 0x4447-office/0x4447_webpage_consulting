@@ -48,10 +48,13 @@
 </template>
 
 <script>
+import headMixins from '../../mixins/head-mixins'
+
 import data from '~/assets/content/pages/contact.json'
 
 export default {
   name: 'Contact',
+  mixins: [headMixins],
   data() {
     return {
       data,

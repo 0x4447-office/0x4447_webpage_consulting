@@ -37,9 +37,11 @@
 </template>
 
 <script>
+import headMixins from '../mixins/head-mixins'
 import data from '~/assets/content/pages/home.json'
 export default {
   name: 'Home',
+  mixins: [headMixins],
   data() {
     return {
       data,

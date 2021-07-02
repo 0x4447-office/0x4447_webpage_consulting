@@ -1,6 +1,6 @@
 export const head = {
-  title: 'Landing WebApp',
-
+  title: 'AWS Cloud Consulting',
+  titleTemplate: '%s - 0x4447',
   meta: [
     { charset: 'utf-8' },
     {
@@ -11,6 +11,10 @@ export const head = {
       hid: 'description',
       name: 'description',
       content: '',
+    },
+    {
+      property: 'og:image',
+      content: '/public/img/og.jpg',
     },
   ],
   link: [

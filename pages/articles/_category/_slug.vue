@@ -208,6 +208,25 @@ export default {
     const { title } = this.article
     return {
       title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.article.description,
+        },
+        {
+          property: 'og:title',
+          content: this.article.title + ' - 0x4447',
+        },
+        {
+          property: 'og:description',
+          content: this.article.description,
+        },
+        {
+          property: 'og:image',
+          content: this.article.cover,
+        },
+      ],
     }
   },
   computed: {

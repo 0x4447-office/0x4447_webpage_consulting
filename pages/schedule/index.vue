@@ -56,10 +56,12 @@
 </template>
 
 <script>
+import headMixins from '../../mixins/head-mixins'
 import data from '~/assets/content/pages/schedule.json'
 
 export default {
   name: 'Schedule',
+  mixins: [headMixins],
   data() {
     return {
       data,
