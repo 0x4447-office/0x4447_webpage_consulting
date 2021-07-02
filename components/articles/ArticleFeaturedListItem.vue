@@ -1,5 +1,8 @@
 <template>
-  <NuxtLink class="row text-decoration-none" :to="`articles/${article.slug}`">
+  <NuxtLink
+    class="row text-decoration-none"
+    :to="{ path: `/articles/${article.categories[0]}/${article.slug}` }"
+  >
     <div class="col-12">
       <!-- Card -->
       <div class="card card-row shadow-light-lg mb-6 lift lift-lg">

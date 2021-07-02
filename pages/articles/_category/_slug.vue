@@ -126,6 +126,25 @@
       <!-- / .container -->
     </section>
 
+    <!-- FORM
+    ================================================== -->
+    <section class="pt-6 pt-md-8 pb-8 pb-md-14">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <!-- Card -->
+            <div class="card card-border border-primary shadow-light-lg">
+              <div class="card-body">
+                <ContactForm />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- / .row -->
+      </div>
+      <!-- / .container -->
+    </section>
+
     <!-- ARTICLES
    ================================================== -->
     <section class="pt-7 pt-md-10 pb-10 pb-md-13 bg-gray-200">

@@ -7,7 +7,7 @@
           <img
             class="navbar__logo navbar-brand-img"
             alt="0x4447, LLC."
-            src="public/img/logo_light.svg"
+            src="/public/img/logo_light.svg"
           />
         </a>
 
@@ -45,6 +45,8 @@
               v-for="(item, index) in data"
               :key="index + '-header-navbar-item'"
               class="nav-item"
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show"
             >
               <NuxtLink :to="item.url" class="nav-link">
                 {{ item.name }}

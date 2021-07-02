@@ -4,14 +4,14 @@
       <h6 class="font-weight-bold text-uppercase text-muted mb-0">Tags:</h6>
     </div>
     <div class="col ml-n5">
-      <a
+      <NuxtLink
         v-for="(category, index) in categories"
         :key="index"
-        class="badge badge-pill badge-secondary-soft mr-1"
-        :href="`/articles/${category.slug}`"
+        class="badge badge-pill badge-secondary-soft mr-1 cursor-pointer"
+        :to="{ path: `/articles/${category.slug}` }"
       >
         <span class="h6 text-uppercase">{{ category.name }}</span>
-      </a>
+      </NuxtLink>
     </div>
   </div>
 </template>

@@ -38,7 +38,7 @@
     </section>
 
     <!--    {{ articles }}-->
-    <section class="pt-7 pt-md-10">
+    <section v-if="!$route.params.category" class="pt-7 pt-md-10">
       <div class="container">
         <ArticleFeaturedListItem
           v-for="(article, index) in featuredArticles"
@@ -85,7 +85,6 @@ import data from '~/assets/content/pages/articles.json'
 
 export default {
   name: 'Articles',
-
   components: { ArticleListItem, ArticleCategories, ArticleFeaturedListItem },
   async asyncData({ $content, params }) {
     let queryBuilder = $content('articles')
@@ -99,12 +98,7 @@ export default {
       queryBuilder = queryBuilder.where(conditions)
     }
 
-    const articles = await queryBuilder
-      .sortBy('createdAt', 'desc')
-      // .where({
-      //   categories: { $contains: params.category ? params.category : '' },
-      // })
-      .fetch()
+    const articles = await queryBuilder.sortBy('createdAt', 'desc').fetch()
 
     return {
       articles,
@@ -121,7 +115,9 @@ export default {
       return this.articles.filter((article) => article.isFeatured)
     },
     standardArticles() {
-      return this.articles.filter((article) => !article.isFeatured)
+      return this.$route.params.category
+        ? this.articles
+        : this.articles.filter((article) => !article.isFeatured)
     },
   },
 }

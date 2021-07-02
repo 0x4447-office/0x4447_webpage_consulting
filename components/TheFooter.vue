@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="footer_shape">
     <div class="position-relative footer_shape">
       <div class="shape shape-bottom shape-fluid-x svg-shim text-dark">
         <SvgIcon name="curve-1" />
@@ -14,7 +14,7 @@
               <img
                 class="footer__logo img-fluid mb-2"
                 alt="0x4447, LLC."
-                src="public/img/logo_dark.svg"
+                src="/public/img/logo_dark.svg"
               />
             </NuxtLink>
 
