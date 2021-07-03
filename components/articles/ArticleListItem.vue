@@ -36,7 +36,7 @@
 
         <!-- Date -->
         <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-          <Timestamp :createdAt="article.createdAt" />
+          <Timestamp :created-at="article.createdAt" />
         </p>
       </div>
     </div>

@@ -1,13 +1,7 @@
-const getRoutes = async () => {
-  const { $content } = require('@nuxt/content')
-  const files = await $content({ deep: true }).only(['path']).fetch()
-
-  return files.map((file) => (file.path === '/index' ? '/' : file.path))
-}
+import { getRoutes } from '../helpers/get-nested-content-routes'
 
 export const modules = [
   // https://go.nuxtjs.dev/pwa
-  '@nuxtjs/pwa',
   '@nuxtjs/svg',
   // SVG Sprite Module https://github.com/nuxt-community/svg-sprite-module
   '@nuxtjs/svg-sprite',

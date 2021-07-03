@@ -55,8 +55,11 @@ export const head = {
       type: 'image/x-icon',
       href: '/favicon.ico',
     },
+    {
+      rel: 'stylesheet',
+      href: 'https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css',
+    },
   ],
-
   script: [
     {
       src: 'https://code.jquery.com/jquery-3.6.0.min.js',
@@ -68,10 +71,6 @@ export const head = {
     },
     {
       src: 'https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/js/bootstrap-select.min.js',
-      body: true,
-    },
-    {
-      src: '/public/js/theme.min.js',
       body: true,
     },
   ],
