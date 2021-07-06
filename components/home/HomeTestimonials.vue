@@ -39,7 +39,6 @@
 
 <script>
 import CompanyCard from '../CompanyCard'
-import companies from '~/assets/content/helpers/companies.json'
 
 export default {
   name: 'HomeTestimonials',
@@ -49,10 +48,13 @@ export default {
       type: Object,
       required: true,
     },
+    companies: {
+      type: Array,
+      required: true,
+    },
   },
   data() {
     return {
-      companies,
       options: {
         cellAlign: 'left',
         imagesLoaded: true,

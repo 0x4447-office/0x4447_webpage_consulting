@@ -1,6 +1,7 @@
 import { getRoutes } from '../helpers/get-nested-content-routes'
 
 export const modules = [
+  // '~/modules/api',
   // https://go.nuxtjs.dev/pwa
   '@nuxtjs/svg',
   // SVG Sprite Module https://github.com/nuxt-community/svg-sprite-module

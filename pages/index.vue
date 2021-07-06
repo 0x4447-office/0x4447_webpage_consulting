@@ -31,20 +31,37 @@
     </section>
     <HomeHub :hub="data.hub" />
     <HomeAbout :about="data.about" />
-    <HomeTestimonials :testimonials="data.testimonials" />
+    <HomeTestimonials
+      :testimonials="data.testimonials"
+      :companies="companies"
+    />
     <HomeCta :cta="data.cta" />
   </div>
 </template>
 
 <script>
 import headMixins from '../mixins/head-mixins'
-import data from '~/assets/content/pages/home.json'
 export default {
   name: 'Home',
   mixins: [headMixins],
+  async asyncData() {
+    const companies = await fetch(
+      process.env.baseUrl + '/public/content/helpers/companies.json'
+    ).then((res) => res.json())
+
+    const data = await fetch(
+      process.env.baseUrl + '/public/content/pages/home.json'
+    ).then((res) => res.json())
+
+    return {
+      companies,
+      data,
+    }
+  },
   data() {
     return {
-      data,
+      data: {},
+      companies: [],
     }
   },
 }

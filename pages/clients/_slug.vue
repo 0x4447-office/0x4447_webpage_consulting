@@ -114,14 +114,18 @@
 </template>
 
 <script>
-import companies from '~/assets/content/helpers/companies.json'
-
 export default {
   name: 'Clients',
   data() {
     return {
-      company: companies.find((item) => item.slug === this.$route.params.slug),
+      company: [],
     }
+  },
+  async fetch() {
+    const data = await fetch(
+      process.env.baseUrl + '/public/content/helpers/companies.json'
+    ).then((res) => res.json())
+    this.company = data.find((item) => item.slug === this.$route.params.slug)
   },
   computed: {
     showBadge() {
