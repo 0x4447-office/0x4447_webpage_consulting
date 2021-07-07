@@ -1,5 +1,5 @@
 import { getRoutes } from '../helpers/get-nested-content-routes'
-
+import companies from '../assets/content/helpers/companies.json'
 export const modules = [
   // '~/modules/api',
   // https://go.nuxtjs.dev/pwa
@@ -27,7 +27,7 @@ export const modules = [
       hostname: process.env.BASE_URL,
       gzip: true,
       routes() {
-        return getRoutes()
+        return getRoutes(companies, 'clients')
       },
     },
   ],

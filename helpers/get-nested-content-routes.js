@@ -1,17 +1,12 @@
-import fetch from 'node-fetch'
-
-export const getRoutes = async () => {
+export const getRoutes = async (routes, pageName) => {
   const { $content } = require('@nuxt/content')
+
   const files = await $content({ deep: true }).only(['path']).fetch()
 
   const contentRoutes = files.map((file) =>
     file.path === '/index' ? '/' : file.path
   )
 
-  const data = await fetch(
-    process.env.BASE_URL + '/public/content/helpers/companies.json'
-  ).then((res) => res.json())
-  const companiesRoutes = data.map((company) => `/clients/${company.slug}`)
-
-  return [...contentRoutes, ...companiesRoutes]
+  const routesArray = routes.map((route) => `/${pageName}/${route.slug}`)
+  return [...contentRoutes, ...routesArray]
 }
