@@ -1,0 +1,33 @@
+{
+  "head": {
+    "title": "Articles",
+    "meta": {
+      "description": "Some things that I learned over time. ",
+      "ogTitle": "Articles"
+    }
+  },
+  "title": "Articles",
+  "description": "My thoughts, experience and knowledge as a memory dump.",
+  "categories": [
+    {
+      "name": "All",
+      "description": "Articles page",
+      "slug": ""
+    },
+    {
+      "name": "Experience",
+      "description": "My accumulated knowledge.",
+      "slug": "experience"
+    },
+    {
+      "name": "How To",
+      "description": "Step by step explanations.",
+      "slug": "how_to"
+    },
+    {
+      "name": "Knowledge",
+      "description": "Repository of all that I know.",
+      "slug": "knowledge"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+<template>
+  <div>
+    <!-- WELCOME
+    ================================================== -->
+    <section
+      class="py-10 py-md-14 bg-cover shame__background-image__schedule"
+      :style="`background-image: url(/public/img/covers/schedule.jpg)`"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8 text-center">
+            <!-- Heading -->
+            <h1 class="display-2 font-weight-bold text-white">
+              {{ data.title }}
+            </h1>
+
+            <!-- Text -->
+            <p class="lead text-white-75 mb-0">
+              {{ data.description }}
+            </p>
+          </div>
+        </div>
+        <!-- / .row -->
+      </div>
+      <!-- / .container -->
+    </section>
+
+    <!-- SHAPE
+    ================================================== -->
+    <div class="position-relative">
+      <div class="shape shape-bottom shape-fluid-x svg-shim text-light">
+        <SvgIcon name="curve-1" />
+      </div>
+    </div>
+
+    <section class="pt-8 pt-md-7 pb-10 pb-md-13">
+      <div class="container">
+        <div class="row justify-content-center">
+          <!-- Calendly inline widget begin -->
+          <div
+            class="calendly-inline-widget"
+            data-url="https://calendly.com/0x4447/schedule?hide_event_type_details=1"
+            style="min-width: 320px; height: 630px"
+          ></div>
+          <script
+            type="text/javascript"
+            src="https://assets.calendly.com/assets/external/widget.js"
+          ></script>
+          <!-- Calendly inline widget end -->
+        </div>
+        <!-- / .row -->
+      </div>
+      <!-- / .container -->
+    </section>
+  </div>
+</template>
+
+<script>
+import headMixins from '../../mixins/head-mixins'
+import data from '~/assets/content/pages/schedule.json'
+
+export default {
+  name: 'Schedule',
+  mixins: [headMixins],
+  data() {
+    return {
+      data,
+    }
+  },
+}
+</script>

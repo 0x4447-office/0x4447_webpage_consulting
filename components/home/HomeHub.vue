@@ -1,0 +1,44 @@
+<template>
+  <section class="py-8 py-md-11">
+    <div class="container">
+      <div class="row">
+        <div
+          v-for="(item, index) in hub"
+          :key="index + '-home-hib-item'"
+          class="col-12 col-md-4 text-center"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <!-- Icon -->
+          <div class="icon text-primary mb-3">
+            <img :src="`public${item.icon}`" :alt="item.title" />
+          </div>
+
+          <!-- Heading -->
+          <h3>
+            {{ item.title }}
+          </h3>
+
+          <!-- Text -->
+          <p class="text-muted mb-0">
+            {{ item.text }}
+          </p>
+        </div>
+      </div>
+      <!-- / .row -->
+    </div>
+    <!-- / .container -->
+  </section>
+</template>
+
+<script>
+export default {
+  name: 'HomeHub',
+  props: {
+    hub: {
+      type: Array,
+      required: true,
+    },
+  },
+}
+</script>
