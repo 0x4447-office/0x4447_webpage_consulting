@@ -19,8 +19,6 @@ export const generate = {
       (category) => `/articles/${category.slug}`
     )
 
-    console.log('articles', articles)
-
     return [...clientsRoutes, ...categories, ...articles]
   },
 }
