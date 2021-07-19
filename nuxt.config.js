@@ -4,6 +4,8 @@ import { css } from './config/css'
 import { env } from './config/env'
 import { head } from './config/head'
 import { plugins } from './config/plugins'
+import { router } from './config/router'
+import { generate } from './config/generate'
 
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
@@ -39,4 +41,9 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules,
+
+  // Router (https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-router)
+  router,
+
+  generate,
 }
